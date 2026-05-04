@@ -79,3 +79,43 @@ h1, h2, h3 {
   /* custom hamburger icon color */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+/* =====================
+   FOOTER STYLING
+===================== */
+
+/* Style the footer section */
+footer {
+  background-color: var(--cream); /* Light background color */
+  border-top: 1px solid rgba(201,168,76,0.3); /* Thin top border */
+  padding: 12px 0 6px; /* Space inside footer (top, sides, bottom) */
+}
+
+/* Style for the brand name */
+.footer-brand {
+  font-family: var(--font-heading); /* Custom heading font */
+  font-size: 1rem; /* Medium text size */
+  color: var(--dark); /* Dark color */
+}
+
+/* Container for social icons */
+.footer-social {
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center icons horizontally */
+  gap: 16px; /* Space between icons */
+}
+
+/* Hover effect on social links */
+.footer-social a:hover {
+  color: var(--gold); /* Change color on hover */
+  transform: translateY(-3px); /* Move icon slightly up */
+}
+
+/* Bottom copyright section */
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.08); /* Light separator line */
+  margin-top: 8px; /* Space above */
+  padding-top: 8px; /* Space inside */
+  text-align: center; /* Center text */
+  font-size: 0.78rem; /* Smaller text */
+  color: #999; /* Grey color */
+}
