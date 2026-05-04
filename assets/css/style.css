@@ -1,0 +1,79 @@
+/* =====================
+   CSS VARIABLES
+===================== */
+:root {
+  --gold:       #C9A84C; /* main accent color used across the site */
+  --terracotta: #A0522D; /* secondary warm color */
+  --blue:       #2E86AB; /* additional accent (not heavily used yet) */
+  --cream:      #F5F0E8; /* background color */
+  --dark:       #1A1A2E; /* dark theme color (navbar, sections) */
+
+  /* Font variables */
+  --font-heading: 'Playfair Display', serif; /* headings font */
+  --font-body:    'Lato', sans-serif;        /* body text font */
+}
+
+/* =====================
+   GLOBAL
+===================== */
+* {
+  margin: 0; /* removes default browser margin */
+  padding: 0; /* removes default padding */
+  box-sizing: border-box; /* makes sizing easier (includes padding & border) */
+}
+
+body {
+  font-family: var(--font-body); /* apply body font */
+  color: var(--dark); /* default text color */
+  background-color: var(--cream); /* page background */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading); /* headings use different font */
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background-color: var(--dark); /* dark navbar */
+  padding: 10px 0; /* vertical spacing */
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gold) !important; /* override Bootstrap color */
+  display: flex; /* align logo + text horizontally */
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+}
+
+.navbar-brand img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain; /* keeps image ratio */
+  border-radius: 50%; /* makes logo circular */
+}
+
+.navbar-nav .nav-link {
+  color: var(--cream) !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0 6px;
+  transition: color 0.3s ease; /* smooth hover */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--gold) !important; /* highlight active/hover */
+}
+
+.navbar-toggler {
+  border-color: var(--gold); /* mobile button border */
+}
+
+.navbar-toggler-icon {
+  /* custom hamburger icon color */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
