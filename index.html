@@ -4,7 +4,7 @@
 <head> 
  <meta charset="UTF-8"> <!-- Supports all characters --> 
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <!-- Makes site responsive on mobile --> 
+ <!-- Makes site responsive on mobile;initial-scale=1.0:show the website at real size --> 
  
  <title>Discover Tunisia</title> <!-- Page title (tab name) --> 
  
@@ -24,7 +24,8 @@
 <body>
    <!-- ================= NAVBAR ================= -->
   <nav class="navbar navbar-expand-lg">
-    <!-- navbar-expand-lg = expands on large screens, collapses on mobile -->
+    <!-- navbar-expand-lg = expands on large screens(menu is horizontal),
+      collapses on mobile:menu becomes collapsed (hamburger menu) -->
 
     <div class="container">
       <!-- Bootstrap container = centers content and adds spacing -->
@@ -36,20 +37,23 @@
       </a>
 
       <!-- Mobile toggle button (hamburger menu) -->
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMenu"
-        aria-controls="navbarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+      <!-- Button used for opening/closing the navbar menu on small screens -->
+<button class="navbar-toggler" type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarMenu"
+  aria-controls="navbarMenu"
+  aria-expanded="false"
+  aria-label="Toggle navigation">
 
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Hamburger icon (☰) shown by Bootstrap -->
+  <span class="navbar-toggler-icon"></span>
+
+</button>
 
       <!-- Collapsible menu -->
       <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto">
-          <!-- ms-auto pushes links to the right -->
+        <ul class="navbar-nav ms-auto"> <!--ms = margin start-->
+          <!-- ms-auto pushes links to the right: Add automatic margin on the start side” -->
 
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>

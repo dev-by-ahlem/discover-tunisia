@@ -2,7 +2,11 @@
 /* =====================
    CSS VARIABLES
 ===================== */
+/* :root is a pseudo-class.It selects the root element of the document, 
+which is the <html> element. It is mainly used to define global CSS variables that apply across the entire website.*/ 
 :root {
+  /*global & custom variable (created by the programmer not pre-made by bootstrap)
+  to store the color */
   --gold:       #C9A84C; /* main accent color used across the site */
   --terracotta: #A0522D; /* secondary warm color */
   --blue:       #2E86AB; /* additional accent (not heavily used yet) */
@@ -17,6 +21,9 @@
 /* =====================
    GLOBAL
 ===================== */
+/*This CSS reset using the universal selector *, it removes all default browser margins and padding 
+and sets box-sizing to border-box so that all elements have consistent
+ spacing and predictable sizing across different browsers.*/
 * {
   margin: 0; /* removes default browser margin */
   padding: 0; /* removes default padding */
@@ -37,85 +44,92 @@ h1, h2, h3 {
 /* =====================
    NAVBAR
 ===================== */
+
+
+/* Styles the whole navbar container */
 .navbar {
-  background-color: var(--dark); /* dark navbar */
-  padding: 10px 0; /* vertical spacing */
+  background-color: var(--dark); /* sets dark background color using CSS variable */
+  padding: 10px 0; /* adds space top and bottom inside navbar */
 }
 
+/* Styles the brand/logo area (site name + logo) */
 .navbar-brand {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--gold) !important; /* override Bootstrap color */
-  display: flex; /* align logo + text horizontally */
-  align-items: center;
-  gap: 10px; /* space between logo and text */
+  font-family: var(--font-heading); /* applies heading font */
+  font-size: 1.4rem; /* increases text size */
+  color: var(--gold) !important; /* forces gold color (overrides Bootstrap default) */
+  display: flex; /* places logo and text in a row */
+  align-items: center; /* vertically centers logo and text */
+  gap: 10px; /* adds space between logo and text */
 }
 
+/* Styles the logo image inside navbar brand */
 .navbar-brand img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain; /* keeps image ratio */
-  border-radius: 50%; /* makes logo circular */
+  width: 44px; /* sets logo width */
+  height: 44px; /* sets logo height */
+  object-fit: contain; /* keeps image proportions without distortion */
+  border-radius: 50%; /* makes image circular */
 }
 
+/* Styles navigation links inside navbar */
 .navbar-nav .nav-link {
-  color: var(--cream) !important;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  margin: 0 6px;
-  transition: color 0.3s ease; /* smooth hover */
+  color: var(--cream) !important; /* sets link color */
+  font-weight: 400; /* normal font weight */
+  letter-spacing: 0.5px; /* adds spacing between letters */
+  margin: 0 6px; /* space between links */
+  transition: color 0.3s ease; /* smooth color change on hover */
 }
 
+/* Styles links when hovered or active */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--gold) !important; /* highlight active/hover */
+  color: var(--gold) !important; /* changes link color to gold */
 }
 
+/* Styles the mobile hamburger button */
 .navbar-toggler {
-  border-color: var(--gold); /* mobile button border */
+  border-color: var(--gold); /* sets border color of toggle button */
 }
 
+/* Styles the hamburger icon (3 lines) */
 .navbar-toggler-icon {
-  /* custom hamburger icon color */
+  /* replaces default icon with custom gold SVG icon */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 /* =====================
-   FOOTER STYLING
+   FOOTER
 ===================== */
-
-/* Style the footer section */
+/* Styles the entire footer section */
 footer {
-  background-color: var(--cream); /* Light background color */
-  border-top: 1px solid rgba(201,168,76,0.3); /* Thin top border */
-  padding: 12px 0 6px; /* Space inside footer (top, sides, bottom) */
+  background-color: var(--cream); /* sets light background using CSS variable */
+  border-top: 1px solid rgba(201,168,76,0.3); /* adds a thin top border line */
+  padding: 12px 0 6px; /* adds space inside footer (top, right/left, bottom) */
 }
 
-/* Style for the brand name */
+/* Styles the brand name inside footer */
 .footer-brand {
-  font-family: var(--font-heading); /* Custom heading font */
-  font-size: 1rem; /* Medium text size */
-  color: var(--dark); /* Dark color */
+  font-family: var(--font-heading); /* applies heading font */
+  font-size: 1rem; /* sets text size */
+  color: var(--dark); /* sets text color */
 }
 
-/* Container for social icons */
+/* Container for social media icons */
 .footer-social {
-  display: flex; /* Use flexbox layout */
-  justify-content: center; /* Center icons horizontally */
-  gap: 16px; /* Space between icons */
+  display: flex; /* places icons in a row */
+  justify-content: center; /* centers icons horizontally */
+  gap: 16px; /* adds space between icons */
 }
 
-/* Hover effect on social links */
+/* Hover effect for social media links */
 .footer-social a:hover {
-  color: var(--gold); /* Change color on hover */
-  transform: translateY(-3px); /* Move icon slightly up */
+  color: var(--gold); /* changes icon color when hovered */
+  transform: translateY(-3px); /* moves icon slightly upward on hover */
 }
 
-/* Bottom copyright section */
+/* Bottom section of footer (copyright area) */
 .footer-bottom {
-  border-top: 1px solid rgba(0,0,0,0.08); /* Light separator line */
-  margin-top: 8px; /* Space above */
-  padding-top: 8px; /* Space inside */
-  text-align: center; /* Center text */
-  font-size: 0.78rem; /* Smaller text */
-  color: #999; /* Grey color */
-}
+  border-top: 1px solid rgba(0,0,0,0.08); /* adds light separator line */
+  margin-top: 8px; /* space above the section */
+  padding-top: 8px; /* space inside top of section */
+  text-align: center; /* centers text */
+  font-size: 0.78rem; /* makes text smaller */
+  color: #999; /* sets light gray text color */}
