@@ -49,7 +49,7 @@ h1, h2, h3 {
 /* Styles the whole navbar container */
 .navbar {
   background-color: var(--dark); /* sets dark background color using CSS variable */
-  padding: 10px 0; /* adds space top and bottom inside navbar */
+  padding: 20px 0px; /* adds space top and bottom inside navbar */
 }
 
 /* Styles the brand/logo area (site name + logo) */
@@ -95,6 +95,107 @@ h1, h2, h3 {
   /* replaces default icon with custom gold SVG icon */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+/* =====================
+   HERO SECTION (top banner area)
+===================== */
+
+/* Main hero container */
+.hero {
+  position: relative; /* allows absolute positioned elements inside (overlay + text) */
+  width: 100%; /* full width of screen */
+  height: 100vh; /* full screen height (100% of viewport height) */
+  overflow: hidden; /* hides anything outside the hero area */
+}
+
+/* Hero background image */
+.hero-img {
+  width: 100%; /* full width */
+  height: 100%; /* full height */
+  object-fit: cover; /* image covers area without distortion */
+  object-position: center; /* keeps image centered */
+  display: block; /* removes extra space below image */
+}
+
+/* Dark overlay on top of image */
+.hero-overlay {
+  position: absolute; /* positions on top of hero */
+  inset: 0; /* top:0, right:0, bottom:0, left:0 (full cover) */
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 46, 0.68) 0%, /* dark at top */
+    rgba(26, 26, 46, 0.08) 40%, /* fading */
+    rgba(26, 26, 46, 0.0) 100%  /* transparent at bottom */
+  ); /* improves text readability */
+}
+
+/* Content placed on top of hero image */
+.hero-content {
+  position: absolute; /* floats above image */
+  top: 7%; /* distance from top */
+  left: 50%; /* move to center horizontally */
+  transform: translateX(-50%); /* perfectly centers horizontally */
+  text-align: center; /* centers text */
+  width: 90%; /* responsive width */
+  max-width: 620px; /* prevents text from being too wide */
+}
+
+/* Small label text above heading */
+.hero-tag {
+  font-size: 1.2rem; /* text size */
+  letter-spacing: 4px; /* spacing between letters */
+  text-transform: uppercase; /* makes text uppercase */
+  color: var(--gold); /* gold color */
+  margin-bottom: 8px; /* space below */
+}
+
+/* Main hero heading */
+.hero-content h1 {
+  font-size: 4rem; /* very large text */
+  color: #fff; /* white color */
+  line-height: 1.25; /* spacing between lines */
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* makes text readable on image */
+  margin-bottom: 8px; /* spacing below */
+}
+
+/* Highlighted word inside heading */
+.hero-content h1 span {
+  color: var(--gold); /* makes specific word gold */
+}
+
+/* Subtitle under heading */
+.hero-sub {
+  font-size: 1.4rem; /* medium text size */
+  color: rgba(245, 240, 232, 0.85); /* light transparent white */
+  font-weight: 300; /* thin font */
+  letter-spacing: 1px; /* spacing between letters */
+  margin-bottom: 16px; /* space below */
+}
+
+/* Hero button */
+.btn-hero {
+  display: inline-block; /* behaves like button but keeps inline flow */
+  background-color: var(--gold); /* gold background */
+  color: var(--dark); /* dark text */
+  font-weight: 700; /* bold text */
+  padding: 16px 40px; /* space inside button */
+  border: 2px solid var(--gold); /* border same color as background */
+  border-radius: 2px; /* slightly rounded corners */
+  font-family: var(--font-body); /* body font */
+  letter-spacing: 2px; /* spacing between letters */
+  text-transform: uppercase; /* uppercase text */
+  font-size: 1rem; /* normal text size */
+  text-decoration: none; /* removes underline */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* smooth hover animation */
+}
+
+/* Button hover effect */
+.btn-hero:hover {
+  background-color: transparent; /* removes background */
+  color: #fff; /* text becomes white */
+  transform: translateY(-2px); /* slight lift effect */
+}
+
 /* =====================
    FOOTER
 ===================== */
