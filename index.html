@@ -1,322 +1,320 @@
-<!DOCTYPE html> <!-- Declares this is an HTML5 document --> 
-<html lang="en"> <!-- Root of the page, language = English --> 
- 
-<head> 
- <meta charset="UTF-8"> <!-- Supports all characters --> 
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- <!-- Makes site responsive on mobile;initial-scale=1.0:show the website at real size --> 
- 
- <title>Discover Tunisia</title> <!-- Page title (tab name) --> 
- 
- <!-- Bootstrap CSS (for layout, grid, components) --> 
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
- 
- <!-- Google Fonts (custom fonts) --> 
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
- 
- <!-- Font Awesome (icons like social media, etc.) --> 
- <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script> 
- 
- <!-- Your custom CSS file --> 
- <link rel="stylesheet" href="assets/css/style.css"> 
-</head> 
- 
+<!DOCTYPE html> <!-- Declares the document as HTML5 -->
+
+<html lang="en"> <!-- Root element of the page, language set to English -->
+
+<head>
+  <meta charset="UTF-8"> <!-- Supports all characters (UTF-8 encoding) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the website responsive on different screen sizes -->
+
+  <title>Discover Tunisia</title> <!-- Title shown in browser tab -->
+
+  <!-- Bootstrap CSS (for layout, grid system, and components) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts (custom fonts for design) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons library like Facebook, Instagram, etc.) -->
+ <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+
+  <!-- Your custom CSS file -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
 <body>
-   <!-- ================= NAVBAR ================= -->
+
+  <!-- ================= NAVBAR ================= -->
   <nav class="navbar navbar-expand-lg">
-    <!-- navbar-expand-lg = expands on large screens(menu is horizontal),
-      collapses on mobile:menu becomes collapsed (hamburger menu) -->
+    <!-- navbar = Bootstrap navbar -->
+    <!-- navbar-expand-lg = expands on large screens, collapses on small screens -->
 
     <div class="container">
-      <!-- Bootstrap container = centers content and adds spacing -->
+      <!-- Centers content and adds horizontal spacing -->
 
-      <!-- Logo + site name -->
+      <!-- Logo and website name -->
       <a class="navbar-brand" href="#">
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
+        <!-- Logo image -->
+
         <em>Discover Tunisia</em>
+        <!-- Website name (italic style) -->
       </a>
 
-      <!-- Mobile toggle button (hamburger menu) -->
-      <!-- Button used for opening/closing the navbar menu on small screens -->
-<button class="navbar-toggler" type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarMenu"
-  aria-controls="navbarMenu"
-  aria-expanded="false"
-  aria-label="Toggle navigation">
+      <!-- Mobile menu button (hamburger icon) -->
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" <!-- enables toggle behavior -->
+        data-bs-target="#navbarMenu" <!-- target menu to show/hide -->
+        aria-controls="navbarMenu" <!-- accessibility: controls menu -->
+        aria-expanded="false" <!-- menu initially closed -->
+        aria-label="Toggle navigation"> <!-- accessibility label -->
 
-  <!-- Hamburger icon (☰) shown by Bootstrap -->
-  <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <!-- Default Bootstrap hamburger icon -->
+      </button>
 
-</button>
-
-      <!-- Collapsible menu -->
+      <!-- Collapsible navigation menu -->
       <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto"> <!--ms = margin start-->
-          <!-- ms-auto pushes links to the right: Add automatic margin on the start side” -->
 
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <ul class="navbar-nav ms-auto">
+          <!-- navbar-nav = navigation list -->
+          <!-- ms-auto = pushes menu to the right -->
+
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+            <!-- active = current page -->
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Destinations</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Culture</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
 
         </ul>
       </div>
     </div>
   </nav>
-    <!-- ================= HERO SECTION ================= -->
+
+  <!-- ================= HERO SECTION ================= -->
   <section class="hero">
+    <!-- Main banner section -->
 
     <!-- Background image -->
     <img src="assets/images/hero.png" alt="Discover Tunisia" class="hero-img">
 
-    <!-- Dark overlay for readability -->
+    <!-- Dark overlay for better text readability -->
     <div class="hero-overlay"></div>
 
-    <!-- Text content -->
+    <!-- Hero text content -->
     <div class="hero-content">
-      <p class="hero-tag">North Africa's Best Kept Secret</p>
 
-      <!-- Main title -->
-      <h1>Discover a <span>Hidden Gem</span><br>of the Mediterranean</h1>
+      <p class="hero-tag">North Africa's Best Kept Secret</p>
+      <!-- Small tagline -->
+
+      <!-- Main heading -->
+      <h1>
+        Discover a <span>Hidden Gem</span><br>
+        of the Mediterranean
+      </h1>
 
       <!-- Subtitle -->
-      <p class="hero-sub">Ancient ruins · Golden dunes · Turquoise shores</p>
+      <p class="hero-sub">
+        Ancient ruins · Golden dunes · Turquoise shores
+      </p>
 
-      <!-- Button scrolls to welcome section -->
-      <a href="#welcome" class="btn-hero">Explore Now</a>
+      <!-- Button linking to welcome section -->
+      <a href="#welcome" class="btn-hero">
+        Explore Now
+      </a>
+
     </div>
-
   </section>
-   <!-- ================= WELCOME SECTION ================= -->
-<!-- This section introduces Tunisia with text, stats, and images -->
-<section class="section-welcome" id="welcome">
-  <!-- id="welcome" allows navigation from other parts of the page (anchor link) -->
 
-  <div class="container">
-    <!-- Bootstrap container: centers content and adds horizontal spacing -->
+  <!-- ================= WELCOME SECTION ================= -->
+  <section class="section-welcome" id="welcome">
+    <!-- Section for introduction -->
+    <!-- id used for anchor navigation -->
 
-    <!-- Bootstrap row: creates a horizontal flex layout -->
-    <div class="row align-items-center g-5">
-      <!-- align-items-center = vertically centers columns -->
-      <!-- g-5 = adds spacing (gap) between columns -->
+    <div class="container">
+      <!-- Centers and structures content -->
 
-      <!-- ================= LEFT COLUMN (TEXT CONTENT) ================= -->
-      <div class="col-lg-6">
-        <!-- col-lg-6 = takes 50% width on large screens -->
+      <div class="row align-items-center g-5">
+        <!-- row = flex layout -->
+        <!-- align-items-center = vertical alignment -->
+        <!-- g-5 = spacing between columns -->
 
-        <!-- Small label above heading -->
-        <p class="section-label" style="color: #A0522D;">
-          Welcome To:
-        </p>
+        <!-- LEFT TEXT COLUMN -->
+        <div class="col-lg-6">
+          <!-- Takes half width on large screens -->
 
-        <!-- Main section heading -->
-        <h2>
-          A Land Where History<br>
-          Meets the <span>Mediterranean</span>
-          <!-- span highlights a word with different color -->
-        </h2>
+          <p class="section-label" style="color: #A0522D;">
+            Welcome To:
+          </p>
+          <!-- Small section label -->
 
-        <!-- First paragraph description -->
-        <p>
-          Tunisia is a country of extraordinary contrasts — where ancient Roman ruins
-          stand beside golden Saharan dunes, and whitewashed villages overlook the
-          sparkling blue sea.
-        </p>
+          <h2>
+            A Land Where History<br>
+            Meets the <span>Mediterranean</span>
+          </h2>
+          <!-- Main heading with highlighted word -->
 
-        <!-- Second paragraph description -->
-        <p>
-          Explore bustling souks, taste vibrant cuisine, and discover Berber villages,
-          salt flats, and Mediterranean coves.
-        </p>
+          <!-- Description paragraph -->
+          <p>
+            Tunisia is a country of extraordinary contrasts — where ancient Roman ruins
+            stand beside golden Saharan dunes, and whitewashed villages overlook the
+            sparkling blue sea.
+          </p>
 
-        <!-- ================= STATS SECTION ================= -->
-        <div class="welcome-stat">
-          <!-- Container for statistics (uses flex in CSS) -->
+          <!-- Second description -->
+          <p>
+            Explore bustling souks, taste vibrant cuisine, and discover Berber villages,
+            salt flats, and Mediterranean coves.
+          </p>
 
-          <!-- Single stat item -->
-          <div class="stat">
-            <h3>3,000+</h3> <!-- Big number -->
-            <p>Years of History</p> <!-- Description -->
-          </div>
+          <!-- STATS SECTION -->
+          <div class="welcome-stat">
+            <!-- Flex container for stats -->
 
-          <!-- Second stat -->
-          <div class="stat">
-            <h3>1,300 km</h3>
-            <p>Coastline</p>
-          </div>
+            <div class="stat">
+              <h3>3,000+</h3>
+              <!-- Statistic number -->
+              <p>Years of History</p>
+              <!-- Description -->
+            </div>
 
-          <!-- Third stat -->
-          <div class="stat">
-            <h3>8</h3>
-            <p>UNESCO Sites</p>
-          </div>
+            <div class="stat">
+              <h3>1,300 km</h3>
+              <p>Coastline</p>
+            </div>
 
-        </div>
-      </div>
-
-      <!-- ================= RIGHT COLUMN (IMAGE GALLERY) ================= -->
-      <div class="col-lg-6">
-        <!-- col-lg-6 = takes remaining 50% width -->
-
-        <!-- Container for scrolling image gallery -->
-        <div class="scroll-gallery">
-
-          <!-- Moving track for vertical scrolling animation -->
-          <div class="scroll-track">
-
-            <!-- Images in gallery -->
-            <img src="assets/images/kairaoun-mosque.png" alt="Kairouan Mosque">
-            <img src="assets/images/carthage-jam.png" alt="Carthage and El Jem">
-            <img src="assets/images/arch-of-dogga.png" alt="Dougga Arch">
-            <img src="assets/images/scroll2.jpg" alt="Sidi Bou Said View">
-            <img src="assets/images/scroll1.png" alt="El Jem Amphitheatre">
-            <img src="assets/images/scroll3.jpg" alt="Sidi Bou Said Door">
-            <img src="assets/images/scroll4.jpg" alt="Bizerte Port">
-            <img src="assets/images/scroll5.png" alt="Sidi Bou Said">
-            <img src="assets/images/sahara.png" alt="Sahara Desert">
-
-            <!-- DUPLICATE IMAGES -->
-            <!-- These are repeated to create infinite scrolling effect -->
-            <img src="assets/images/kairaoun-mosque.png" alt="Kairouan Mosque">
-            <img src="assets/images/carthage-jam.png" alt="Carthage and El Jem">
-            <img src="assets/images/arch-of-dogga.png" alt="Dougga Arch">
-            <img src="assets/images/scroll2.jpg" alt="Sidi Bou Said View">
-            <img src="assets/images/scroll1.png" alt="El Jem Amphitheatre">
-            <img src="assets/images/scroll3.jpg" alt="Sidi Bou Said Door">
-            <img src="assets/images/scroll4.jpg" alt="Bizerte Port">
-            <img src="assets/images/scroll5.png" alt="Sidi Bou Said">
-            <img src="assets/images/sahara.png" alt="Sahara Desert">
+            <div class="stat">
+              <h3>8</h3>
+              <p>UNESCO Sites</p>
+            </div>
 
           </div>
         </div>
-      </div>
-      <!-- ================= WELCOME SECTION ================= -->
-<!-- Main section introducing Tunisia -->
-<section class="section-welcome" id="welcome">
-  <!-- id="welcome" allows navigation via anchor links -->
 
-  <div class="container">
-    <!-- Bootstrap container: centers content and adds side spacing -->
+        <!-- RIGHT IMAGE COLUMN -->
+        <div class="col-lg-6">
+          <!-- Second half of layout -->
 
-    <div class="row align-items-center g-5">
-      <!-- row = horizontal layout -->
-      <!-- align-items-center = vertical alignment -->
-      <!-- g-5 = spacing between columns -->
+          <div class="scroll-gallery">
+            <!-- Container for scrolling images -->
 
-      <!-- ================= LEFT COLUMN (TEXT CONTENT) ================= -->
-      <div class="col-lg-6">
-        <!-- col-lg-6 = takes 50% width on large screens -->
+            <div class="scroll-track">
+              <!-- This element moves via CSS animation -->
 
-        <p class="section-label" style="color: #A0522D;">
-          <!-- small label text above heading -->
-          Welcome To:
-        </p>
+              <!-- Images -->
+              <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
+              <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
+              <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
+              <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said View">
+              <img src="assets/images/scrolling-images/jam.png" alt="El Jem Amphitheatre">
+              <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said Door">
+              <img src="assets/images/scrolling-images/old-medina.jpg" alt="Bizerte Port">
+              <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert">
 
-        <h2>
-          <!-- main heading -->
-          A Land Where History<br>
-          <!-- line break inside heading -->
+              <!-- DUPLICATED IMAGES -->
+              <!-- Needed to create smooth infinite scrolling -->
+             <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
+              <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
+              <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
+              <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said View">
+              <img src="assets/images/scrolling-images/jam.png" alt="El Jem Amphitheatre">
+              <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said Door">
+              <img src="assets/images/scrolling-images/old-medina.jpg" alt="Bizerte Port">
+              <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert">
 
-          Meets the <span>Mediterranean</span>
-          <!-- span highlights the word -->
-        </h2>
-
-        <p>
-          <!-- first description paragraph -->
-          Tunisia is a country of extraordinary contrasts — where ancient Roman ruins
-          stand beside golden Saharan dunes, and whitewashed villages overlook the
-          sparkling blue sea.
-        </p>
-
-        <p>
-          <!-- second description paragraph -->
-          Explore bustling souks, taste vibrant cuisine, and discover Berber villages,
-          salt flats, and Mediterranean coves.
-        </p>
-
-        <!-- ================= STATS SECTION ================= -->
-        <div class="welcome-stat">
-          <!-- flex container for statistics -->
-
-          <div class="stat">
-            <!-- single stat block -->
-            <h3>3,000+</h3>
-            <!-- big number -->
-            <p>Years of History</p>
-            <!-- label -->
-          </div>
-
-          <div class="stat">
-            <h3>1,300 km</h3>
-            <p>Coastline</p>
-          </div>
-
-          <div class="stat">
-            <h3>8</h3>
-            <p>UNESCO Sites</p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- ================= RIGHT COLUMN (IMAGE GALLERY) ================= -->
-      <div class="col-lg-6">
-        <!-- right side of layout -->
-
-        <div class="scroll-gallery">
-          <!-- container for scrolling images -->
-
-          <div class="scroll-track">
-            <!-- moving track (animated in CSS) -->
-
-            <!-- ORIGINAL IMAGES -->
-            <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
-            <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
-            <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
-            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said View">
-            <img src="assets/images/scrolling-images/jam.png" alt="El Jem Amphitheatre">
-            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said Door">
-            <img src="assets/images/scrolling-images/brigde.png" alt="Bizerte Port">
-
-            <!-- DUPLICATE IMAGES -->
-            <!-- These are repeated to create infinite scrolling effect -->
-            <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
-            <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
-            <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
-            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said View">
-            <img src="assets/images/scrolling-images/jam.png" alt="El Jem Amphitheatre">
-            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said Door">
-            <img src="assets/images/scrolling-images/old-medina.jpg" alt="Bizerte Port">
-            <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert">
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
+  </section>
+<!-- ================= FACT CARDS ================= -->
+<!-- This section displays small info cards about Tunisia -->
+
+<div class="facts-row">
+  <!-- Container for all cards (styled with flex in CSS) -->
+
+  <!-- First card -->
+  <div class="fact-card">
+    <!-- Card container (custom styled box) -->
+
+    <div class="fact-icon">
+      <!-- Icon container -->
+      <i class="fas fa-map-marker-alt"></i>
+      <!-- Font Awesome icon (location pin) -->
+    </div>
+
+    <p class="fact-label">Capital</p>
+    <!-- Small label describing the info -->
+
+    <p class="fact-value">Tunis</p>
+    <!-- Main value -->
   </div>
+
+  <!-- Second card -->
+  <div class="fact-card">
+    <div class="fact-icon">
+      <i class="fas fa-coins"></i>
+      <!-- Currency icon -->
+    </div>
+
+    <p class="fact-label">Currency</p>
+
+    <p class="fact-value">
+      Tunisian Dinar 
+      <span>(TND)</span>
+      <!-- span adds smaller secondary text -->
+    </p>
+  </div>
+
+  <!-- Third card -->
+  <div class="fact-card">
+    <div class="fact-icon">
+      <i class="fas fa-users"></i>
+      <!-- People icon -->
+    </div>
+
+    <p class="fact-label">Population</p>
+
+    <p class="fact-value">12 Million</p>
+  </div>
+
+  <!-- Fourth card -->
+  <div class="fact-card">
+    <div class="fact-icon">
+      <i class="fas fa-comment"></i>
+      <!-- Language icon -->
+    </div>
+
+    <p class="fact-label">Language</p>
+
+    <p class="fact-value">Arabic</p>
+  </div>
+
+  <!-- Fifth card -->
+  <div class="fact-card">
+    <div class="fact-icon">
+      <i class="fas fa-clock"></i>
+      <!-- Time icon -->
+    </div>
+
+    <p class="fact-label">Time Zone</p>
+
+    <p class="fact-value">GMT +1</p>
+  </div>
+
+  <!-- Sixth card -->
+  <div class="fact-card">
+    <div class="fact-icon">
+      <i class="fas fa-thermometer-half"></i>
+      <!-- Climate icon -->
+    </div>
+
+    <p class="fact-label">Climate</p>
+
+    <p class="fact-value">Mediterranean</p>
+  </div>
+
+</div>
+
+</div>
+<!-- Closing parent container -->
+
 </section>
-  <!-- ================= FOOTER ================= -->
- <!-- Right side column -->
-      <div class="col-md-4 text-md-end">
-        
-        <!-- Message aligned to the right -->
-        <p class="footer-tagline">Made with ❤️ for Tunisia</p>
-      
-      </div>
-
-    </div>
-
-    <!-- Bottom copyright section -->
-    <div class="footer-bottom">
-      
-      <!-- Copyright text -->
-      &copy; 2026 Discover Tunisia. All rights reserved.
-    
-    </div>
-
-  </div>
-
+<!-- End of section -->
 </footer>
   <!-- Bootstrap JS (required for navbar toggle & interactions) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
