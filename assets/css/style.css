@@ -341,7 +341,61 @@ h1, h2, h3 {
   100% { transform: translateY(-50%); }
 }
 
+/* =====================
+   WHY VISIT SECTION
+===================== */
+.section-why {
+  padding: 80px 0;
+  background-color: var(--dark);
+}
 
+.section-why .section-label {
+  color: var(--gold);
+}
+
+.section-why h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  margin-bottom: 44px;
+}
+
+.section-why h2 span {
+  color: var(--gold);
+}
+
+.why-card {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  height: 100%;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.why-card .icon {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.why-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 0.92rem;
+  color: #aaa;
+  line-height: 1.8;
+}
 
 /* =====================
    FOOTER
