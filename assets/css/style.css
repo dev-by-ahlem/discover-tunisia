@@ -1,12 +1,7 @@
-
 /* =====================
    CSS VARIABLES
 ===================== */
-/* :root is a pseudo-class.It selects the root element of the document, 
-which is the <html> element. It is mainly used to define global CSS variables that apply across the entire website.*/ 
 :root {
-  /*global & custom variable (created by the programmer not pre-made by bootstrap)
-  to store the color */
   --gold:       #C9A84C; /* main accent color used across the site */
   --terracotta: #A0522D; /* secondary warm color */
   --blue:       #2E86AB; /* additional accent (not heavily used yet) */
@@ -21,9 +16,6 @@ which is the <html> element. It is mainly used to define global CSS variables th
 /* =====================
    GLOBAL
 ===================== */
-/*This CSS reset using the universal selector *, it removes all default browser margins and padding 
-and sets box-sizing to border-box so that all elements have consistent
- spacing and predictable sizing across different browsers.*/
 * {
   margin: 0; /* removes default browser margin */
   padding: 0; /* removes default padding */
@@ -40,161 +32,141 @@ h1, h2, h3 {
   font-family: var(--font-heading); /* headings use different font */
 }
 
-
 /* =====================
    NAVBAR
 ===================== */
-
-
-/* Styles the whole navbar container */
 .navbar {
-  background-color: var(--dark); /* sets dark background color using CSS variable */
-  padding: 20px 0px; /* adds space top and bottom inside navbar */
+  background-color: var(--dark); /* dark navbar */
+  padding: 10px 0; /* vertical spacing */
 }
 
-/* Styles the brand/logo area (site name + logo) */
 .navbar-brand {
-  font-family: var(--font-heading); /* applies heading font */
-  font-size: 1.4rem; /* increases text size */
-  color: var(--gold) !important; /* forces gold color (overrides Bootstrap default) */
-  display: flex; /* places logo and text in a row */
-  align-items: center; /* vertically centers logo and text */
-  gap: 10px; /* adds space between logo and text */
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--gold) !important; /* override Bootstrap color */
+  display: flex; /* align logo + text horizontally */
+  align-items: center;
+  gap: 10px; /* space between logo and text */
 }
 
-/* Styles the logo image inside navbar brand */
 .navbar-brand img {
-  width: 44px; /* sets logo width */
-  height: 44px; /* sets logo height */
-  object-fit: contain; /* keeps image proportions without distortion */
-  border-radius: 50%; /* makes image circular */
+  width: 44px;
+  height: 44px;
+  object-fit: contain; /* keeps image ratio */
+  border-radius: 50%; /* makes logo circular */
 }
 
-/* Styles navigation links inside navbar */
 .navbar-nav .nav-link {
-  color: var(--cream) !important; /* sets link color */
-  font-weight: 400; /* normal font weight */
-  letter-spacing: 0.5px; /* adds spacing between letters */
-  margin: 0 6px; /* space between links */
-  transition: color 0.3s ease; /* smooth color change on hover */
+  color: var(--cream) !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0 6px;
+  transition: color 0.3s ease; /* smooth hover */
 }
 
-/* Styles links when hovered or active */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--gold) !important; /* changes link color to gold */
+  color: var(--gold) !important; /* highlight active/hover */
 }
 
-/* Styles the mobile hamburger button */
 .navbar-toggler {
-  border-color: var(--gold); /* sets border color of toggle button */
+  border-color: var(--gold); /* mobile button border */
 }
 
-/* Styles the hamburger icon (3 lines) */
 .navbar-toggler-icon {
-  /* replaces default icon with custom gold SVG icon */
+  /* custom hamburger icon color */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* =====================
-   HERO SECTION (top banner area)
+   HERO
 ===================== */
-
-/* Main hero container */
 .hero {
-  position: relative; /* allows absolute positioned elements inside (overlay + text) */
-  width: 100%; /* full width of screen */
-  height: 100vh; /* full screen height (100% of viewport height) */
-  overflow: hidden; /* hides anything outside the hero area */
+  position: relative; /* allows overlay & content positioning */
+  width: 100%;
+  height: 100vh; /* full screen height */
+  overflow: hidden; /* hides overflow */
 }
 
-/* Hero background image */
 .hero-img {
-  width: 100%; /* full width */
-  height: 100%; /* full height */
-  object-fit: cover; /* image covers area without distortion */
-  object-position: center; /* keeps image centered */
-  display: block; /* removes extra space below image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills screen without distortion */
+  object-position: center;
+  display: block;
 }
 
-/* Dark overlay on top of image */
 .hero-overlay {
-  position: absolute; /* positions on top of hero */
-  inset: 0; /* top:0, right:0, bottom:0, left:0 (full cover) */
+  position: absolute;
+  inset: 0; /* covers entire hero */
   background: linear-gradient(
     to bottom,
-    rgba(26, 26, 46, 0.68) 0%, /* dark at top */
-    rgba(26, 26, 46, 0.08) 40%, /* fading */
-    rgba(26, 26, 46, 0.0) 100%  /* transparent at bottom */
-  ); /* improves text readability */
+    rgba(26, 26, 46, 0.68) 0%,
+    rgba(26, 26, 46, 0.08) 40%,
+    rgba(26, 26, 46, 0.0) 100%
+  ); /* dark overlay for readability */
 }
 
-/* Content placed on top of hero image */
 .hero-content {
-  position: absolute; /* floats above image */
-  top: 7%; /* distance from top */
-  left: 50%; /* move to center horizontally */
-  transform: translateX(-50%); /* perfectly centers horizontally */
-  text-align: center; /* centers text */
-  width: 90%; /* responsive width */
-  max-width: 620px; /* prevents text from being too wide */
+  position: absolute;
+  top: 7%; /* pushes content from top */
+  left: 50%;
+  transform: translateX(-50%); /* centers horizontally */
+  text-align: center;
+  width: 90%;
+  max-width: 620px; /* prevents too wide text */
 }
 
-/* Small label text above heading */
 .hero-tag {
-  font-size: 1.2rem; /* text size */
-  letter-spacing: 4px; /* spacing between letters */
-  text-transform: uppercase; /* makes text uppercase */
-  color: var(--gold); /* gold color */
-  margin-bottom: 8px; /* space below */
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
 }
 
-/* Main hero heading */
 .hero-content h1 {
-  font-size: 4rem; /* very large text */
-  color: #fff; /* white color */
-  line-height: 1.25; /* spacing between lines */
-  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* makes text readable on image */
-  margin-bottom: 8px; /* spacing below */
+  font-size: 4rem;
+  color: #fff;
+  line-height: 1.25;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* improves readability */
+  margin-bottom: 8px;
 }
 
-/* Highlighted word inside heading */
 .hero-content h1 span {
-  color: var(--gold); /* makes specific word gold */
+  color: var(--gold); /* highlight word */
 }
 
-/* Subtitle under heading */
 .hero-sub {
-  font-size: 1.4rem; /* medium text size */
-  color: rgba(245, 240, 232, 0.85); /* light transparent white */
-  font-weight: 300; /* thin font */
-  letter-spacing: 1px; /* spacing between letters */
-  margin-bottom: 16px; /* space below */
+  font-size: 1.4rem;
+  color: rgba(245, 240, 232, 0.85);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
 }
 
-/* Hero button */
 .btn-hero {
-  display: inline-block; /* behaves like button but keeps inline flow */
-  background-color: var(--gold); /* gold background */
-  color: var(--dark); /* dark text */
-  font-weight: 700; /* bold text */
-  padding: 16px 40px; /* space inside button */
-  border: 2px solid var(--gold); /* border same color as background */
-  border-radius: 2px; /* slightly rounded corners */
-  font-family: var(--font-body); /* body font */
-  letter-spacing: 2px; /* spacing between letters */
-  text-transform: uppercase; /* uppercase text */
-  font-size: 1rem; /* normal text size */
-  text-decoration: none; /* removes underline */
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* smooth hover animation */
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--dark);
+  font-weight: 700;
+  padding: 16px 40px;
+  border: 2px solid var(--gold);
+  border-radius: 2px;
+  font-family: var(--font-body);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
 .btn-hero:hover {
-  background-color: transparent; /* removes background */
-  color: #fff; /* text becomes white */
-  transform: translateY(-2px); /* slight lift effect */
+  background-color: transparent; /* transparent on hover */
+  color: #fff;
+  transform: translateY(-2px); /* slight lift */
 }
+
 /* =====================
    WELCOME SECTION
 ===================== */
@@ -400,38 +372,71 @@ h1, h2, h3 {
 /* =====================
    FOOTER
 ===================== */
-/* Styles the entire footer section */
 footer {
-  background-color: var(--cream); /* sets light background using CSS variable */
-  border-top: 1px solid rgba(201,168,76,0.3); /* adds a thin top border line */
-  padding: 12px 0 6px; /* adds space inside footer (top, right/left, bottom) */
+  background-color: var(--cream);
+  border-top: 1px solid rgba(201,168,76,0.3);
+  padding: 12px 0 6px;
 }
 
-/* Styles the brand name inside footer */
 .footer-brand {
-  font-family: var(--font-heading); /* applies heading font */
-  font-size: 1rem; /* sets text size */
-  color: var(--dark); /* sets text color */
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--dark);
 }
 
-/* Container for social media icons */
 .footer-social {
-  display: flex; /* places icons in a row */
-  justify-content: center; /* centers icons horizontally */
-  gap: 16px; /* adds space between icons */
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
-/* Hover effect for social media links */
 .footer-social a:hover {
-  color: var(--gold); /* changes icon color when hovered */
-  transform: translateY(-3px); /* moves icon slightly upward on hover */
+  color: var(--gold);
+  transform: translateY(-3px);
 }
 
-/* Bottom section of footer (copyright area) */
 .footer-bottom {
-  border-top: 1px solid rgba(0,0,0,0.08); /* adds light separator line */
-  margin-top: 8px; /* space above the section */
-  padding-top: 8px; /* space inside top of section */
-  text-align: center; /* centers text */
-  font-size: 0.78rem; /* makes text smaller */
-  color: #999; /* sets light gray text color */}
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin-top: 8px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #999;
+}
+/* =====================
+   MEDIA QUERIES (RESPONSIVE)
+===================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  /*Home page*/
+  .hero-content h1  { font-size: 2rem; }
+  .hero-content     { top: 5%; }
+  .hero-tag         { font-size: 0.8rem; }
+  .hero-sub         { font-size: 1rem; }
+
+  .section-welcome  { padding: 55px 0 30px; }
+  .section-welcome h2 { font-size: 1.8rem; }
+
+  .scroll-gallery   { height: 300px; margin-top: 32px; }
+  .scroll-track img { height: 150px; }
+
+  .welcome-stat     { gap: 20px; }
+
+  .facts-row        { gap: 12px; }
+  .fact-card        { min-width: 100px; padding: 16px 10px; }
+
+  .section-why      { padding: 55px 0; }
+  .section-why h2   { font-size: 1.8rem; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  /*Home page*/
+  .hero-content h1  { font-size: 1.4rem; }
+  .hero-tag         { font-size: 0.65rem; }
+  .btn-hero         { padding: 10px 24px; font-size: 0.8rem; }
+  .welcome-stat     { flex-direction: column; gap: 14px; }
+  .facts-row        { flex-wrap: wrap; }
+  .fact-card        { flex: 1 1 calc(33% - 12px); }
+}
