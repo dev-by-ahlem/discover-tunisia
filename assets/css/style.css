@@ -914,7 +914,145 @@ footer {
   line-height: 1.9;
   max-width: 700px;
 }
+/* =====================
+   DESTINATIONS LIST
+   Full width section containing
+   all destination rows
+===================== */
+.dest-list {
+  background-color: var(--cream);
+}
 
+
+/* =====================
+   SINGLE DESTINATION ROW
+   Each row = image (50%) + text (50%)
+   Alternates left/right using
+   flex-lg-row-reverse on even rows
+===================== */
+.dest-row {
+  min-height: 500px;           /* comfortable height for each row */
+  border-bottom: 1px solid rgba(201,168,76,0.15); /* subtle gold divider */
+}
+
+
+/* =====================
+   IMAGE SIDE
+   Takes exactly half the screen
+   Gold border + shadow + zoom on hover
+===================== */
+.dest-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;           /* matches row height */
+  overflow: hidden;            /* clips zoomed image */
+  position: relative;
+
+  /* Gold border around image */
+  border: 6px solid var(--gold);
+
+  /* Subtle shadow */
+  box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
+}
+
+.dest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills without stretching */
+  display: block;
+  transition: transform 0.5s ease; /* smooth zoom */
+}
+
+/* Image zooms on row hover */
+.dest-row:hover .dest-img-wrap img {
+  transform: scale(1.04);
+}
+
+
+/* =====================
+   TEXT SIDE
+   Takes the other half of the screen
+   Padding for comfortable reading
+===================== */
+.dest-text {
+  padding: 50px 60px;          /* generous padding */
+}
+
+/* Small category label above title */
+.dest-category {
+  display: inline-block;
+  background-color: rgba(201,168,76,0.15); /* light gold background */
+  color: var(--terracotta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.dest-category i {
+  margin-right: 6px;
+  color: var(--gold);
+}
+
+/* Destination title */
+.dest-text h2 {
+  font-size: 2.4rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* Description paragraph */
+.dest-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  text-align: justify;
+}
+
+/* Info list — location, best time, known for */
+.dest-info {
+  list-style: none;            /* removes default bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                   /* space between each item */
+}
+
+.dest-info li {
+  font-size: 0.92rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;                   /* space between icon and text */
+}
+
+/* Gold icons */
+.dest-info li i {
+  color: var(--gold);
+  font-size: 1rem;
+  width: 18px;                 /* fixed width keeps text aligned */
+}
+
+.dest-info li strong {
+  color: var(--dark);
+}
+
+
+/* =====================
+   ALTERNATING ROW BACKGROUND
+   Even rows get a slightly different
+   background to break the monotony
+===================== */
+.dest-row-reverse {
+  background-color: #fff;      /* white for reversed rows */
+}
 
 /* =====================
    MEDIA QUERIES (RESPONSIVE)
