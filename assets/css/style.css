@@ -85,13 +85,13 @@ h1, h2, h3 {
   position: relative; /* allows overlay & content positioning */
   width: 100%;
   height: 100vh; /* full screen height */
-  overflow: hidden; /* hides overflow */
+  overflow:hidden; /* hides overflow */
 }
 
 .hero-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* fills screen without distortion */
+  height: 80%;
+  object-fit:cover; /* fills screen without distortion */
   object-position: center;
   display: block;
 }
@@ -99,12 +99,7 @@ h1, h2, h3 {
 .hero-overlay {
   position: absolute;
   inset: 0; /* covers entire hero */
-  background: linear-gradient(
-    to bottom,
-    rgba(26, 26, 46, 0.68) 0%,
-    rgba(26, 26, 46, 0.08) 40%,
-    rgba(26, 26, 46, 0.0) 100%
-  ); /* dark overlay for readability */
+ background:rgba(26, 26, 46, 0.45); /* dark overlay for readability */
 }
 
 .hero-content {
@@ -419,7 +414,7 @@ footer {
   position: relative;          /* allows overlay & text to sit inside */
   width: 100%;
   height: 60vh;                /* shorter than homepage hero */
-  background-image: url('../images/view-port.jpg');
+  background-image: url('');
   background-size: cover;      /* image fills the full width */
   background-position: center; /* image stays centered */
   display: flex;
@@ -656,7 +651,7 @@ footer {
   position: relative;
   width: 100%;
   height: 60vh;
-  background-image: url('../images/scrolling-images/sidi-bou-said.jpg');
+  background-image: url('../images/hero-destination.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -856,7 +851,7 @@ footer {
   position: relative;
   width: 100%;
   height: 60vh;
-  background-image: url('../images/scrolling-images/sidi-bou-said.jpg');
+  background-image: url('../images/hero-destination.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
