@@ -849,6 +849,48 @@ footer {
 }
 
 /* =====================
+   HERO BANNER
+   Full width banner at the top
+===================== */
+.dest-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url('../images/scrolling-images/sidi-bou-said.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay on image */
+.dest-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.60);
+}
+
+/* Text on top of overlay */
+.dest-hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.dest-hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+.dest-hero-content h1 span {
+  color: var(--gold);
+}
+
+
+/* =====================
    MEDIA QUERIES (RESPONSIVE)
 ===================== */
 
