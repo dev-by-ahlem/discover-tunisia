@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+<!-- Declares HTML5 document -->
+
+<html lang="en">
+<!-- Root element of the page, language set to English -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Supports all characters (UTF-8 encoding) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Makes page responsive on all devices -->
+
+  <title>Destinations - Discover Tunisia</title>
+  <!-- Browser tab title -->
+
+  <!-- Bootstrap CSS (for layout and responsiveness) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts (custom typography) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome (icons library) -->
+  <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+
+  <!-- Shared CSS file -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="assets/css/destinations.css"/>
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg">
+    <!-- Bootstrap navbar, expands on large screens -->
+
+    <div class="container">
+      <!-- Centers content -->
+
+      <a class="navbar-brand" href="index.html">
+        <!-- Logo + brand link -->
+
+        <img src="assets/images/logo.png" alt="Logo"/>
+        <!-- Logo image -->
+
+        <em>Discover Tunisia</em>
+        <!-- Brand name -->
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+        <!-- Hamburger icon (Bootstrap default) -->
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <!-- Collapsible menu for mobile -->
+
+        <ul class="navbar-nav ms-auto">
+          <!-- Navigation list aligned right -->
+
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+  
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <!-- Footer section -->
+
+    <div class="container">
+
+      <div class="row align-items-center">
+        <!-- Flex layout -->
+
+        <div class="col-md-4">
+          <!-- Left footer -->
+
+          <p class="footer-brand"><em>Tunisia</em></p>
+          <p class="footer-tagline">Your gateway to the Mediterranean.</p>
+
+        </div>
+
+        <div class="col-md-4 text-center">
+          <!-- Social icons -->
+
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 text-md-end">
+          <!-- Right footer -->
+
+          <p class="footer-tagline">Made with ❤️ for Tunisia</p>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <!-- Copyright -->
+
+        &copy; 2026 Discover Tunisia. All rights reserved.
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap JS (for navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

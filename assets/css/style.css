@@ -404,6 +404,206 @@ footer {
   color: #999;
 }
 /* =====================
+   DESTINATIONS PAGE CSS
+   File: assets/css/destinations.css
+   Linked in: destinations.html only
+===================== */
+
+
+/* =====================
+   HERO BANNER
+   Full width image banner at the top
+   of the destinations page
+===================== */
+.dest-hero {
+  position: relative;          /* allows overlay & text to sit inside */
+  width: 100%;
+  height: 60vh;                /* shorter than homepage hero */
+  background-image: url('../images/view-port.jpg');
+  background-size: cover;      /* image fills the full width */
+  background-position: center; /* image stays centered */
+  display: flex;
+  align-items: center;         /* text centered vertically */
+  justify-content: center;     /* text centered horizontally */
+}
+
+/* Dark overlay on image for text readability */
+.dest-hero-overlay {
+  position: absolute;
+  inset: 0;                    /* covers full hero */
+  background: rgba(26, 26, 46, 0.60);
+}
+
+/* Text block — sits above the overlay */
+.dest-hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;                  /* on top of overlay */
+}
+
+.dest-hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+/* Gold keyword highlight */
+.dest-hero-content h1 span {
+  color: var(--gold);
+}
+
+
+/* =====================
+   INTRO TEXT SECTION
+   Short description below the hero
+===================== */
+.dest-intro {
+  padding: 60px 0 20px;
+  background-color: var(--cream);
+}
+
+.dest-intro h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.dest-intro h2 span {
+  color: var(--gold);
+}
+
+.dest-intro p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+  max-width: 700px;            /* keeps text readable */
+}
+
+
+/* =====================
+   CARDS SECTION
+   Container for all destination cards
+===================== */
+.dest-cards {
+  padding: 40px 0 80px;
+  background-color: var(--cream);
+}
+
+
+/* =====================
+   SINGLE CARD
+   White card with shadow and hover lift
+===================== */
+.dest-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;            /* clips image to rounded corners */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;                /* equal height in same row */
+}
+
+/* Card lifts up on hover */
+.dest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* =====================
+   CARD IMAGE
+   Fixed height image at top of card
+   Zooms slightly on hover
+===================== */
+.dest-card-img {
+  position: relative;          /* needed for tag positioning */
+  overflow: hidden;            /* clips zoomed image */
+}
+
+.dest-card-img img {
+  width: 100%;
+  height: 220px;               /* all images same height */
+  object-fit: cover;           /* fills without stretching */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Image zooms when card is hovered */
+.dest-card:hover .dest-card-img img {
+  transform: scale(1.06);
+}
+
+
+/* =====================
+   CARD TAG
+   Small gold pill label on top of image
+   e.g. "History", "Beach", "Island"
+===================== */
+.dest-tag {
+  position: absolute;          /* sits on the image */
+  top: 14px;
+  left: 14px;
+  background-color: var(--gold);
+  color: var(--dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;         /* pill shape */
+}
+
+
+/* =====================
+   CARD BODY
+   Text area below the image
+===================== */
+.dest-card-body {
+  padding: 22px 20px 16px;
+}
+
+.dest-card-body h3 {
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.dest-card-body p {
+  font-size: 0.92rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+
+/* =====================
+   CARD FOOTER
+   Location and type shown at bottom
+   of each card
+===================== */
+.dest-card-footer {
+  display: flex;
+  justify-content: space-between; /* items on opposite sides */
+  font-size: 0.8rem;
+  color: #999;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  padding-top: 12px;
+}
+
+/* Each item = icon + text */
+.dest-card-footer span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Gold icons */
+.dest-card-footer i {
+  color: var(--gold);
+}
+/* =====================
    MEDIA QUERIES (RESPONSIVE)
 ===================== */
 
@@ -440,3 +640,248 @@ footer {
   .facts-row        { flex-wrap: wrap; }
   .fact-card        { flex: 1 1 calc(33% - 12px); }
 }
+
+/* =====================
+   DESTINATIONS PAGE CSS
+   File: assets/css/destinations.css
+   Linked in: destinations.html only
+===================== */
+
+
+/* =====================
+   HERO BANNER
+   Full width banner at the top
+===================== */
+.dest-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url('../images/scrolling-images/sidi-bou-said.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay on image */
+.dest-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.60);
+}
+
+/* Text on top of overlay */
+.dest-hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.dest-hero-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+.dest-hero-content h1 span {
+  color: var(--gold);
+}
+
+
+/* =====================
+   INTRO TEXT SECTION
+   Short description below hero
+===================== */
+.dest-intro {
+  padding: 60px 0 20px;
+  background-color: var(--cream);
+}
+
+.dest-intro h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.dest-intro h2 span {
+  color: var(--gold);
+}
+
+.dest-intro p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+  max-width: 700px;
+}
+
+
+/* =====================
+   DESTINATIONS LIST
+   Full width section containing
+   all destination rows
+===================== */
+.dest-list {
+  background-color: var(--cream);
+}
+
+
+/* =====================
+   SINGLE DESTINATION ROW
+   Each row = image (50%) + text (50%)
+   Alternates left/right using
+   flex-lg-row-reverse on even rows
+===================== */
+.dest-row {
+  min-height: 500px;           /* comfortable height for each row */
+  border-bottom: 1px solid rgba(201,168,76,0.15); /* subtle gold divider */
+}
+
+
+/* =====================
+   IMAGE SIDE
+   Takes exactly half the screen
+   Gold border + shadow + zoom on hover
+===================== */
+.dest-img-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;           /* matches row height */
+  overflow: hidden;            /* clips zoomed image */
+  position: relative;
+
+  /* Gold border around image */
+  border: 6px solid var(--gold);
+
+  /* Subtle shadow */
+  box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
+}
+
+.dest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* fills without stretching */
+  display: block;
+  transition: transform 0.5s ease; /* smooth zoom */
+}
+
+/* Image zooms on row hover */
+.dest-row:hover .dest-img-wrap img {
+  transform: scale(1.04);
+}
+
+
+/* =====================
+   TEXT SIDE
+   Takes the other half of the screen
+   Padding for comfortable reading
+===================== */
+.dest-text {
+  padding: 50px 60px;          /* generous padding */
+}
+
+/* Small category label above title */
+.dest-category {
+  display: inline-block;
+  background-color: rgba(201,168,76,0.15); /* light gold background */
+  color: var(--terracotta);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.dest-category i {
+  margin-right: 6px;
+  color: var(--gold);
+}
+
+/* Destination title */
+.dest-text h2 {
+  font-size: 2.4rem;
+  color: var(--dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* Description paragraph */
+.dest-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  text-align: justify;
+}
+
+/* Info list — location, best time, known for */
+.dest-info {
+  list-style: none;            /* removes default bullet points */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                   /* space between each item */
+}
+
+.dest-info li {
+  font-size: 0.92rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;                   /* space between icon and text */
+}
+
+/* Gold icons */
+.dest-info li i {
+  color: var(--gold);
+  font-size: 1rem;
+  width: 18px;                 /* fixed width keeps text aligned */
+}
+
+.dest-info li strong {
+  color: var(--dark);
+}
+
+/* =====================
+   MEDIA QUERIES (RESPONSIVE)
+===================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-content h1  { font-size: 2rem; }
+  .hero-content     { top: 5%; }
+  .hero-tag         { font-size: 0.8rem; }
+  .hero-sub         { font-size: 1rem; }
+
+  .section-welcome  { padding: 55px 0 30px; }
+  .section-welcome h2 { font-size: 1.8rem; }
+
+  .scroll-gallery   { height: 300px; margin-top: 32px; }
+  .scroll-track img { height: 150px; }
+
+  .welcome-stat     { gap: 20px; }
+
+  .facts-row        { gap: 12px; }
+  .fact-card        { min-width: 100px; padding: 16px 10px; }
+
+  .section-why      { padding: 55px 0; }
+  .section-why h2   { font-size: 1.8rem; }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-content h1  { font-size: 1.4rem; }
+  .hero-tag         { font-size: 0.65rem; }
+  .btn-hero         { padding: 10px 24px; font-size: 0.8rem; }
+  .welcome-stat     { flex-direction: column; gap: 14px; }
+  .facts-row        { flex-wrap: wrap; }
+  .fact-card        { flex: 1 1 calc(33% - 12px); }
+}
+
+
