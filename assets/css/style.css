@@ -581,17 +581,10 @@ footer {
 ========================================================= */
 @media (max-width: 992px) {
 
-  .dest-text {
-    padding: 40px 30px;
-  }
-
-  .dest-text h2 {
-    font-size: 2rem;
-  }
-
-  .dest-img-wrap {
-    min-height: 380px;
-  }
+  /* --- Destinations --- */
+  .dest-text        { padding: 40px 30px; }
+  .dest-text h2     { font-size: 2rem; }
+  .dest-img-wrap    { min-height: 380px; }
 }
 
 /* =========================================================
@@ -599,37 +592,50 @@ footer {
 ========================================================= */
 @media (max-width: 768px) {
 
-  /* Home */
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content { top: 5%; }
-  .hero-tag { font-size: 0.8rem; }
-  .hero-sub { font-size: 1rem; }
+  /* --- Home Hero --- */
+  .hero-content h1  { font-size: 2rem; }
+  .hero-content     { top: 5%; }
+  .hero-tag         { font-size: 0.8rem; }
+  .hero-sub         { font-size: 1rem; }
 
-  .section-welcome { padding: 55px 0 30px; }
+  /* --- Welcome Section --- */
+  .section-welcome  { padding: 55px 0 30px; }
   .section-welcome h2 { font-size: 1.8rem; }
+  .welcome-stat     { gap: 20px; }
 
-  .scroll-gallery { height: 300px; margin-top: 32px; }
+  /* --- Scrolling Gallery --- */
+  .scroll-gallery   { height: 300px; margin-top: 32px; }
   .scroll-track img { height: 150px; }
 
-  .welcome-stat { gap: 20px; }
+  /* --- Fact Cards --- */
+  /* 3 cards per row, compact size */
+  .facts-row        { gap: 10px; }
+  .fact-card        {
+    flex: 1 1 calc(33% - 10px);
+    min-width: 0;
+    padding: 14px 6px;
+  }
+  .fact-icon        { font-size: 1.1rem; margin-bottom: 6px; }
+  .fact-label       { font-size: 0.58rem; letter-spacing: 0.5px; }
+  .fact-value       { font-size: 0.82rem; }
 
-  .facts-row { gap: 12px; }
-  .fact-card { min-width: 100px; padding: 16px 10px; }
+  /* --- Why Cards --- */
+  /* Force 2 columns on tablet */
+  .section-why      { padding: 55px 0; }
+  .section-why h2   { font-size: 1.8rem; }
+  .section-why .col-lg-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 
-  .section-why { padding: 55px 0; }
-  .section-why h2 { font-size: 1.8rem; }
-
-  /* Destinations */
-  .dest-hero { height: 45vh; }
+  /* --- Destinations --- */
+  .dest-hero            { height: 45vh; }
   .dest-hero-content h1 { font-size: 2rem; }
-
-  .dest-intro { padding: 40px 0 10px; }
-  .dest-intro h2 { font-size: 1.7rem; }
-
-  .dest-img-wrap { min-height: 280px; }
-
-  .dest-text { padding: 30px 20px; }
-  .dest-text h2 { font-size: 1.6rem; }
+  .dest-intro           { padding: 40px 0 10px; }
+  .dest-intro h2        { font-size: 1.7rem; }
+  .dest-img-wrap        { min-height: 280px; }
+  .dest-text            { padding: 30px 20px; }
+  .dest-text h2         { font-size: 1.6rem; }
 }
 
 /* =========================================================
@@ -637,17 +643,31 @@ footer {
 ========================================================= */
 @media (max-width: 480px) {
 
-  /* Home */
-  .hero-content h1 { font-size: 1.4rem; }
-  .hero-tag { font-size: 0.65rem; }
-  .btn-hero { padding: 10px 24px; font-size: 0.8rem; }
+  /* --- Home Hero --- */
+  .hero-content h1  { font-size: 1.4rem; }
+  .hero-tag         { font-size: 0.65rem; }
+  .btn-hero         { padding: 10px 24px; font-size: 0.8rem; }
 
-  .welcome-stat { flex-direction: column; gap: 14px; }
+  /* --- Welcome Section --- */
+  .welcome-stat     { flex-direction: column; gap: 14px; }
 
-  .facts-row { flex-wrap: wrap; }
-  .fact-card { flex: 1 1 calc(33% - 12px); }
+  /* --- Fact Cards --- */
+  /* Keep 3 per row even on small screens */
+  .fact-card        {
+    flex: 1 1 calc(33% - 10px);
+    padding: 12px 4px;
+  }
+  .fact-label       { font-size: 0.55rem; }
+  .fact-value       { font-size: 0.78rem; }
 
-  /* Destinations */
+  /* --- Why Cards --- */
+  /* 1 column on very small screens */
+  .section-why .col-lg-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* --- Destinations --- */
   .dest-hero-content h1 { font-size: 1.5rem; }
-  .dest-text h2 { font-size: 1.4rem; }
+  .dest-text h2         { font-size: 1.4rem; }
 }
