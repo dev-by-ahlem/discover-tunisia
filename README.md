@@ -43,7 +43,7 @@
   - [......](#....)
   - [Footer](#footer)
 - [Contact](#contact)
-   - [Navbar](#Navbar)
+  - [Navbar](#Navbar)
   - [......](#....)
   - [Footer](#footer)
 - [Validations](#validations)
@@ -55,3 +55,22 @@
  
   - [Contact Us](#contact-us)
   - [Thank you message](#thank-you-message)
+ 
+    ------------------
+    ------------------
+ 
+ ## Project Goals
+    
+- Create an informative and visually engaging website that showcases Tunisia as a travel destination.
+- Promote Tunisia’s rich culture, history, and landscapes through high-quality images, interactive sections, and well-structured content.
+- Provide visitors with clear and useful travel information, including destinations, cultural insights, and practical tips.
+- Inspire users to explore Tunisia by creating an immersive and user-friendly experience that highlights the country’s beauty and diversity.
+- Encourage engagement through modern design, smooth interactions, and accessible navigation across all devices.
+  
+## Responsive Design
+
+- The website was designed with flexibility in mind, allowing it to adapt smoothly to different screen sizes and devices, from large desktop displays to tablets and smartphones.
+- This was achieved using Bootstrap’s grid system alongside custom CSS media queries to ensure a consistent and user-friendly experience.
+
+  
+  
