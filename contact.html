@@ -56,19 +56,15 @@
 
   <!-- =====================================================
        HERO — Google Map of Tunisia
-       Real interactive map so tourists can
-       explore Tunisia before contacting us
   ====================================================== -->
   <section class="contact-hero">
 
-    <!-- Title block sits above the map -->
     <div class="contact-hero-text">
       <p class="hero-tag">Find Your Way</p>
       <h1>Explore <span>Tunisia</span> on the Map</h1>
       <p class="hero-sub">Click around — your next adventure is waiting</p>
     </div>
 
-    <!-- Google Maps iframe — shows full Tunisia -->
     <div class="contact-map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541455.0!2d7.5!3d33.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd5c2ab6b3e27d%3A0xeae69da7f5a0b93e!2sTunisia!5e0!3m2!1sen!2stn!4v1"
@@ -83,10 +79,111 @@
   </section>
 
 
- 
+  <!-- =====================================================
+       FUNNY REQUIREMENTS SECTION
+  ====================================================== -->
+  <section class="contact-requirements">
+    <div class="container">
+
+      <p class="section-label">Before You Contact Us</p>
+      <h2>Please Confirm You Are <span>Ready</span> 😄</h2>
+      <p class="req-subtitle">
+        All boxes must be checked before the contact form appears.
+        We are very serious about this. 🇹🇳
+      </p>
+
+      <!-- Checkbox 1 -->
+      <input type="checkbox" id="req1" class="req-checkbox-hidden">
+      <label class="req-item" for="req1">
+        <span class="req-box"></span>
+        <span class="req-text">🧭 I am ready to get lost in a medina and pretend it was completely planned</span>
+      </label>
+
+      <!-- Checkbox 2 -->
+      <input type="checkbox" id="req2" class="req-checkbox-hidden">
+      <label class="req-item" for="req2">
+        <span class="req-box"></span>
+        <span class="req-text">🌶️ I solemnly swear I will try harissa even if it looks dangerously spicy</span>
+      </label>
+
+      <!-- Checkbox 3 -->
+      <input type="checkbox" id="req3" class="req-checkbox-hidden">
+      <label class="req-item" for="req3">
+        <span class="req-box"></span>
+        <span class="req-text">🍽️ I will NEVER say "I'm not hungry" in a Tunisian home — ever</span>
+      </label>
+
+      <!-- Checkbox 4 -->
+      <input type="checkbox" id="req4" class="req-checkbox-hidden">
+      <label class="req-item" for="req4">
+        <span class="req-box"></span>
+        <span class="req-text">🍵 I accept that mint tea will be offered approximately 47 times per day</span>
+      </label>
+
+      <!-- Checkbox 5 -->
+      <input type="checkbox" id="req5" class="req-checkbox-hidden">
+      <label class="req-item" for="req5">
+        <span class="req-box"></span>
+        <span class="req-text">🕐 I understand that "5 minutes away" can mean anything from 5 to 45 minutes</span>
+      </label>
+
+      <!-- Checkbox 6 -->
+      <input type="checkbox" id="req6" class="req-checkbox-hidden">
+      <label class="req-item" for="req6">
+        <span class="req-box"></span>
+        <span class="req-text">🐪 I am mentally prepared to ride a camel and pretend I am not terrified</span>
+      </label>
+
+      <!-- Checkbox 7 -->
+      <input type="checkbox" id="req7" class="req-checkbox-hidden">
+      <label class="req-item" for="req7">
+        <span class="req-box"></span>
+        <span class="req-text">🛍️ I acknowledge that the souk vendor calling me "my friend" will cost me money</span>
+      </label>
+
+      <!-- Checkbox 8 — FINAL FIX -->
+      <div style="position: relative;">
+
+        <!-- Checkbox must NOT be inside the link -->
+        <input type="checkbox" id="req8" class="req-checkbox-hidden">
+
+        <!-- Label checks the checkbox -->
+        <label class="req-item" for="req8">
+          <span class="req-box"></span>
+          <span class="req-text">
+            ❤️ I accept that I will fall in love with Tunisia and never truly want to leave
+          </span>
+        </label>
+
+        <!-- Invisible link overlay (scrolls to form) -->
+        <a href="#form-start"
+           style="
+             position:absolute;
+             inset:0;
+             z-index:5;
+             text-decoration:none;
+             color:inherit;
+           ">
+        </a>
+
+      </div>
+
+      <!-- Warning -->
+      <p class="req-warning" id="req-warning">
+        ⚠️ Please check all boxes to unlock the contact form!
+      </p>
+
+      <!-- Anchor for auto-scroll -->
+      <a id="form-start"></a>
+
+      
+
+    </div>
+  </section>
+
 
   <!-- =====================================================
-       FOOTER — same as all pages
+       FOOTER
   ====================================================== -->
   <footer>
     <div class="container">
