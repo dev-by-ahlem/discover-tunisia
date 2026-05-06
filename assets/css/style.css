@@ -577,6 +577,247 @@ footer {
 }
 
 /* =========================================================
+   CONTACT — HERO MAP SECTION
+   Shows Google Map with title on top
+========================================================= */
+.contact-hero {
+  position: relative;
+  width: 100%;
+}
+
+/* Title block above the map */
+.contact-hero-text {
+  background-color: var(--dark);
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.contact-hero-text h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Gold highlight on keyword */
+.contact-hero-text h1 span {
+  color: var(--gold);
+}
+
+.contact-hero-text .hero-sub {
+  font-size: 1rem;
+  color: rgba(245, 240, 232, 0.8);
+  font-weight: 300;
+}
+
+/* Map container — fixed height */
+.contact-map {
+  width: 100%;
+  height: 450px;
+}
+
+/* iframe fills the full map container */
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================================================
+   CONTACT — FUNNY REQUIREMENTS SECTION
+   Checklist tourists must complete before
+   the contact form is unlocked
+========================================================= */
+.contact-requirements {
+  padding: 80px 0;
+  background-color: var(--cream);
+}
+
+.contact-requirements h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+/* Gold highlight on keyword */
+.contact-requirements h2 span {
+  color: var(--gold);
+}
+
+/* Small subtitle below heading */
+.req-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* Container for all checklist items */
+.req-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 750px;
+}
+
+/* Single checklist item */
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #fff;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Highlight on hover */
+.req-item:hover {
+  border-color: var(--gold);
+  background-color: rgba(201,168,76,0.05);
+}
+
+/* The checkbox input */
+.req-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--gold); /* makes checkbox gold when ticked */
+  flex-shrink: 0;
+}
+
+/* Text next to checkbox */
+.req-text {
+  font-size: 0.98rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Warning shown when not all boxes are ticked */
+.req-warning {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: var(--terracotta);
+  font-weight: 600;
+}
+
+/* =========================================================
+   CONTACT — FORM SECTION
+   Hidden by default — unlocked when all
+   checkboxes are ticked
+========================================================= */
+.contact-form-section {
+  display: none; /* hidden until all boxes are checked */
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contact-form-section h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+/* Gold highlight on keyword */
+.contact-form-section h2 span {
+  color: var(--gold);
+}
+
+/* Small text below form title */
+.form-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 36px;
+}
+
+/* Input and textarea styling */
+.contact-input {
+  background-color: var(--cream);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition: border-color 0.3s ease;
+}
+
+/* Gold border when input is focused/clicked */
+.contact-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Form label styling */
+.contact-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+/* Submit button */
+.btn-contact-submit {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--dark);
+  font-weight: 700;
+  padding: 14px 40px;
+  border: 2px solid var(--gold);
+  border-radius: 25px; /* rounded corners */
+  font-family: var(--font-body);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Invert colors on hover */
+.btn-contact-submit:hover {
+  background-color: transparent;
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Icon inside the button */
+.btn-contact-submit i {
+  margin-left: 8px;
+}
+
+/* =========================================================
+   CONTACT — THANK YOU MESSAGE
+   Hidden by default — shown after form submit
+========================================================= */
+.thank-you-msg {
+  display: none; /* hidden until form is submitted */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Big emoji at top */
+.thank-you-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-msg h3 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.thank-you-msg p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* =========================================================
    MEDIA QUERIES — TABLET (max-width: 992px)
 ========================================================= */
 @media (max-width: 992px) {
@@ -636,6 +877,262 @@ footer {
   .dest-img-wrap        { min-height: 280px; }
   .dest-text            { padding: 30px 20px; }
   .dest-text h2         { font-size: 1.6rem; }
+
+  /* --- Contact --- */
+  .contact-hero-text h1   { font-size: 2rem; }
+  .contact-map            { height: 320px; }
+  .contact-requirements   { padding: 55px 0; }
+  .contact-requirements h2 { font-size: 1.8rem; }
+  .contact-form-section   { padding: 55px 0; }
+  .req-text               { font-size: 0.9rem; }
+}
+/* =========================================================
+   CONTACT — HERO MAP SECTION
+   Title on top, Google Map below
+========================================================= */
+.contact-hero {
+  position: relative;
+  width: 100%;
+}
+
+/* Dark title block above map */
+.contact-hero-text {
+  background-color: var(--dark);
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+
+.contact-hero-text h1 {
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-hero-text h1 span {
+  color: var(--gold);
+}
+
+.contact-hero-text .hero-sub {
+  font-size: 1rem;
+  color: rgba(245, 240, 232, 0.8);
+  font-weight: 300;
+}
+
+/* Map container */
+.contact-map {
+  width: 100%;
+  height: 450px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================================================
+   CONTACT — REQUIREMENTS SECTION
+========================================================= */
+.contact-requirements {
+  padding: 80px 0;
+  background-color: var(--cream);
+}
+
+.contact-requirements h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.contact-requirements h2 span {
+  color: var(--gold);
+}
+
+.req-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* Each checklist item row */
+.req-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #fff;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px;
+  padding: 18px 20px;
+  cursor: pointer;
+  margin-bottom: 16px;        /* space between items */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  max-width: 750px;
+}
+
+.req-item:hover {
+  border-color: var(--gold);
+  background-color: rgba(201,168,76,0.05);
+}
+
+/* Hide the real checkbox — we use custom box */
+.req-checkbox-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom checkbox box — the visible square */
+.req-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(201,168,76,0.4);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: 0.3s ease;
+  position: relative;
+  background-color: #fff;
+}
+
+/* Gold box when checked */
+.req-checkbox-hidden:checked + .req-item .req-box {
+  background-color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Tick mark inside box when checked */
+.req-checkbox-hidden:checked + .req-item .req-box::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Gold border on label when checked */
+.req-checkbox-hidden:checked + .req-item {
+  border-color: var(--gold);
+  background-color: rgba(201,168,76,0.05);
+}
+
+/* Text next to checkbox */
+.req-text {
+  font-size: 0.98rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Warning message */
+.req-warning {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  color: var(--terracotta);
+  font-weight: 600;
+  max-width: 750px;
+}
+
+/* =========================================================
+   CONTACT — FORM WRAPPER
+   Hidden by default
+   Shows ONLY when all 8 checkboxes are checked
+   
+   HOW THE CSS TRICK WORKS:
+   ~ means "general sibling that comes after"
+   So: when req1 AND req2 ... AND req8 are all :checked,
+   find .contact-form-wrapper and show it
+========================================================= */
+/* Hide form by default */
+.contact-form-wrapper {
+  display: none;
+}
+
+/* Hide warning when last checkbox is checked */
+#req8:checked ~ .req-warning {
+  display: none;
+}
+
+/* Show form when last checkbox is checked */
+#req8:checked ~ .contact-form-wrapper {
+  display: block;
+}
+
+
+/* Form section heading */
+.contact-form-wrapper h2 {
+  font-size: 2.2rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.contact-form-wrapper h2 span {
+  color: var(--gold);
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 36px;
+}
+
+/* Input and textarea */
+.contact-input {
+  background-color: var(--cream);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition: border-color 0.3s ease;
+}
+
+/* Gold border on focus */
+.contact-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Form labels */
+.contact-form .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+/* Submit button */
+.btn-contact-submit {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--dark);
+  font-weight: 700;
+  padding: 14px 40px;
+  border: 2px solid var(--gold);
+  border-radius: 25px;
+  font-family: var(--font-body);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-contact-submit:hover {
+  background-color: transparent;
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.btn-contact-submit i {
+  margin-left: 8px;
 }
 
 /* =========================================================
@@ -670,4 +1167,11 @@ footer {
   /* --- Destinations --- */
   .dest-hero-content h1 { font-size: 1.5rem; }
   .dest-text h2         { font-size: 1.4rem; }
+
+  /* --- Contact --- */
+  .contact-hero-text h1  { font-size: 1.6rem; }
+  .contact-map           { height: 260px; }
+  .req-item              { padding: 14px 14px; }
+  .req-text              { font-size: 0.85rem; }
+  .btn-contact-submit    { padding: 12px 28px; font-size: 0.8rem; }
 }

@@ -5,8 +5,7 @@
   <!-- ================= BASIC PAGE SETUP ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Discover Tunisia</title>
+  <title>Contact - Discover Tunisia</title>
 
   <!-- ================= FONTS & ICONS ================= -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -17,24 +16,22 @@
 
   <!-- ================= CUSTOM CSS ================= -->
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
 
   <!-- =====================================================
-       NAVBAR
-       Main site navigation — logo + links
+       NAVBAR — same as all pages
   ====================================================== -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
 
-      <!-- Logo + site name -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
         <em>Discover Tunisia</em>
       </a>
 
-      <!-- Mobile menu toggle -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarMenu"
@@ -44,35 +41,62 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </div>
 
     </div>
   </nav>
-  <div style="height: 80vh"></div>
-  <h1>page loading...</h1>
-   <!-- =====================================================
-       FOOTER
-       Simple footer with branding, social links, and credits
+
+
+  <!-- =====================================================
+       HERO — Google Map of Tunisia
+       Real interactive map so tourists can
+       explore Tunisia before contacting us
+  ====================================================== -->
+  <section class="contact-hero">
+
+    <!-- Title block sits above the map -->
+    <div class="contact-hero-text">
+      <p class="hero-tag">Find Your Way</p>
+      <h1>Explore <span>Tunisia</span> on the Map</h1>
+      <p class="hero-sub">Click around — your next adventure is waiting</p>
+    </div>
+
+    <!-- Google Maps iframe — shows full Tunisia -->
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541455.0!2d7.5!3d33.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd5c2ab6b3e27d%3A0xeae69da7f5a0b93e!2sTunisia!5e0!3m2!1sen!2stn!4v1"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </section>
+
+
+ 
+
+  <!-- =====================================================
+       FOOTER — same as all pages
   ====================================================== -->
   <footer>
     <div class="container">
       <div class="row align-items-center">
 
-        <!-- Left: Brand -->
         <div class="col-md-4">
           <p class="footer-brand">Tunisia</p>
           <p class="footer-tagline">My first project</p>
         </div>
 
-        <!-- Center: Social icons -->
         <div class="col-md-4 text-center">
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -82,20 +106,17 @@
           </div>
         </div>
 
-        <!-- Right: Message -->
         <div class="col-md-4 text-md-end">
           <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
         </div>
 
       </div>
-
-      <!-- Bottom copyright -->
       <div class="footer-bottom">
         &copy; 2026 Discover Tunisia. All rights reserved.
       </div>
-
     </div>
   </footer>
+
 
   <!-- ================= BOOTSTRAP JS ================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
