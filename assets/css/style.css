@@ -856,6 +856,13 @@ footer {
   .dest-text { padding: 30px 20px; }
   .dest-text h2 { font-size: 1.6rem; }
 
+  .contact-hero-text h1 { font-size: 2rem; }
+  .contact-map { height: 320px; }
+  .contact-requirements { padding: 55px 0; }
+  .contact-requirements h2 { font-size: 1.8rem; }
+  .contact-form-section { padding: 55px 0; }
+  .req-text { font-size: 0.9rem; }
+
   
 }
 
@@ -884,5 +891,10 @@ footer {
   .dest-hero-content h1 { font-size: 1.5rem; }
   .dest-text h2 { font-size: 1.4rem; }
 
+  .contact-hero-text h1 { font-size: 1.6rem; }
+  .contact-map { height: 260px; }
+  .req-item { padding: 14px 14px; }
+  .req-text { font-size: 0.85rem; }
+  .btn-contact-submit { padding: 12px 28px; font-size: 0.8rem; }
   
 }
