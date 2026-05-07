@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
+
   <!-- ================= BASIC PAGE SETUP ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Discover Tunisia</title>
+  <title>Destinations - Discover Tunisia</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
   <!-- ================= FONTS & ICONS ================= -->
@@ -18,24 +18,23 @@
 
   <!-- ================= CUSTOM CSS ================= -->
   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
 
   <!-- =====================================================
-       NAVBAR
-       Shared navigation bar across all pages
+       NAVBAR — identical on every page
+       Active class is on "Destinations" here
   ====================================================== -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
 
-      <!-- Logo + brand -->
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
         <em>Discover Tunisia</em>
       </a>
 
-      <!-- Mobile toggle -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarMenu"
@@ -45,7 +44,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navigation links -->
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -60,35 +58,31 @@
 
   <!-- =====================================================
        HERO BANNER
+       Background image with dark overlay + centered text.
+       Shorter than home hero (60vh instead of 100vh).
   ====================================================== -->
   <section class="dest-hero">
+
+    <!-- Dark overlay for readability -->
     <div class="dest-hero-overlay"></div>
 
+    <!-- Centered text on top of overlay -->
     <div class="dest-hero-content">
       <p class="hero-tag">Explore the Beauty</p>
-
-      <h1>
-        Top <span>Destinations</span><br>
-        in Tunisia
-      </h1>
-
-      <p class="hero-sub">
-        From ancient ruins to golden beaches — find your next adventure
-      </p>
+      <h1>Top <span>Destinations</span><br>in Tunisia</h1>
+      <p class="hero-sub">From ancient ruins to golden beaches — find your next adventure</p>
     </div>
+
   </section>
 
   <!-- =====================================================
        INTRO SECTION
+       Short paragraph introducing the destinations list.
   ====================================================== -->
   <section class="dest-intro">
     <div class="container">
       <p class="section-label">Where to Go</p>
-
-      <h2>
-        Tunisia's Most <span>Unforgettable</span> Places
-      </h2>
-
+      <h2>Tunisia's Most <span>Unforgettable</span> Places</h2>
       <p>
         Tunisia is packed with hidden gems waiting to be discovered. Whether you're
         drawn to ancient history, desert adventures, coastal villages, or vibrant
@@ -99,32 +93,32 @@
 
   <!-- =====================================================
        DESTINATIONS LIST
+       Magazine-style layout: image on one side, text on other.
+       Rows alternate: image left / image right.
+       Uses container-fluid + g-0 so content goes edge to edge.
   ====================================================== -->
   <section class="dest-list">
     <div class="container-fluid px-0">
 
-      <!-- =====================================================
-           DESTINATION 1 — Sidi Bou Said
-      ====================================================== -->
+      <!-- ===== DESTINATION 1 — Sidi Bou Said (image LEFT) ===== -->
       <div class="dest-row row g-0">
 
+        <!-- Image side -->
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said village overlooking the sea">
+            <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said village">
           </div>
         </div>
 
+        <!-- Text side -->
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-camera"></i> Must See</span>
-
             <h2>Sidi Bou Said</h2>
-
             <p>
               A magical cliffside village of blue doors and white walls overlooking the Mediterranean.
-              One of Tunisia's most iconic and photogenic spots — perfect for photography lovers and romantic getaways.
+              One of Tunisia's most iconic and photogenic spots.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Tunis Area</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> April – October</li>
@@ -135,28 +129,24 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 2 — Carthage
-      ====================================================== -->
+      <!-- ===== DESTINATION 2 — Carthage (image RIGHT) ===== -->
+      <!-- flex-lg-row-reverse flips the columns on large screens -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
 
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Ancient ruins of Carthage">
+            <img src="assets/images/scrolling-images/carthage-jam.png" alt="Ancient ruins of Carthage">
           </div>
         </div>
 
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
-
             <h2>Carthage</h2>
-
             <p>
               Walk through the ruins of one of the ancient world's greatest civilisations.
-              Carthage is a UNESCO World Heritage Site overlooking the Gulf of Tunis — a must for every history lover.
+              A UNESCO World Heritage Site overlooking the Gulf of Tunis.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Tunis Area</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> March – May, Sept – Nov</li>
@@ -167,9 +157,7 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 3 — El Jem
-      ====================================================== -->
+      <!-- ===== DESTINATION 3 — El Jem (image LEFT) ===== -->
       <div class="dest-row row g-0">
 
         <div class="col-lg-6">
@@ -181,14 +169,11 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
-
             <h2>El Jem Amphitheatre</h2>
-
             <p>
               One of the best-preserved Roman amphitheatres in the world.
-              This jaw‑dropping colosseum seats 35,000 people and rivals the Colosseum in Rome.
+              Seats 35,000 people and rivals the Colosseum in Rome.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Central Tunisia</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> March – June</li>
@@ -199,28 +184,23 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 4 — Sahara / Douz
-      ====================================================== -->
+      <!-- ===== DESTINATION 4 — Sahara (image RIGHT) ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
 
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Sahara Desert dunes in Douz">
+            <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert dunes">
           </div>
         </div>
 
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-hiking"></i> Adventure</span>
-
             <h2>Douz & The Sahara</h2>
-
             <p>
               The gateway to the Sahara Desert. Ride camels at sunset, sleep under a billion stars,
-              and experience the silence and magic of the world's greatest desert.
+              and experience the magic of the world's greatest desert.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> South Tunisia</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> October – March</li>
@@ -231,28 +211,23 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 5 — Kairouan
-      ====================================================== -->
+      <!-- ===== DESTINATION 5 — Kairouan (image LEFT) ===== -->
       <div class="dest-row row g-0">
 
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Great Mosque of Kairouan">
+            <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Great Mosque of Kairouan">
           </div>
         </div>
 
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-mosque"></i> Spiritual</span>
-
             <h2>Kairouan Mosque</h2>
-
             <p>
-              One of the oldest and most important mosques in the Islamic world.
+              One of the oldest mosques in the Islamic world.
               A masterpiece of early Islamic architecture dating back to 670 AD.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Central Tunisia</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> All year round</li>
@@ -263,9 +238,7 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 6 — Bizerte
-      ====================================================== -->
+      <!-- ===== DESTINATION 6 — Bizerte (image RIGHT) ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
 
         <div class="col-lg-6">
@@ -277,14 +250,11 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-anchor"></i> Port City</span>
-
             <h2>Bizerte Port</h2>
-
             <p>
-              A charming port city with colourful boats, a beautiful old medina, and a relaxed atmosphere.
-              Tunisia's most northerly city — an underrated gem far from the tourist crowds.
+              A charming port city with colourful boats and a beautiful old medina.
+              Tunisia's most northerly city — an underrated gem.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> North Tunisia</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> May – September</li>
@@ -295,9 +265,7 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 7 — Djerba
-      ====================================================== -->
+      <!-- ===== DESTINATION 7 — Djerba (image LEFT) ===== -->
       <div class="dest-row row g-0">
 
         <div class="col-lg-6">
@@ -309,15 +277,11 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-sun"></i> Island Life</span>
-
             <h2>Djerba</h2>
-
             <p>
-              Tunisia's largest island, famous for its white villages, turquoise sea,
-              and rich Jewish and Berber heritage. A paradise for beach lovers and
-              culture seekers with a relaxed island atmosphere.
+              Tunisia's largest island, famous for turquoise sea and rich heritage.
+              A paradise for beach lovers and culture seekers.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> South Coast</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> April – October</li>
@@ -328,28 +292,23 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 8 — Korbus
-      ====================================================== -->
+      <!-- ===== DESTINATION 8 — Korbus (image RIGHT) ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
 
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Korbus natural hot springs by the sea">
+            <img src="" alt="Korbus hot springs by the sea">
           </div>
         </div>
 
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-hot-tub"></i> Nature</span>
-
             <h2>Korbus</h2>
-
             <p>
-              A hidden coastal village famous for its natural hot springs that flow directly into the sea.
-              A unique and deeply relaxing experience surrounded by dramatic Cap Bon scenery.
+              A hidden village with natural hot springs that flow into the sea.
+              A unique relaxing experience on the Cap Bon peninsula.
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Cap Bon</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> October – April</li>
@@ -360,9 +319,7 @@
 
       </div>
 
-      <!-- =====================================================
-           DESTINATION 9 — Sousse
-      ====================================================== -->
+      <!-- ===== DESTINATION 9 — Sousse (image LEFT) ===== -->
       <div class="dest-row row g-0">
 
         <div class="col-lg-6">
@@ -374,15 +331,11 @@
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
-
             <h2>Sousse</h2>
-
             <p>
-              A vibrant coastal city with a UNESCO‑listed medina, beautiful beaches,
-              and a lively atmosphere. Known as the “Pearl of the Sahel”, Sousse blends
-              history, culture, and seaside fun.
+              A vibrant coastal city with a UNESCO-listed medina and beautiful beaches.
+              Known as the "Pearl of the Sahel".
             </p>
-
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> East Coast</li>
               <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> May – October</li>
@@ -397,20 +350,17 @@
   </section>
 
   <!-- =====================================================
-       FOOTER
+       FOOTER — identical on every page
   ====================================================== -->
   <footer>
     <div class="container">
-
       <div class="row align-items-center">
 
-        <!-- Left: Brand -->
         <div class="col-md-4">
           <p class="footer-brand"><em>Tunisia</em></p>
           <p class="footer-tagline">Your gateway to the Mediterranean.</p>
         </div>
 
-        <!-- Center: Social icons -->
         <div class="col-md-4 text-center">
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -420,21 +370,18 @@
           </div>
         </div>
 
-        <!-- Right: Message -->
         <div class="col-md-4 text-md-end">
           <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
         </div>
 
       </div>
-
       <div class="footer-bottom">
         &copy; 2026 Discover Tunisia. All rights reserved.
       </div>
-
     </div>
   </footer>
 
-  <!-- ================= BOOTSTRAP JS ================= -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

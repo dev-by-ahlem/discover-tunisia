@@ -1,77 +1,78 @@
-<!-- Declares that this document uses HTML5, the modern standard for web pages -->
+<!-- Declares that this document uses HTML5 -->
 <!DOCTYPE html>
 
-<!-- Opens the root HTML element and sets the language of the page to English -->
+<!-- Root HTML element, language set to English -->
 <html lang="en">
 
-<!-- Opens the <head> section, which contains metadata, links, and resources -->
 <head>
 
   <!-- ================= BASIC PAGE SETUP ================= -->
 
-  <!-- Sets the character encoding to UTF‑8, allowing the page to display all characters correctly -->
+  <!-- Sets character encoding to UTF-8 -->
   <meta charset="UTF-8">
 
-  <!-- Ensures the page scales correctly on mobile devices by setting the viewport width to the device width -->
+  <!-- Makes the page responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Defines the text that appears in the browser tab -->
+  <!-- Browser tab title -->
   <title>Discover Tunisia</title>
 
-  <!-- Links the favicon (small icon in the browser tab) using a PNG image -->
+  <!-- Small icon shown in the browser tab -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
   <!-- ================= FONTS & ICONS ================= -->
 
-  <!-- Loads two Google Fonts (Playfair Display and Lato) to style text on the website -->
+  <!-- Google Fonts: Playfair Display (headings) + Lato (body text) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Loads Font Awesome icons (map marker, sun, coins, etc.) using a CDN -->
+  <!-- Font Awesome icons kit -->
   <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 
   <!-- ================= BOOTSTRAP ================= -->
 
-  <!-- Loads Bootstrap 5 CSS framework for layout, grid system, and responsive design -->
+  <!-- Bootstrap 5 CSS: grid, components, responsive utilities -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- ================= CUSTOM CSS ================= -->
 
-  <!-- Links your own stylesheet, where you wrote all your custom styles -->
+  <!-- Your own stylesheet with all custom styles -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- Closes the <head> section -->
 </head>
 
-<!-- Opens the <body> of the page, which contains all visible content -->
 <body>
 
   <!-- =====================================================
        NAVBAR
-       Main site navigation — logo + links
+       Dark navigation bar with logo on left, links on right.
+       Collapses into a hamburger menu on mobile.
   ====================================================== -->
-
   <nav class="navbar navbar-expand-lg">
     <div class="container">
 
-      <!-- Logo + site name -->
+      <!-- Logo image + site name -->
       <a class="navbar-brand" href="#">
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
         <em>Discover Tunisia</em>
       </a>
 
-      <!-- Mobile menu toggle -->
+      <!-- Hamburger button — only visible on mobile -->
+      <!-- data-bs-toggle and data-bs-target are Bootstrap attributes -->
+      <!-- that tell it to show/hide the #navbarMenu div -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarMenu"
               aria-controls="navbarMenu"
               aria-expanded="false"
               aria-label="Toggle navigation">
+        <!-- The 3 lines icon is drawn by CSS using an SVG background image -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navigation links -->
+      <!-- Navigation links — collapse on mobile, expand on desktop -->
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
+          <!-- ms-auto pushes the links to the right side -->
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
@@ -84,46 +85,56 @@
 
   <!-- =====================================================
        HERO SECTION
+       Full-screen section with background image,
+       dark overlay for readability, and centered text.
   ====================================================== -->
-
   <section class="hero">
 
-    <!-- Background image -->
-    <img src="assets/images/hero.png" 
-         alt="Mediterranean coast of Tunisia" 
+    <!-- Background image fills the full hero area -->
+    <img src="assets/images/hero.png"
+         alt="Mediterranean coast of Tunisia"
          class="hero-img">
 
-    <!-- Dark overlay -->
+    <!-- Semi-transparent dark overlay on top of the image -->
     <div class="hero-overlay"></div>
 
-    <!-- Hero text -->
+    <!-- Text content positioned over the overlay -->
     <div class="hero-content">
+
+      <!-- Small uppercase tagline -->
       <p class="hero-tag">North Africa's Best Kept Secret</p>
 
+      <!-- Main heading with gold highlight -->
       <h1>
         Discover a <span>Hidden Gem</span><br>
         of the Mediterranean
       </h1>
 
+      <!-- Subtitle -->
       <p class="hero-sub">Ancient ruins · Golden dunes · Turquoise shores</p>
 
-      <!-- Scrolls to welcome section -->
+      <!-- Button — scrolls down to the welcome section -->
       <a href="#welcome" class="btn-hero">Explore Now</a>
+
     </div>
 
   </section>
 
   <!-- =====================================================
        WELCOME SECTION
+       Two-column layout: text on left, scrolling images on right.
+       Includes stats + fact cards below.
   ====================================================== -->
-
   <section class="section-welcome" id="welcome">
+    <!-- id="welcome" is targeted by the hero button href="#welcome" -->
     <div class="container">
 
+      <!-- Bootstrap row with vertical alignment and spacing -->
       <div class="row align-items-center g-5">
 
-        <!-- LEFT COLUMN -->
+        <!-- ===== LEFT COLUMN — Text + Stats ===== -->
         <div class="col-lg-6">
+          <!-- col-lg-6 = 50% width on large screens, full width on mobile -->
 
           <p class="section-label">Welcome To:</p>
 
@@ -143,7 +154,7 @@
             salt flats, and Mediterranean coves.
           </p>
 
-          <!-- STATS -->
+          <!-- Stats row: 3 numbers displayed side by side -->
           <div class="welcome-stat">
 
             <div class="stat">
@@ -164,12 +175,16 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN — SCROLLING GALLERY -->
+        <!-- ===== RIGHT COLUMN — Scrolling Gallery ===== -->
         <div class="col-lg-6">
+
+          <!-- Outer container clips the overflow of the scrolling track -->
           <div class="scroll-gallery">
+
+            <!-- Inner track — moves upward via CSS animation -->
             <div class="scroll-track">
 
-              <!-- First set -->
+              <!-- First set of images -->
               <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
               <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
               <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
@@ -179,7 +194,9 @@
               <img src="assets/images/scrolling-images/old-medina.jpg" alt="Bizerte Medina">
               <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert">
 
-              <!-- Duplicate set for infinite scroll -->
+              <!-- Duplicate set — needed for seamless infinite scroll -->
+              <!-- When the first set scrolls off screen, the duplicate -->
+              <!-- takes its place, creating a continuous loop -->
               <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
               <img src="assets/images/scrolling-images/carthage-jam.png" alt="Carthage and El Jem">
               <img src="assets/images/scrolling-images/arch-of-dogga.png" alt="Dougga Arch">
@@ -195,63 +212,62 @@
 
       </div>
 
+      <!-- ===== FACT CARDS — Full width below the two columns ===== -->
+      <!-- Uses flexbox to spread 6 cards evenly across the row -->
+      <div class="facts-row">
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <p class="fact-label">Capital</p>
+          <p class="fact-value">Tunis</p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-coins"></i></div>
+          <p class="fact-label">Currency</p>
+          <p class="fact-value">Tunisian Dinar <span>(TND)</span></p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-users"></i></div>
+          <p class="fact-label">Population</p>
+          <p class="fact-value">12 Million</p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-comment"></i></div>
+          <p class="fact-label">Language</p>
+          <p class="fact-value">Arabic</p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-clock"></i></div>
+          <p class="fact-label">Time Zone</p>
+          <p class="fact-value">GMT +1</p>
+        </div>
+
+        <div class="fact-card">
+          <div class="fact-icon"><i class="fas fa-thermometer-half"></i></div>
+          <p class="fact-label">Climate</p>
+          <p class="fact-value">Mediterranean</p>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- =====================================================
-       FACT CARDS
+       WHY TUNISIA SECTION
+       Dark background with 4 highlight cards.
   ====================================================== -->
-
-  <div class="facts-row">
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-map-marker-alt"></i></div>
-      <p class="fact-label">Capital</p>
-      <p class="fact-value">Tunis</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-coins"></i></div>
-      <p class="fact-label">Currency</p>
-      <p class="fact-value">Tunisian Dinar <span>(TND)</span></p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-users"></i></div>
-      <p class="fact-label">Population</p>
-      <p class="fact-value">12 Million</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-comment"></i></div>
-      <p class="fact-label">Language</p>
-      <p class="fact-value">Arabic</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-clock"></i></div>
-      <p class="fact-label">Time Zone</p>
-      <p class="fact-value">GMT +1</p>
-    </div>
-
-    <div class="fact-card">
-      <div class="fact-icon"><i class="fas fa-thermometer-half"></i></div>
-      <p class="fact-label">Climate</p>
-      <p class="fact-value">Mediterranean</p>
-    </div>
-
-  </div>
-
-  <!-- =====================================================
-       WHY TUNISIA
-  ====================================================== -->
-
   <section class="section-why">
     <div class="container">
 
       <p class="section-label">Why Tunisia?</p>
       <h2>Reasons to <span>Fall in Love</span></h2>
 
+      <!-- Bootstrap row: 4 cards, 2 per row on tablet, 1 per row on mobile -->
       <div class="row g-4">
 
         <div class="col-lg-3 col-md-6">
@@ -292,18 +308,20 @@
 
   <!-- =====================================================
        FOOTER
+       Three columns: brand, social icons, tagline.
   ====================================================== -->
-
   <footer>
     <div class="container">
 
       <div class="row align-items-center">
 
+        <!-- Left: Brand name + tagline -->
         <div class="col-md-4">
           <p class="footer-brand">Tunisia</p>
           <p class="footer-tagline">My first project</p>
         </div>
 
+        <!-- Center: Social media icons -->
         <div class="col-md-4 text-center">
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook"></i></a>
@@ -313,12 +331,14 @@
           </div>
         </div>
 
+        <!-- Right: Credit message -->
         <div class="col-md-4 text-md-end">
           <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
         </div>
 
       </div>
 
+      <!-- Copyright line -->
       <div class="footer-bottom">
         &copy; 2026 Discover Tunisia. All rights reserved.
       </div>
@@ -326,7 +346,7 @@
     </div>
   </footer>
 
-  <!-- Loads Bootstrap's JavaScript bundle (dropdowns, navbar toggle, etc.) -->
+  <!-- Bootstrap JS — required for navbar toggle on mobile -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
