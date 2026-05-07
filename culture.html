@@ -1,11 +1,287 @@
+<!-- Declares that this document uses HTML5 -->
 <!DOCTYPE html>
+
+<!-- Root HTML element, language set to English -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+  <!-- ================= BASIC PAGE SETUP ================= -->
+
+  <!-- Sets character encoding to UTF-8 -->
+  <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Browser tab title -->
+  <title>Discover Tunisia</title>
+
+  <!-- Small icon shown in the browser tab -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- ================= FONTS & ICONS ================= -->
+
+  <!-- Google Fonts: Playfair Display (headings) + Lato (body text) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons kit -->
+  <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+
+  <!-- ================= BOOTSTRAP ================= -->
+
+  <!-- Bootstrap 5 CSS: grid, components, responsive utilities -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ================= CUSTOM CSS ================= -->
+
+  <!-- Your own stylesheet with all custom styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
-    
+
+  <!-- =====================================================
+       NAVBAR
+       Dark navigation bar with logo on left, links on right.
+       Collapses into a hamburger menu on mobile.
+  ====================================================== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <!-- Logo image + site name -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
+        <em>Discover Tunisia</em>
+      </a>
+
+      <!-- Hamburger button — only visible on mobile -->
+      <!-- data-bs-toggle and data-bs-target are Bootstrap attributes -->
+      <!-- that tell it to show/hide the #navbarMenu div -->
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarMenu"
+              aria-controls="navbarMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <!-- The 3 lines icon is drawn by CSS using an SVG background image -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links — collapse on mobile, expand on desktop -->
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <!-- ms-auto pushes the links to the right side -->
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Culture</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+<!-- ========================= -->
+<!--        HERO SECTION       -->
+<!-- ========================= -->
+<section class="culture-hero">
+  <div class="hero-content">
+    <h1>Culture & Food</h1>
+    <p>A rich tapestry of Berber, Arab, Ottoman, and Mediterranean influences — alive in every dish and every tradition.</p>
+  </div>
+</section>
+
+<!-- ========================= -->
+<!--      CULTURE SECTION      -->
+<!-- ========================= -->
+<section class="culture-section">
+
+  <!-- Radios (hidden) MUST be above labels -->
+  <input type="radio" name="tabset" id="tab-food" checked>
+  <input type="radio" name="tabset" id="tab-traditions">
+  <input type="radio" name="tabset" id="tab-arts">
+  <input type="radio" name="tabset" id="tab-clothing">
+
+  <!-- Tab Buttons -->
+  <div class="ch-tabs">
+    <label for="tab-food" class="ch-tab">🍽️ Food & Drink</label>
+    <label for="tab-traditions" class="ch-tab">🎵 Traditions</label>
+    <label for="tab-arts" class="ch-tab">🎨 Arts & Crafts</label>
+    <label for="tab-clothing" class="ch-tab">👗 Traditional Clothing</label>
+  </div>
+
+  <!-- ========================= -->
+  <!--        FOOD TAB           -->
+  <!-- ========================= -->
+  <div class="ch-content" id="content-food">
+    <div class="food-grid">
+
+      <div class="food-card"><img src="assets/images/brik.jpg"><h3>Brik</h3><p>Crispy fried pastry with egg and tuna.</p></div>
+      <div class="food-card"><img src="assets/images/scrolling-images/couscous.jpg"><h3>Couscous</h3><p>Tunisia’s national dish.</p></div>
+      <div class="food-card"><img src="assets/images/lablabi.jpg"><h3>Lablabi</h3><p>Warm chickpea soup.</p></div>
+      <div class="food-card"><img src="assets/images/ojja.jpg"><h3>Ojja</h3><p>Spicy tomato stew with merguez.</p></div>
+
+      <div class="food-card"><img src="assets/images/kaak.jpg"><h3>Kaak Warka</h3><p>Delicate almond pastry.</p></div>
+      <div class="food-card"><img src="assets/images/bambalouni.jpg"><h3>Bambalouni</h3><p>Sweet fried dough.</p></div>
+      <div class="food-card"><img src="assets/images/mesfouf.jpg"><h3>Mesfouf</h3><p>Sweet couscous with raisins.</p></div>
+      <div class="food-card"><img src="assets/images/makroudh.jpg"><h3>Makroudh</h3><p>Date‑filled semolina pastry.</p></div>
+
+      <div class="food-card"><img src="assets/images/harissa.jpg"><h3>Harissa</h3><p>Spicy chili paste.</p></div>
+      <div class="food-card"><img src="assets/images/mechouia.jpg"><h3>Salata Mechouia</h3><p>Grilled pepper salad.</p></div>
+      <div class="food-card"><img src="assets/images/merguez.jpg"><h3>Merguez</h3><p>Spicy lamb sausages.</p></div>
+      <div class="food-card"><img src="assets/images/zwitina.jpg"><h3>Zwitina</h3><p>Olive oil dip with spices.</p></div>
+
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!--      TRADITIONS TAB       -->
+  <!-- ========================= -->
+  <div class="ch-content" id="content-traditions">
+
+    <div class="curly-top"></div>
+
+    <div class="trad-list">
+
+      <div class="trad-item">
+        <div class="trad-icon">🎵</div>
+        <div>
+          <h3>Malouf Music</h3>
+          <p>A classical musical tradition brought to Tunisia by Andalusian Muslims in the 15th century. Performed with lutes, violins, and percussion at weddings and celebrations.</p>
+        </div>
+      </div>
+
+      <div class="trad-item">
+        <div class="trad-icon">💃</div>
+        <div>
+          <h3>Stambeli Ritual</h3>
+          <p>A spiritual music and dance tradition of sub-Saharan origin, used in healing ceremonies. Recognised by UNESCO as an Intangible Cultural Heritage of humanity.</p>
+        </div>
+      </div>
+
+      <div class="trad-item">
+        <div class="trad-icon">🌙</div>
+        <div>
+          <h3>Ramadan Nights</h3>
+          <p>During Ramadan, Tunisian cities come alive after sunset with lanterns, music, street food, and families gathering in public squares. A truly magical atmosphere.</p>
+        </div>
+      </div>
+
+      <div class="trad-item">
+        <div class="trad-icon">👰</div>
+        <div>
+          <h3>Tunisian Wedding</h3>
+          <p>Traditional weddings are elaborate multi-day celebrations featuring henna ceremonies, traditional music, elaborate costumes, and feasts of couscous and sweets.</p>
+        </div>
+      </div>
+
+      <div class="trad-item">
+        <div class="trad-icon">🐎</div>
+        <div>
+          <h3>The Fantasia</h3>
+          <p>A traditional equestrian display where riders in traditional dress charge at full gallop and fire rifles simultaneously — a breathtaking cultural performance.</p>
+        </div>
+      </div>
+
+      <div class="trad-item">
+        <div class="trad-icon">🏺</div>
+        <div>
+          <h3>Berber Heritage</h3>
+          <p>Tunisia’s indigenous Amazigh (Berber) culture survives in the south — in architecture, tattooing traditions, weaving patterns, and the Tamazight language.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!--     ARTS & CRAFTS TAB     -->
+  <!-- ========================= -->
+  <div class="ch-content" id="content-arts">
+    <div class="arts-grid">
+
+      <div class="arts-card"><div class="arts-emoji">🪔</div><h3>Pottery & Ceramics</h3><p>Nabeul’s hand‑painted tiles.</p></div>
+      <div class="arts-card"><div class="arts-emoji">🧶</div><h3>Carpet Weaving</h3><p>Kairouan’s geometric carpets.</p></div>
+      <div class="arts-card"><div class="arts-emoji">🪬</div><h3>Silver Jewellery</h3><p>Khamsa & fish motifs.</p></div>
+      <div class="arts-card"><div class="arts-emoji">🪵</div><h3>Woodwork</h3><p>Inlaid cedar & olive wood.</p></div>
+      <div class="arts-card"><div class="arts-emoji">👘</div><h3>Traditional Clothing</h3><p>Jebba, chechia, fouta.</p></div>
+      <div class="arts-card"><div class="arts-emoji">🫒</div><h3>Olive Oil Heritage</h3><p>Ancient groves & craft oil.</p></div>
+
+    </div>
+  </div>
+
+  <!-- ========================= -->
+  <!--   TRADITIONAL CLOTHING    -->
+  <!-- ========================= -->
+  <div class="ch-content" id="content-clothing">
+    <div class="clothing-grid">
+
+      <div class="cloth-card"><img src="assets/images/scrolling-images/sefseri.jpg"><h3>Sefsari</h3><p>Elegant white wrap.</p></div>
+      <div class="cloth-card"><img src="assets/images/scrolling-images/jebba.jpg"><h3>Jebba</h3><p>Traditional embroidered outfit.</p></div>
+      <div class="cloth-card"><img src="assets/images/chechia.jpg"><h3>Chechia</h3><p>Iconic red wool hat.</p></div>
+      <div class="cloth-card"><img src="assets/images/fouta.jpg"><h3>Fouta</h3><p>Striped wrap cloth.</p></div>
+
+      <div class="cloth-card"><img src="assets/images/klila.jpg"><h3>Klila</h3><p>Traditional jewelry.</p></div>
+      <div class="cloth-card"><img src="assets/images/khomsa.jpg"><h3>Khomsa</h3><p>Hand of Fatima symbol.</p></div>
+      <div class="cloth-card"><img src="assets/images/balgha.jpg"><h3>Balgha</h3><p>Leather slippers.</p></div>
+      <div class="cloth-card"><img src="assets/images/kswa.jpg"><h3>Kswa</h3><p>Wedding ceremonial dress.</p></div>
+
+      <div class="cloth-card"><img src="assets/images/kaftan.jpg"><h3>Kaftan</h3><p>Elegant embroidered robe.</p></div>
+      <div class="cloth-card"><img src="assets/images/houll.jpg"><h3>Houll</h3><p>Traditional men’s wrap.</p></div>
+      <div class="cloth-card"><img src="assets/images/serwel.jpg"><h3>Serwel</h3><p>Loose traditional pants.</p></div>
+      <div class="cloth-card"><img src="assets/images/arfia.jpg"><h3>Arfia</h3><p>Decorated headscarf.</p></div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+       FOOTER
+       Three columns: brand, social icons, tagline.
+  ====================================================== -->
+  <footer>
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <!-- Left: Brand name + tagline -->
+        <div class="col-md-4">
+          <p class="footer-brand">Tunisia</p>
+          <p class="footer-tagline">My first project</p>
+        </div>
+
+        <!-- Center: Social media icons -->
+        <div class="col-md-4 text-center">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Credit message -->
+        <div class="col-md-4 text-md-end">
+          <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
+        </div>
+
+      </div>
+
+      <!-- Copyright line -->
+      <div class="footer-bottom">
+        &copy; 2026 Discover Tunisia. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS — required for navbar toggle on mobile -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

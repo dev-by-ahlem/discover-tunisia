@@ -1,24 +1,19 @@
 /* =========================================================
-   CSS VARIABLES
-   Reusable theme colors + fonts for consistency.
-   Use var(--name) anywhere in the stylesheet.
+   CSS VARIABLES — Theme Colors & Fonts
 ========================================================= */
 :root {
-  --gold:       #C9A84C; /* Main accent — buttons, borders, highlights */
-  --terracotta: #A0522D; /* Warm secondary — labels, stats */
-  --blue:       #2E86AB; /* Additional accent (used rarely) */
-  --cream:      #F5F0E8; /* Soft page background */
-  --dark:       #1A1A2E; /* Deep navy — navbar, dark sections */
+  --gold: #C9A84C;
+  --terracotta: #A0522D;
+  --blue: #2E86AB;
+  --cream: #F5F0E8;
+  --dark: #1A1A2E;
 
-  --font-heading: 'Playfair Display', serif; /* Elegant serif for titles */
-  --font-body:    'Lato', sans-serif;        /* Clean sans-serif for body */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
 }
 
 /* =========================================================
    GLOBAL RESET
-   Removes default browser margin/padding.
-   box-sizing: border-box makes sizing easier —
-   padding and border are included in element width/height.
 ========================================================= */
 * {
   margin: 0;
@@ -27,7 +22,7 @@
 }
 
 /* =========================================================
-   GLOBAL BODY STYLES
+   GLOBAL BODY
 ========================================================= */
 body {
   font-family: var(--font-body);
@@ -35,114 +30,93 @@ body {
   background-color: var(--cream);
 }
 
-/* All headings use the serif font */
 h1, h2, h3 {
   font-family: var(--font-heading);
 }
 
 /* =========================================================
    NAVBAR
-   Dark bar with logo on left, nav links on right.
-   On mobile: links collapse behind a hamburger button.
 ========================================================= */
 .navbar {
   background-color: var(--dark);
   padding: 10px 0;
 }
 
-/* Logo + site name */
 .navbar-brand {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-  color: var(--gold) !important; /* !important overrides Bootstrap default */
+  color: var(--gold) !important;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Circular logo image */
 .navbar-brand img {
   width: 44px;
   height: 44px;
-  object-fit: contain; /* Keeps proportions */
-  border-radius: 50%;  /* Makes it circular */
+  object-fit: contain;
+  border-radius: 50%;
 }
 
-/* Nav links */
 .navbar-nav .nav-link {
   color: var(--cream) !important;
   font-weight: 400;
   letter-spacing: 0.5px;
   margin: 0 6px;
-  transition: color 0.3s ease; /* Smooth color change on hover */
+  transition: color 0.3s ease;
 }
 
-/* Active or hovered link */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--gold) !important;
 }
 
-/* Mobile hamburger button border */
 .navbar-toggler {
   border-color: var(--gold);
   background-color: transparent;
 }
 
-/* Gold outline when button is focused (accessibility) */
 .navbar-toggler:focus {
   box-shadow: 0 0 0 2px var(--gold);
 }
 
-/*
-  Custom hamburger icon — 3 gold lines.
-  The SVG is encoded as a URL-safe string.
-  stroke='%23C9A84C' = stroke color #C9A84C (gold).
-  %23 is the URL encoding of the # character.
-*/
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* =========================================================
    HOME — HERO SECTION
-   Full-screen image with dark overlay and centered text.
 ========================================================= */
 .hero {
-  position: relative; /* Needed so overlay + text can be positioned inside */
+  position: relative;
   width: 100%;
-  height: 100vh;      /* 100vh = full screen height */
-  overflow: hidden;   /* Hides anything outside the container */
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Background image */
 .hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* Fills area without distortion */
-  object-position: center;    /* Keeps subject centered */
-  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-/* Dark overlay on top of the image */
 .hero-overlay {
-  position: absolute; /* Positioned relative to .hero */
-  inset: 0;           /* inset: 0 = top:0, right:0, bottom:0, left:0 */
-  background: rgba(26, 26, 46, 0.45); /* Semi-transparent dark */
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.45);
 }
 
-/* Text block centered over the overlay */
 .hero-content {
   position: absolute;
-  top: 7%;            /* Distance from top of hero */
+  top: 7%;
   left: 50%;
-  transform: translateX(-50%); /* Centers horizontally */
+  transform: translateX(-50%);
   text-align: center;
   width: 90%;
-  max-width: 620px;   /* Prevents text from becoming too wide */
+  max-width: 620px;
 }
 
-/* Small uppercase tagline */
 .hero-tag {
   font-size: 1.2rem;
   letter-spacing: 4px;
@@ -151,21 +125,18 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 
-/* Main heading */
 .hero-content h1 {
   font-size: 4rem;
   color: #fff;
   line-height: 1.25;
-  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* Shadow improves readability */
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
   margin-bottom: 8px;
 }
 
-/* Gold word highlight */
 .hero-content h1 span {
   color: var(--gold);
 }
 
-/* Subtitle */
 .hero-sub {
   font-size: 1.4rem;
   color: rgba(245, 240, 232, 0.85);
@@ -174,7 +145,6 @@ h1, h2, h3 {
   margin-bottom: 16px;
 }
 
-/* CTA button */
 .btn-hero {
   display: inline-block;
   background-color: var(--gold);
@@ -186,27 +156,24 @@ h1, h2, h3 {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 1rem;
-  text-decoration: none; /* Removes underline from anchor */
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
-/* Hover: transparent background, white text */
 .btn-hero:hover {
   background-color: transparent;
   color: #fff;
-  transform: translateY(-2px); /* Slight lift */
+  transform: translateY(-2px);
 }
 
 /* =========================================================
    HOME — WELCOME SECTION
-   Two-column layout: text left, gallery right.
 ========================================================= */
 .section-welcome {
   padding: 80px 0 50px;
   background-color: var(--cream);
 }
 
-/* Small uppercase label above headings */
 .section-label {
   font-size: 0.78rem;
   letter-spacing: 3px;
@@ -215,7 +182,6 @@ h1, h2, h3 {
   margin-bottom: 12px;
 }
 
-/* Section heading */
 .section-welcome h2 {
   font-size: 2.4rem;
   color: var(--dark);
@@ -223,59 +189,48 @@ h1, h2, h3 {
   line-height: 1.3;
 }
 
-/* Gold word */
 .section-welcome h2 span {
   color: var(--gold);
 }
 
-/* Body text */
 .section-welcome p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
 }
 
-/* Stats row */
 .welcome-stat {
   margin-top: 32px;
   display: flex;
   gap: 36px;
 }
 
-/* Large number */
 .welcome-stat .stat h3 {
   font-size: 1.9rem;
   color: var(--terracotta);
 }
 
-/* Small label */
 .welcome-stat .stat p {
   font-size: 0.82rem;
   color: #777;
-  margin: 0;
 }
 
 /* =========================================================
    HOME — FACT CARDS
-   6 small info cards displayed in a row.
-   Uses flexbox for responsive wrapping.
 ========================================================= */
-
-/* Flex container — wraps cards on small screens */
 .facts-row {
   display: flex;
-  flex-wrap: wrap;              /* Cards wrap to next row on small screens */
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
   margin-top: 50px;
   padding-top: 40px;
-  border-top: 1px solid rgba(201,168,76,0.25); /* Subtle gold line */
+  border-top: 1px solid rgba(201,168,76,0.25);
 }
 
-/* Individual card */
 .fact-card {
-  flex: 1;              /* Each card grows equally */
-  min-width: 130px;     /* Prevents cards from shrinking too small */
+  flex: 1;
+  min-width: 130px;
   background-color: #fff;
   border-radius: 12px;
   padding: 22px 16px;
@@ -284,20 +239,17 @@ h1, h2, h3 {
   transition: 0.3s ease;
 }
 
-/* Hover: lift + stronger shadow */
 .fact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-/* Gold icon */
 .fact-icon {
   font-size: 1.5rem;
   color: var(--gold);
   margin-bottom: 10px;
 }
 
-/* Small uppercase label */
 .fact-label {
   font-size: 0.75rem;
   letter-spacing: 2px;
@@ -306,7 +258,6 @@ h1, h2, h3 {
   margin-bottom: 6px;
 }
 
-/* Main value text */
 .fact-value {
   font-family: var(--font-heading);
   font-size: 1rem;
@@ -314,7 +265,6 @@ h1, h2, h3 {
   color: var(--dark);
 }
 
-/* Secondary smaller text (e.g. currency code) */
 .fact-value span {
   display: block;
   font-size: 0.78rem;
@@ -323,67 +273,50 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — SCROLLING GALLERY
-   Vertical auto-scroll using CSS animation.
-   Images are duplicated so the loop is seamless.
 ========================================================= */
-
-/* Outer container — clips the overflow */
 .scroll-gallery {
   width: 100%;
-  height: 460px;    /* Only this height is visible */
-  overflow: hidden; /* Hides images outside this box */
+  height: 460px;
+  overflow: hidden;
   border-radius: 8px;
 }
 
-/* Inner track — moves upward continuously */
 .scroll-track {
   display: flex;
-  flex-direction: column; /* Stack images vertically */
+  flex-direction: column;
   gap: 10px;
-  animation: scrollUp 20s linear infinite; /* Continuous loop */
+  animation: scrollUp 20s linear infinite;
 }
 
-/* Pauses scroll when mouse hovers — better UX */
 .scroll-gallery:hover .scroll-track {
   animation-play-state: paused;
 }
 
-/* Each image in the track */
 .scroll-track img {
   width: 100%;
   height: 210px;
-  object-fit: cover; /* Fill without stretching */
+  object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0;    /* Prevents images from collapsing */
+  flex-shrink: 0;
 }
 
-/*
-  Keyframe animation: moves track up by 50%.
-  Why 50%? Because images are duplicated —
-  so 50% = exactly one full set of images.
-  When the first set scrolls off, the duplicate
-  takes its place seamlessly.
-*/
 @keyframes scrollUp {
-  0%   { transform: translateY(0); }
+  0% { transform: translateY(0); }
   100% { transform: translateY(-50%); }
 }
 
 /* =========================================================
    HOME — WHY VISIT SECTION
-   Dark section with 4 reason cards.
 ========================================================= */
 .section-why {
   padding: 80px 0;
   background-color: var(--dark);
 }
 
-/* Label in gold on dark background */
 .section-why .section-label {
   color: var(--gold);
 }
 
-/* Heading in white */
 .section-why h2 {
   font-size: 2.4rem;
   color: #fff;
@@ -394,38 +327,33 @@ h1, h2, h3 {
   color: var(--gold);
 }
 
-/* Individual card */
 .why-card {
-  background-color: rgba(255,255,255,0.05); /* Slightly lighter than background */
-  border: 1px solid rgba(201,168,76,0.2);   /* Faint gold border */
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(201,168,76,0.2);
   border-radius: 4px;
   padding: 32px 24px;
   text-align: center;
   transition: 0.3s ease;
-  height: 100%; /* Equal height in Bootstrap grid */
+  height: 100%;
 }
 
-/* Hover: lift + brighter gold border */
 .why-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
 }
 
-/* Icon */
 .why-card .icon {
   font-size: 2rem;
   color: var(--gold);
   margin-bottom: 16px;
 }
 
-/* Card title */
 .why-card h4 {
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 10px;
 }
 
-/* Card description */
 .why-card p {
   font-size: 0.92rem;
   color: #aaa;
@@ -434,7 +362,6 @@ h1, h2, h3 {
 
 /* =========================================================
    FOOTER
-   Three-column layout: brand | social icons | tagline
 ========================================================= */
 footer {
   background-color: var(--cream);
@@ -442,41 +369,34 @@ footer {
   padding: 12px 0 6px;
 }
 
-/* Brand name */
 .footer-brand {
   font-family: var(--font-heading);
   font-size: 1rem;
   color: var(--dark);
 }
 
-/* Tagline text */
 .footer-tagline {
   font-size: 0.85rem;
   color: #888;
-  margin: 0;
 }
 
-/* Social icons row */
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
-/* Social icon color */
 .footer-social a {
   color: var(--dark);
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover: gold + lift */
 .footer-social a:hover {
   color: var(--gold);
   transform: translateY(-3px);
 }
 
-/* Bottom copyright bar */
 .footer-bottom {
   border-top: 1px solid rgba(0,0,0,0.08);
   margin-top: 8px;
@@ -487,9 +407,7 @@ footer {
 }
 
 /* =========================================================
-   DESTINATIONS — HERO BANNER
-   Background image with overlay + centered text.
-   60vh height — shorter than home hero.
+   DESTINATIONS — HERO
 ========================================================= */
 .dest-hero {
   position: relative;
@@ -503,21 +421,18 @@ footer {
   justify-content: center;
 }
 
-/* Dark overlay */
 .dest-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(26, 26, 46, 0.60);
 }
 
-/* Text on top of overlay */
 .dest-hero-content {
-  position: relative; /* Above the overlay */
+  position: relative;
   text-align: center;
-  z-index: 1;         /* z-index ensures text is above overlay */
+  z-index: 1;
 }
 
-/* Title */
 .dest-hero-content h1 {
   font-size: 3rem;
   color: #fff;
@@ -525,13 +440,12 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Gold word */
 .dest-hero-content h1 span {
   color: var(--gold);
 }
 
 /* =========================================================
-   DESTINATIONS — INTRO SECTION
+   DESTINATIONS — INTRO
 ========================================================= */
 .dest-intro {
   padding: 60px 0 20px;
@@ -553,48 +467,41 @@ footer {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
-  max-width: 700px; /* Readable line length */
+  max-width: 700px;
 }
 
 /* =========================================================
-   DESTINATIONS — LIST WRAPPER
+   DESTINATIONS — LIST
 ========================================================= */
 .dest-list {
   background-color: var(--cream);
 }
 
-/* =========================================================
-   DESTINATIONS — SINGLE ROW
-   Each row = image (50%) + text (50%).
-   Alternates direction using flex-lg-row-reverse.
-========================================================= */
 .dest-row {
   min-height: 500px;
-  border-bottom: 1px solid rgba(201,168,76,0.15); /* Gold divider */
+  border-bottom: 1px solid rgba(201,168,76,0.15);
 }
 
 /* =========================================================
    DESTINATIONS — IMAGE SIDE
-   Full-height image with gold border + hover zoom.
 ========================================================= */
 .dest-img-wrap {
   width: 100%;
   height: 100%;
   min-height: 500px;
-  overflow: hidden;   /* Clips the zoomed image */
+  overflow: hidden;
   position: relative;
-  border: 6px solid var(--gold);               /* Gold frame */
-  box-shadow: 8px 8px 30px rgba(0,0,0,0.15);  /* Depth shadow */
+  border: 6px solid var(--gold);
+  box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
 }
 
 .dest-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s ease; /* Smooth zoom */
+  transition: 0.5s ease;
 }
 
-/* Image zooms slightly when row is hovered */
 .dest-row:hover .dest-img-wrap img {
   transform: scale(1.04);
 }
@@ -603,20 +510,19 @@ footer {
    DESTINATIONS — TEXT SIDE
 ========================================================= */
 .dest-text {
-  padding: 50px 60px; /* Generous padding */
+  padding: 50px 60px;
 }
 
-/* Category pill badge */
 .dest-category {
   display: inline-block;
-  background-color: rgba(201,168,76,0.15); /* Light gold tint */
+  background-color: rgba(201,168,76,0.15);
   color: var(--terracotta);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 6px 16px;
-  border-radius: 20px;  /* Pill shape */
+  border-radius: 20px;
   margin-bottom: 16px;
   border: 1px solid rgba(201,168,76,0.3);
 }
@@ -626,15 +532,12 @@ footer {
   color: var(--gold);
 }
 
-/* Destination name */
 .dest-text h2 {
   font-size: 2.4rem;
   color: var(--dark);
   margin-bottom: 16px;
-  line-height: 1.2;
 }
 
-/* Description */
 .dest-text p {
   font-size: 1rem;
   color: #555;
@@ -643,12 +546,8 @@ footer {
   text-align: justify;
 }
 
-/* =========================================================
-   DESTINATIONS — INFO LIST
-   Location, best time, known for — with icons.
-========================================================= */
 .dest-info {
-  list-style: none; /* Remove default bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -664,35 +563,28 @@ footer {
   gap: 10px;
 }
 
-/* Gold icons */
 .dest-info li i {
   color: var(--gold);
   font-size: 1rem;
-  width: 18px; /* Fixed width keeps text aligned */
+  width: 18px;
 }
 
 .dest-info li strong {
   color: var(--dark);
 }
 
-/* =========================================================
-   DESTINATIONS — ALTERNATING ROW BACKGROUND
-   Reversed rows get white background for visual variety.
-========================================================= */
 .dest-row-reverse {
   background-color: #fff;
 }
 
 /* =========================================================
-   CONTACT — HERO MAP SECTION
-   Dark title block above an embedded Google Map.
+   CONTACT — HERO
 ========================================================= */
 .contact-hero {
   position: relative;
   width: 100%;
 }
 
-/* Dark title area */
 .contact-hero-text {
   background-color: var(--dark);
   text-align: center;
@@ -715,22 +607,19 @@ footer {
   font-weight: 300;
 }
 
-/* Map container */
 .contact-map {
   width: 100%;
   height: 450px;
 }
 
-/* iframe fills the container */
 .contact-map iframe {
   width: 100%;
   height: 100%;
-  display: block; /* Removes extra space below iframe */
+  display: block;
 }
 
 /* =========================================================
-   CONTACT — REQUIREMENTS SECTION
-   Fun checklist. Pure CSS trick to unlock the form.
+   CONTACT — REQUIREMENTS
 ========================================================= */
 .contact-requirements {
   padding: 80px 0;
@@ -753,7 +642,6 @@ footer {
   margin-bottom: 40px;
 }
 
-/* Each clickable requirement row */
 .req-item {
   display: flex;
   align-items: flex-start;
@@ -762,24 +650,17 @@ footer {
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 10px;
   padding: 18px 20px;
-  cursor: pointer; /* Shows hand cursor — whole row is clickable */
+  cursor: pointer;
   margin-bottom: 16px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   max-width: 750px;
 }
 
-/* Hover highlight */
 .req-item:hover {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
-/*
-  Hidden real checkbox.
-  position: absolute + opacity: 0 makes it invisible.
-  It is still functional — clicking its label toggles it.
-  We hide it because we draw our own custom checkbox box.
-*/
 .req-checkbox-hidden {
   position: absolute;
   opacity: 0;
@@ -787,7 +668,6 @@ footer {
   height: 0;
 }
 
-/* Custom visible checkbox square */
 .req-box {
   width: 22px;
   height: 22px;
@@ -796,47 +676,36 @@ footer {
   flex-shrink: 0;
   margin-top: 2px;
   transition: 0.3s ease;
-  position: relative; /* Needed for ::after tick mark */
+  position: relative;
   background-color: #fff;
 }
 
-/*
-  CSS selector: .req-checkbox-hidden:checked + .req-item .req-box
-  Meaning: "when the hidden checkbox is checked,
-  find the next sibling .req-item, then find .req-box inside it"
-  Result: fills the box with gold
-*/
 .req-checkbox-hidden:checked + .req-item .req-box {
   background-color: var(--gold);
   border-color: var(--gold);
 }
 
-/* Draw tick mark using ::after pseudo-element */
 .req-checkbox-hidden:checked + .req-item .req-box::after {
-  content: '✓';         /* Tick character */
+  content: '✓';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the tick */
+  transform: translate(-50%, -50%);
   color: var(--dark);
   font-size: 0.85rem;
   font-weight: 700;
 }
 
-/* Gold border on entire row when checked */
 .req-checkbox-hidden:checked + .req-item {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
-/* Requirement text */
 .req-text {
   font-size: 0.98rem;
   color: #555;
   line-height: 1.6;
 }
-
-/* Warning message */
 .req-warning {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -847,42 +716,22 @@ footer {
 }
 
 /* =========================================================
-   CONTACT — PURE CSS UNLOCK TRICK
-
-   HOW IT WORKS:
-   The form wrapper is hidden by default (display: none).
-   
-   CSS selector used:
-   #req8:checked ~ .contact-form-wrapper { display: block; }
-   
-   ~ means "general sibling that comes AFTER"
-   So: when the checkbox with id="req8" is checked,
-   find any sibling element with class .contact-form-wrapper
-   and show it.
-   
-   This works because in the HTML, the <input id="req8"> and
-   the <div class="contact-form-wrapper"> are siblings inside
-   the same <div class="container">.
+   CONTACT — FORM UNLOCK (Pure CSS)
 ========================================================= */
-
-/* Form hidden by default */
 .contact-form-wrapper {
   display: none;
   padding: 50px 0 20px;
   max-width: 750px;
 }
 
-/* Show form when last checkbox is checked */
 #req8:checked ~ .contact-form-wrapper {
   display: block;
 }
 
-/* Hide warning when last checkbox is checked */
 #req8:checked ~ .req-warning {
   display: none;
 }
 
-/* Form headings */
 .contact-form-wrapper h2 {
   font-size: 2.2rem;
   color: var(--dark);
@@ -893,14 +742,12 @@ footer {
   color: var(--gold);
 }
 
-/* Subtitle */
 .form-subtitle {
   font-size: 1rem;
   color: #777;
   margin-bottom: 36px;
 }
 
-/* Input + textarea styling */
 .contact-input {
   background-color: var(--cream);
   border: 1px solid rgba(201,168,76,0.3);
@@ -912,7 +759,6 @@ footer {
   transition: border-color 0.3s ease;
 }
 
-/* Gold border when field is focused/clicked */
 .contact-input:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
@@ -920,7 +766,6 @@ footer {
   background-color: #fff;
 }
 
-/* Form labels */
 .contact-form .form-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -929,7 +774,6 @@ footer {
   margin-bottom: 6px;
 }
 
-/* Submit button */
 .btn-contact-submit {
   display: inline-block;
   background-color: var(--gold);
@@ -937,7 +781,7 @@ footer {
   font-weight: 700;
   padding: 14px 40px;
   border: 2px solid var(--gold);
-  border-radius: 25px; /* Rounded pill shape */
+  border-radius: 25px;
   font-family: var(--font-body);
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -946,83 +790,466 @@ footer {
   transition: 0.3s ease;
 }
 
-/* Hover: transparent background */
 .btn-contact-submit:hover {
   background-color: transparent;
   color: var(--gold);
   transform: translateY(-2px);
 }
 
-/* Icon spacing */
 .btn-contact-submit i {
   margin-left: 8px;
 }
+/* ========================================================= */
+/*                     COLOR VARIABLES                       */
+/* ========================================================= */
+:root {
+  --gold: #C9A84C;
+  --terracotta: #A0522D;
+  --blue: #2E86AB;
+  --cream: #F5F0E8;
+  --dark: #1A1A2E;
+  --radius-soft: 18px;
+  --radius-oval: 45px;
+  --transition: 0.35s ease;
+}
+/* ========================================================= */
+/*                     CULTURE — HERO                        */
+/* ========================================================= */
+.culture-hero {
+  background: var(--blue);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.culture-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.culture-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+/* ========================================================= */
+/*                     CULTURE — HERO                        */
+/* ========================================================= */
+.culture-hero {
+  background: var(--blue);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.culture-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.culture-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ========================================================= */
+/*                     CULTURE SECTION                       */
+/* ========================================================= */
+.culture-section {
+  padding: 50px 20px;
+}
+
+/* ========================================================= */
+/*                           TABS                             */
+/* ========================================================= */
+
+/* Hide radios globally */
+input[type="radio"] {
+  display: none;
+}
+
+.ch-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.ch-tab {
+  padding: 12px 22px;
+  border: 2px solid var(--blue);
+  background: white;
+  color: var(--blue);
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.ch-tab:hover {
+  background: var(--blue);
+  color: white;
+}
+
+/* Active tab = GOLD */
+#tab-food:checked + label,
+#tab-traditions:checked + label,
+#tab-arts:checked + label,
+#tab-clothing:checked + label {
+  background: var(--gold);
+  color: var(--dark);
+  border-color: var(--gold);
+}
+
+/* ========================================================= */
+/*                     TAB CONTENT LOGIC                     */
+/* ========================================================= */
+.ch-content {
+  display: none;
+  margin-top: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+#tab-food:checked ~ #content-food { display: block; }
+#tab-traditions:checked ~ #content-traditions { display: block; }
+#tab-arts:checked ~ #content-arts { display: block; }
+#tab-clothing:checked ~ #content-clothing { display: block; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================= */
+/*                     CURLY BLUE BORDER                     */
+/* ========================================================= */
+.curly-top {
+  width: 100%;
+  height: 40px;
+  background: url('images/curly-blue.png') center/contain no-repeat;
+  margin: 20px 0 30px;
+}
+
+/* ========================================================= */
+/*                     FOOD & CLOTHING CARDS                 */
+/* ========================================================= */
+.food-grid,
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 10px 0;
+}
+
+.food-card,
+.cloth-card {
+  background: white;
+  border-radius: 40px;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid var(--terracotta);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.food-card img,
+.cloth-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 25px;
+  margin-bottom: 12px;
+}
+
+.food-card:hover,
+.cloth-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* ========================================================= */
+/*                     TRADITIONS LIST (Option A)            */
+/* ========================================================= */
+.trad-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.trad-item {
+  display: flex;
+  gap: 18px;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.trad-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.trad-icon {
+  font-size: 2rem;
+  width: 55px;
+  height: 55px;
+  background: var(--blue);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================================= */
+/*                     ARTS CARDS (Option C)                 */
+/* ========================================================= */
+.arts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 10px 0;
+}
+
+.arts-card {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.arts-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.arts-emoji {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+#tab-food:checked ~ .ch-tabs label[for="tab-food"],
+#tab-traditions:checked ~ .ch-tabs label[for="tab-traditions"],
+#tab-arts:checked ~ .ch-tabs label[for="tab-arts"],
+#tab-clothing:checked ~ .ch-tabs label[for="tab-clothing"] {
+  background: var(--terracotta);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+@media (max-width: 992px) {
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trad-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ch-tabs {
+    gap: 10px;
+  }
+}
+.ch-tabs label,
+.ch-tab {
+  -webkit-tap-highlight-color: transparent !important;
+  background-color: white !important;
+}
+
+.ch-tabs label:active,
+.ch-tabs label:focus,
+.ch-tab:active,
+.ch-tab:focus {
+  background-color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+@media (max-width: 992px) {
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trad-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ch-tabs {
+    gap: 10px;
+  }
+}
+
+
+/* ========================================================= */
+/*                        RESPONSIVE                         */
+/* ========================================================= */
+@media (max-width: 992px) {
+  .food-grid,
+  .clothing-grid,
+  .traditions-grid,
+  .arts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .food-grid,
+  .clothing-grid,
+  .traditions-grid,
+  .arts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ch-tabs {
+    gap: 10px;
+  }
+}
+
+
+/* ========================================================= */
+/*                      RESPONSIVE DESIGN                    */
+/* ========================================================= */
+@media (max-width: 992px) {
+  .ch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ch-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .ch-tabs {
+    gap: 10px;
+  }
+}
+
 
 /* =========================================================
-   MEDIA QUERIES — TABLET (max-width: 992px)
+   RESPONSIVE
 ========================================================= */
 @media (max-width: 992px) {
-
-  /* Destinations text padding reduced */
-  .dest-text        { padding: 40px 30px; }
-  .dest-text h2     { font-size: 2rem; }
-  .dest-img-wrap    { min-height: 380px; }
+  .ch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
+
+@media (max-width: 576px) {
+  .ch-header h2 {
+    font-size: 2rem;
+  }
+  .ch-grid {
+    grid-template-columns: 1fr;
+  }
+  .ch-tabs-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}
+
 
 /* =========================================================
    MEDIA QUERIES — TABLET / LARGE MOBILE (max-width: 768px)
 ========================================================= */
 @media (max-width: 768px) {
 
-  /* --- Hero --- */
-  .hero-content h1  { font-size: 2rem; }
-  .hero-content     { top: 5%; }
-  .hero-tag         { font-size: 0.8rem; }
-  .hero-sub         { font-size: 1rem; }
+  /* Hero */
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content { top: 5%; }
+  .hero-tag { font-size: 0.8rem; }
+  .hero-sub { font-size: 1rem; }
 
-  /* --- Welcome --- */
-  .section-welcome  { padding: 55px 0 30px; }
+  /* Welcome */
+  .section-welcome { padding: 55px 0 30px; }
   .section-welcome h2 { font-size: 1.8rem; }
-  .welcome-stat     { gap: 20px; }
 
-  /* --- Scrolling gallery --- */
-  .scroll-gallery   { height: 300px; margin-top: 32px; }
+  /* Scrolling gallery */
+  .scroll-gallery { height: 300px; margin-top: 32px; }
   .scroll-track img { height: 150px; }
 
-  /* --- Fact cards: 3 per row --- */
-  .facts-row        { gap: 10px; }
-  .fact-card        {
-    flex: 1 1 calc(33% - 10px); /* 3 cards per row */
+  /* Fact cards */
+  .facts-row { gap: 10px; }
+  .fact-card {
+    flex: 1 1 calc(33% - 10px);
     min-width: 0;
     padding: 14px 6px;
   }
-  .fact-icon        { font-size: 1.1rem; margin-bottom: 6px; }
-  .fact-label       { font-size: 0.58rem; letter-spacing: 0.5px; }
-  .fact-value       { font-size: 0.82rem; }
 
-  /* --- Why cards: 2 per row on tablet --- */
-  .section-why      { padding: 55px 0; }
-  .section-why h2   { font-size: 1.8rem; }
+  /* Why cards */
+  .section-why { padding: 55px 0; }
+  .section-why h2 { font-size: 1.8rem; }
   .section-why .col-lg-3 {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
-  /* --- Destinations --- */
-  .dest-hero            { height: 45vh; }
+  /* Destinations */
+  .dest-hero { height: 45vh; }
   .dest-hero-content h1 { font-size: 2rem; }
-  .dest-intro           { padding: 40px 0 10px; }
-  .dest-intro h2        { font-size: 1.7rem; }
-  .dest-img-wrap        { min-height: 280px; }
-  .dest-text            { padding: 30px 20px; }
-  .dest-text h2         { font-size: 1.6rem; }
+  .dest-intro { padding: 40px 0 10px; }
+  .dest-intro h2 { font-size: 1.7rem; }
+  .dest-img-wrap { min-height: 280px; }
+  .dest-text { padding: 30px 20px; }
+  .dest-text h2 { font-size: 1.6rem; }
 
-  /* --- Contact --- */
-  .contact-hero-text h1    { font-size: 2rem; }
-  .contact-map             { height: 320px; }
-  .contact-requirements    { padding: 55px 0; }
+  /* Contact */
+  .contact-hero-text h1 { font-size: 2rem; }
+  .contact-map { height: 320px; }
+  .contact-requirements { padding: 55px 0; }
   .contact-requirements h2 { font-size: 1.8rem; }
-  .req-text                { font-size: 0.9rem; }
+
+  /* Culture — Tabs spacing */
+  .tab-btn {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  /* Culture — Timeline spacing */
+  .timeline {
+    margin-left: 10px;
+    padding-left: 16px;
+  }
+
+  .timeline-icon {
+    left: -30px;
+  }
 }
 
 /* =========================================================
@@ -1030,36 +1257,60 @@ footer {
 ========================================================= */
 @media (max-width: 480px) {
 
-  /* --- Hero --- */
-  .hero-content h1  { font-size: 1.4rem; }
-  .hero-tag         { font-size: 0.65rem; }
-  .btn-hero         { padding: 10px 24px; font-size: 0.8rem; }
+  /* Hero */
+  .hero-content h1 { font-size: 1.4rem; }
+  .hero-tag { font-size: 0.65rem; }
+  .btn-hero { padding: 10px 24px; font-size: 0.8rem; }
 
-  /* --- Welcome stats: stack vertically --- */
-  .welcome-stat     { flex-direction: column; gap: 14px; }
+  /* Welcome stats */
+  .welcome-stat {
+    flex-direction: column;
+    gap: 14px;
+  }
 
-  /* --- Fact cards: keep 3 per row --- */
-  .fact-card        {
+  /* Fact cards */
+  .fact-card {
     flex: 1 1 calc(33% - 10px);
     padding: 12px 4px;
   }
-  .fact-label       { font-size: 0.55rem; }
-  .fact-value       { font-size: 0.78rem; }
 
-  /* --- Why cards: 1 per row on small mobile --- */
+  /* Why cards */
   .section-why .col-lg-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  /* --- Destinations --- */
+  /* Destinations */
   .dest-hero-content h1 { font-size: 1.5rem; }
-  .dest-text h2         { font-size: 1.4rem; }
+  .dest-text h2 { font-size: 1.4rem; }
 
-  /* --- Contact --- */
-  .contact-hero-text h1  { font-size: 1.6rem; }
-  .contact-map           { height: 260px; }
-  .req-item              { padding: 14px; }
-  .req-text              { font-size: 0.85rem; }
-  .btn-contact-submit    { padding: 12px 28px; font-size: 0.8rem; }
+  /* Contact */
+  .contact-hero-text h1 { font-size: 1.6rem; }
+  .contact-map { height: 260px; }
+  .req-item { padding: 14px; }
+  .req-text { font-size: 0.85rem; }
+  .btn-contact-submit { padding: 12px 28px; font-size: 0.8rem; }
+
+  /* Culture — Tabs */
+  .tab-btn {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Culture — Timeline */
+  .timeline {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .timeline-icon {
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  /* Culture — Arts cards */
+  .arts-card img {
+    height: 180px;
+  }
 }
