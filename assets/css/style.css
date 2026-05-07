@@ -1,20 +1,21 @@
 /* =========================================================
    CSS VARIABLES
-   Reusable colors and fonts used across the entire website.
+   Reusable theme colors + fonts for consistency
 ========================================================= */
 :root {
-  --gold:       #C9A84C; /* Main accent color */
-  --terracotta: #A0522D; /* Warm secondary color */
-  --blue:       #2E86AB; /* Additional accent (rarely used) */
-  --cream:      #F5F0E8; /* Soft background */
-  --dark:       #1A1A2E; /* Deep navy for dark sections */
+  --gold:       #C9A84C; /* Main accent color used for highlights and buttons */
+  --terracotta: #A0522D; /* Warm secondary color used in headings and labels */
+  --blue:       #2E86AB; /* Additional accent color (used rarely) */
+  --cream:      #F5F0E8; /* Soft background for a warm, clean look */
+  --dark:       #1A1A2E; /* Deep navy used for dark sections and contrast */
 
-  --font-heading: 'Playfair Display', serif; /* Elegant serif */
-  --font-body:    'Lato', sans-serif;        /* Clean sans-serif */
+  --font-heading: 'Playfair Display', serif; /* Elegant serif for titles */
+  --font-body:    'Lato', sans-serif;        /* Clean sans-serif for body text */
 }
 
 /* =========================================================
    GLOBAL RESET
+   Removes default browser spacing + ensures consistent sizing
 ========================================================= */
 * {
   margin: 0;
@@ -24,6 +25,7 @@
 
 /* =========================================================
    GLOBAL BODY STYLES
+   Base typography + background
 ========================================================= */
 body {
   font-family: var(--font-body);
@@ -31,83 +33,94 @@ body {
   background-color: var(--cream);
 }
 
-/* Headings use serif font */
+/* Headings use the serif font for visual hierarchy */
 h1, h2, h3 {
   font-family: var(--font-heading);
 }
 
 /* =========================================================
    NAVBAR
+   Dark header with gold accents
 ========================================================= */
 .navbar {
-  background-color: var(--dark);
+  background-color: var(--dark); /* Strong contrast */
   padding: 10px 0;
 }
 
+/* Brand (logo + text) */
 .navbar-brand {
   font-family: var(--font-heading);
   font-size: 1.4rem;
-  color: var(--gold) !important;
-  display: flex;
+  color: var(--gold) !important; /* Gold branding */
+  display: flex; /* Align logo + text */
   align-items: center;
   gap: 10px;
 }
 
+/* Logo image */
 .navbar-brand img {
   width: 44px;
   height: 44px;
-  object-fit: contain;
-  border-radius: 50%;
+  object-fit: contain; /* Prevent distortion */
+  border-radius: 50%;  /* Circular logo */
 }
 
+/* Navigation links */
 .navbar-nav .nav-link {
-  color: var(--cream) !important;
+  color: var(--cream) !important; /* Light text */
   font-weight: 400;
   letter-spacing: 0.5px;
   margin: 0 6px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Smooth hover */
 }
 
+/* Hover + active state */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--gold) !important;
+  color: var(--gold) !important; /* Gold highlight */
 }
 
+/* Mobile menu button */
 .navbar-toggler {
   border-color: var(--gold);
 }
 
+/* Custom hamburger icon (gold lines) */
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg ... %3e");
 }
 
 /* =========================================================
    HOME — HERO SECTION
+   Fullscreen intro with overlay + centered text
 ========================================================= */
 .hero {
-  position: relative;
+  position: relative; /* Needed for overlay + text */
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Full screen */
   overflow: hidden;
 }
 
+/* Background image */
 .hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Fill area without distortion */
   object-position: center;
   display: block;
 }
 
+/* Dark overlay for readability */
 .hero-overlay {
   position: absolute;
-  inset: 0;
+  inset: 0; /* Covers entire hero */
   background: rgba(26, 26, 46, 0.45);
 }
 
+/* Text container */
 .hero-content {
   position: absolute;
-  top: 7%;
+  top: 7%; /* Slightly lower for aesthetic spacing */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -115,6 +128,7 @@ h1, h2, h3 {
   max-width: 620px;
 }
 
+/* Tagline */
 .hero-tag {
   font-size: 1.2rem;
   letter-spacing: 4px;
@@ -123,18 +137,21 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 
+/* Main title */
 .hero-content h1 {
   font-size: 4rem;
   color: #fff;
   line-height: 1.25;
-  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* Improves readability */
   margin-bottom: 8px;
 }
 
+/* Highlighted word */
 .hero-content h1 span {
   color: var(--gold);
 }
 
+/* Subtitle */
 .hero-sub {
   font-size: 1.4rem;
   color: rgba(245, 240, 232, 0.85);
@@ -143,6 +160,7 @@ h1, h2, h3 {
   margin-bottom: 16px;
 }
 
+/* CTA button */
 .btn-hero {
   display: inline-block;
   background-color: var(--gold);
@@ -155,13 +173,14 @@ h1, h2, h3 {
   text-transform: uppercase;
   font-size: 1rem;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.3s ease; /* Smooth hover */
 }
 
+/* Hover effect */
 .btn-hero:hover {
   background-color: transparent;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-2px); /* Lift effect */
 }
 
 /* =========================================================
@@ -172,6 +191,7 @@ h1, h2, h3 {
   background-color: var(--cream);
 }
 
+/* Section label */
 .section-label {
   font-size: 0.78rem;
   letter-spacing: 3px;
@@ -180,6 +200,7 @@ h1, h2, h3 {
   margin-bottom: 12px;
 }
 
+/* Main heading */
 .section-welcome h2 {
   font-size: 2.4rem;
   color: var(--dark);
@@ -187,69 +208,82 @@ h1, h2, h3 {
   line-height: 1.3;
 }
 
+/* Highlighted word */
 .section-welcome h2 span {
   color: var(--gold);
 }
 
+/* Paragraphs */
 .section-welcome p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
 }
 
-/* Stats */
+/* Stats row */
 .welcome-stat {
   margin-top: 32px;
   display: flex;
   gap: 36px;
 }
 
+/* Stat number */
 .welcome-stat .stat h3 {
   font-size: 1.9rem;
   color: var(--terracotta);
 }
 
+/* Stat label */
 .welcome-stat .stat p {
   font-size: 0.82rem;
   color: #777;
   margin: 0;
 }
-
 /* =========================================================
    HOME — FACT CARDS
+   Small informational cards with icons and hover effects
 ========================================================= */
+
+/* Container for all fact cards */
+/* Uses flexbox for responsive wrapping and spacing */
 .facts-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows cards to move to next line on small screens */
   justify-content: space-between;
-  gap: 16px;
+  gap: 16px; /* Space between cards */
   margin-top: 50px;
   padding-top: 40px;
-  border-top: 1px solid rgba(201,168,76,0.25);
+  border-top: 1px solid rgba(201,168,76,0.25); /* Subtle separator line */
 }
 
+/* Individual fact card */
+/* White background, rounded corners, soft shadow */
 .fact-card {
-  flex: 1;
-  min-width: 130px;
+  flex: 1; /* Flexible width depending on screen size */
+  min-width: 130px; /* Prevents cards from becoming too small */
   background-color: #fff;
   border-radius: 12px;
   padding: 22px 16px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  transition: 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06); /* Soft shadow */
+  transition: 0.3s ease; /* Smooth hover animation */
 }
 
+/* Hover effect */
+/* Slight lift + stronger shadow for interactivity */
 .fact-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
+/* Icon at the top of each card */
 .fact-icon {
   font-size: 1.5rem;
   color: var(--gold);
   margin-bottom: 10px;
 }
 
+/* Label text (small uppercase) */
 .fact-label {
   font-size: 0.75rem;
   letter-spacing: 2px;
@@ -258,6 +292,7 @@ h1, h2, h3 {
   margin-bottom: 6px;
 }
 
+/* Main value text */
 .fact-value {
   font-family: var(--font-heading);
   font-size: 1rem;
@@ -265,6 +300,7 @@ h1, h2, h3 {
   color: var(--dark);
 }
 
+/* Secondary value (like currency code) */
 .fact-value span {
   display: block;
   font-size: 0.78rem;
@@ -273,33 +309,43 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — SCROLLING GALLERY
+   Vertical infinite scroll using pure CSS animation
 ========================================================= */
+
+/* Outer container for the scrolling gallery */
+/* Acts as a viewport that hides overflowing content */
 .scroll-gallery {
   width: 100%;
-  height: 460px;
-  overflow: hidden;
+  height: 460px; /* Visible height */
+  overflow: hidden; /* Only shows visible portion */
   border-radius: 8px;
 }
 
+/* Vertical track containing all images */
+/* Moves upward using keyframe animation */
 .scroll-track {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stack images vertically */
   gap: 10px;
-  animation: scrollUp 20s linear infinite;
+  animation: scrollUp 20s linear infinite; /* Smooth infinite scroll */
 }
 
+/* Pause animation on hover for better UX */
 .scroll-gallery:hover .scroll-track {
   animation-play-state: paused;
 }
 
+/* Individual images inside the track */
 .scroll-track img {
   width: 100%;
   height: 210px;
-  object-fit: cover;
+  object-fit: cover; /* Prevent distortion */
   border-radius: 6px;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevent collapsing */
 }
 
+/* Keyframe animation for vertical scrolling */
+/* Moves the track up by 50% (because images are duplicated) */
 @keyframes scrollUp {
   0%   { transform: translateY(0); }
   100% { transform: translateY(-50%); }
@@ -307,53 +353,63 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — WHY VISIT SECTION
+   Highlight cards explaining why Tunisia is special
 ========================================================= */
+
 .section-why {
   padding: 80px 0;
-  background-color: var(--dark);
+  background-color: var(--dark); /* Dark background for contrast */
 }
 
+/* Section label in gold */
 .section-why .section-label {
   color: var(--gold);
 }
 
+/* Main heading */
 .section-why h2 {
   font-size: 2.4rem;
   color: #fff;
   margin-bottom: 44px;
 }
 
+/* Highlighted word */
 .section-why h2 span {
   color: var(--gold);
 }
 
+/* Individual card */
 .why-card {
-  background-color: rgba(255,255,255,0.05);
-  border: 1px solid rgba(201,168,76,0.2);
+  background-color: rgba(255,255,255,0.05); /* Transparent white */
+  border: 1px solid rgba(201,168,76,0.2);   /* Subtle gold border */
   border-radius: 4px;
   padding: 32px 24px;
   text-align: center;
-  transition: 0.3s ease;
-  height: 100%;
+  transition: 0.3s ease; /* Smooth hover */
+  height: 100%; /* Ensures equal height in grid */
 }
 
+/* Hover effect: lift + stronger border */
 .why-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
 }
 
+/* Icon at top of card */
 .why-card .icon {
   font-size: 2rem;
   color: var(--gold);
   margin-bottom: 16px;
 }
 
+/* Card title */
 .why-card h4 {
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 10px;
 }
 
+/* Card description */
 .why-card p {
   font-size: 0.92rem;
   color: #aaa;
@@ -362,30 +418,36 @@ h1, h2, h3 {
 
 /* =========================================================
    FOOTER
+   Simple footer with branding + social icons
 ========================================================= */
+
 footer {
   background-color: var(--cream);
-  border-top: 1px solid rgba(201,168,76,0.3);
+  border-top: 1px solid rgba(201,168,76,0.3); /* Gold-tinted border */
   padding: 12px 0 6px;
 }
 
+/* Footer brand text */
 .footer-brand {
   font-family: var(--font-heading);
   font-size: 1rem;
   color: var(--dark);
 }
 
+/* Social icons container */
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
+/* Hover effect on social icons */
 .footer-social a:hover {
   color: var(--gold);
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* Lift effect */
 }
 
+/* Bottom copyright */
 .footer-bottom {
   border-top: 1px solid rgba(0,0,0,0.08);
   margin-top: 8px;
@@ -396,50 +458,59 @@ footer {
 }
 /* =========================================================
    DESTINATIONS — HERO BANNER
+   Large banner with background image + centered text
 ========================================================= */
+
 .dest-hero {
-  position: relative;
+  position: relative; /* Needed for overlay + text layering */
   width: 100%;
-  height: 60vh;
+  height: 60vh; /* Shorter than home hero */
   background-image: url('../images/scrolling-images/sidi-bousaid-d.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
+  background-size: cover; /* Image fills container */
+  background-position: center; /* Keeps subject centered */
+  display: flex; /* Center text vertically */
   align-items: center;
   justify-content: center;
 }
 
+/* Dark overlay for readability */
 .dest-hero-overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(26, 26, 46, 0.60);
+  inset: 0; /* Covers entire hero */
+  background: rgba(26, 26, 46, 0.60); /* Stronger overlay than home */
 }
 
+/* Text container */
 .dest-hero-content {
-  position: relative;
+  position: relative; /* Above overlay */
   text-align: center;
-  z-index: 1;
+  z-index: 1; /* Ensures text is visible */
 }
 
+/* Main title */
 .dest-hero-content h1 {
   font-size: 3rem;
   color: #fff;
-  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* Improves readability */
   margin-bottom: 10px;
 }
 
+/* Highlighted word */
 .dest-hero-content h1 span {
   color: var(--gold);
 }
 
 /* =========================================================
    DESTINATIONS — INTRO SECTION
+   Short introduction paragraph before the list
 ========================================================= */
+
 .dest-intro {
   padding: 60px 0 20px;
   background-color: var(--cream);
 }
 
+/* Section title */
 .dest-intro h2 {
   font-size: 2.2rem;
   color: var(--dark);
@@ -447,82 +518,96 @@ footer {
   line-height: 1.3;
 }
 
+/* Highlighted word */
 .dest-intro h2 span {
   color: var(--gold);
 }
 
+/* Intro paragraph */
 .dest-intro p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
-  max-width: 700px;
+  max-width: 700px; /* Keeps text readable */
 }
 
 /* =========================================================
    DESTINATIONS — LIST WRAPPER
 ========================================================= */
+
 .dest-list {
   background-color: var(--cream);
 }
 
 /* =========================================================
    DESTINATIONS — SINGLE ROW
+   Each destination block (image + text)
 ========================================================= */
+
 .dest-row {
-  min-height: 500px;
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  min-height: 500px; /* Ensures consistent height */
+  border-bottom: 1px solid rgba(201,168,76,0.15); /* Subtle divider */
 }
 
 /* =========================================================
    DESTINATIONS — IMAGE SIDE
+   Large image with gold border + hover zoom
 ========================================================= */
+
 .dest-img-wrap {
   width: 100%;
   height: 100%;
-  min-height: 500px;
-  overflow: hidden;
+  min-height: 500px; /* Matches row height */
+  overflow: hidden; /* Hides zoom overflow */
   position: relative;
-  border: 6px solid var(--gold);
-  box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
+  border: 6px solid var(--gold); /* Premium gold frame */
+  box-shadow: 8px 8px 30px rgba(0,0,0,0.15); /* Soft depth */
 }
 
+/* Image inside wrapper */
 .dest-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: 0.5s ease;
+  object-fit: cover; /* Prevent distortion */
+  transition: 0.5s ease; /* Smooth zoom */
 }
 
+/* Hover zoom effect */
 .dest-row:hover .dest-img-wrap img {
   transform: scale(1.04);
 }
 
 /* =========================================================
    DESTINATIONS — TEXT SIDE
+   Title, category badge, description, info list
 ========================================================= */
+
 .dest-text {
-  padding: 50px 60px;
+  padding: 50px 60px; /* Spacious layout */
 }
 
+/* Category badge */
 .dest-category {
   display: inline-block;
-  background-color: rgba(201,168,76,0.15);
+  background-color: rgba(201,168,76,0.15); /* Light gold tint */
   color: var(--terracotta);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 6px 16px;
-  border-radius: 20px;
+  border-radius: 20px; /* Pill shape */
   margin-bottom: 16px;
-  border: 1px solid rgba(201,168,76,0.3);
+  border: 1px solid rgba(201,168,76,0.3); /* Gold border */
 }
 
+/* Icon inside badge */
 .dest-category i {
   margin-right: 6px;
   color: var(--gold);
 }
 
+/* Destination title */
 .dest-text h2 {
   font-size: 2.4rem;
   color: var(--dark);
@@ -530,26 +615,30 @@ footer {
   line-height: 1.2;
 }
 
+/* Description paragraph */
 .dest-text p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
   margin-bottom: 28px;
-  text-align: justify;
+  text-align: justify; /* Clean paragraph alignment */
 }
 
 /* =========================================================
    DESTINATIONS — INFO LIST
+   Small bullet list with icons
 ========================================================= */
+
 .dest-info {
-  list-style: none;
+  list-style: none; /* Remove bullets */
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 12px; /* Space between items */
 }
 
+/* Each info row */
 .dest-info li {
   font-size: 0.92rem;
   color: #666;
@@ -558,88 +647,106 @@ footer {
   gap: 10px;
 }
 
+/* Icons inside info list */
 .dest-info li i {
   color: var(--gold);
   font-size: 1rem;
-  width: 18px;
+  width: 18px; /* Align icons */
 }
 
+/* Bold labels */
 .dest-info li strong {
   color: var(--dark);
 }
 
 /* =========================================================
    DESTINATIONS — ALTERNATING ROW BACKGROUND
+   Used to create visual separation between rows
 ========================================================= */
-.dest-row-reverse {
-  background-color: #fff;
-}
 
+.dest-row-reverse {
+  background-color: #fff; /* White background for contrast */
+}
 /* =========================================================
    CONTACT — HERO MAP SECTION
+   Top section with title + embedded Google Map
 ========================================================= */
+
+/* Wrapper for the hero section */
 .contact-hero {
   position: relative;
   width: 100%;
 }
 
+/* Dark text block above the map */
 .contact-hero-text {
-  background-color: var(--dark);
+  background-color: var(--dark); /* Strong contrast */
   text-align: center;
   padding: 50px 20px 30px;
 }
 
+/* Main contact page title */
 .contact-hero-text h1 {
   font-size: 2.8rem;
   color: #fff;
   margin-bottom: 10px;
 }
 
+/* Highlighted word */
 .contact-hero-text h1 span {
   color: var(--gold);
 }
 
+/* Subtitle under the title */
 .contact-hero-text .hero-sub {
   font-size: 1rem;
   color: rgba(245, 240, 232, 0.8);
   font-weight: 300;
 }
 
+/* Map container */
 .contact-map {
   width: 100%;
-  height: 450px;
+  height: 450px; /* Large visible map */
 }
 
+/* Embedded Google Map iframe */
 .contact-map iframe {
   width: 100%;
   height: 100%;
-  display: block;
+  display: block; /* Removes unwanted gaps */
 }
 
 /* =========================================================
    CONTACT — REQUIREMENTS SECTION
+   Checklist that must be completed before form unlocks
 ========================================================= */
+
 .contact-requirements {
   padding: 80px 0;
   background-color: var(--cream);
 }
 
+/* Section title */
 .contact-requirements h2 {
   font-size: 2.2rem;
   color: var(--dark);
   margin-bottom: 12px;
 }
 
+/* Highlighted word */
 .contact-requirements h2 span {
   color: var(--gold);
 }
 
+/* Subtitle under title */
 .req-subtitle {
   font-size: 1rem;
   color: #777;
   margin-bottom: 40px;
 }
 
+/* List of requirement items */
 .req-list {
   display: flex;
   flex-direction: column;
@@ -647,6 +754,7 @@ footer {
   max-width: 750px;
 }
 
+/* Each requirement row */
 .req-item {
   display: flex;
   align-items: flex-start;
@@ -655,22 +763,25 @@ footer {
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 10px;
   padding: 18px 20px;
-  cursor: pointer;
+  cursor: pointer; /* Makes the whole row clickable */
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Hover highlight */
 .req-item:hover {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
+/* Hidden checkbox used for CSS-only unlock logic */
 .req-checkbox-hidden {
   position: absolute;
-  opacity: 0;
+  opacity: 0; /* Invisible but functional */
   width: 0;
   height: 0;
 }
 
+/* Visual checkbox box */
 .req-box {
   width: 22px;
   height: 22px;
@@ -683,11 +794,13 @@ footer {
   background-color: #fff;
 }
 
+/* When checkbox is checked → fill box with gold */
 .req-checkbox-hidden:checked + .req-item .req-box {
   background-color: var(--gold);
   border-color: var(--gold);
 }
 
+/* Add checkmark when checked */
 .req-checkbox-hidden:checked + .req-item .req-box::after {
   content: '✓';
   position: absolute;
@@ -699,17 +812,20 @@ footer {
   font-weight: 700;
 }
 
+/* Highlight entire row when checked */
 .req-checkbox-hidden:checked + .req-item {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
+/* Requirement text */
 .req-text {
   font-size: 0.98rem;
   color: #555;
   line-height: 1.6;
 }
 
+/* Warning message before form unlock */
 .req-warning {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -721,39 +837,48 @@ footer {
 
 /* =========================================================
    CONTACT — FORM UNLOCK LOGIC (PURE CSS)
+   The magic: form appears ONLY when last checkbox is checked
 ========================================================= */
+
+/* Form is hidden by default */
 .contact-form-wrapper {
   display: none;
 }
 
+/* When requirement #8 is checked → hide warning */
 #req8:checked ~ .req-warning {
   display: none;
 }
 
+/* When requirement #8 is checked → show form */
 #req8:checked ~ .contact-form-wrapper {
   display: block;
 }
 
-------------------------------
 /* =========================================================
    CONTACT — FORM SECTION
+   Inputs, labels, submit button
 ========================================================= */
+
 .contact-form-wrapper h2 {
   font-size: 2.2rem;
   color: var(--dark);
   margin-bottom: 10px;
 }
 
+/* Highlighted word */
 .contact-form-wrapper h2 span {
   color: var(--gold);
 }
 
+/* Subtitle under form title */
 .form-subtitle {
   font-size: 1rem;
   color: #777;
   margin-bottom: 36px;
 }
 
+/* Input fields */
 .contact-input {
   background-color: var(--cream);
   border: 1px solid rgba(201,168,76,0.3);
@@ -765,6 +890,7 @@ footer {
   transition: border-color 0.3s ease;
 }
 
+/* Focus effect */
 .contact-input:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
@@ -772,6 +898,7 @@ footer {
   background-color: #fff;
 }
 
+/* Label styling */
 .contact-form .form-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -780,6 +907,7 @@ footer {
   margin-bottom: 6px;
 }
 
+/* Submit button */
 .btn-contact-submit {
   display: inline-block;
   background-color: var(--gold);
@@ -796,12 +924,14 @@ footer {
   transition: 0.3s ease;
 }
 
+/* Hover effect */
 .btn-contact-submit:hover {
   background-color: transparent;
   color: var(--gold);
   transform: translateY(-2px);
 }
 
+/* Icon spacing */
 .btn-contact-submit i {
   margin-left: 8px;
 }
@@ -809,6 +939,7 @@ footer {
 /* =========================================================
    MEDIA QUERIES — TABLET (max-width: 992px)
 ========================================================= */
+
 @media (max-width: 992px) {
   .dest-text { padding: 40px 30px; }
   .dest-text h2 { font-size: 2rem; }
@@ -818,29 +949,32 @@ footer {
 /* =========================================================
    MEDIA QUERIES — TABLET / LARGE MOBILE (max-width: 768px)
 ========================================================= */
+
 @media (max-width: 768px) {
+  /* Hero adjustments */
   .hero-content h1 { font-size: 2rem; }
   .hero-content { top: 5%; }
   .hero-tag { font-size: 0.8rem; }
   .hero-sub { font-size: 1rem; }
 
+  /* Welcome section */
   .section-welcome { padding: 55px 0 30px; }
   .section-welcome h2 { font-size: 1.8rem; }
   .welcome-stat { gap: 20px; }
 
+  /* Scrolling gallery */
   .scroll-gallery { height: 300px; margin-top: 32px; }
   .scroll-track img { height: 150px; }
 
+  /* Fact cards */
   .facts-row { gap: 10px; }
   .fact-card {
     flex: 1 1 calc(33% - 10px);
     min-width: 0;
     padding: 14px 6px;
   }
-  .fact-icon { font-size: 1.1rem; margin-bottom: 6px; }
-  .fact-label { font-size: 0.58rem; letter-spacing: 0.5px; }
-  .fact-value { font-size: 0.82rem; }
 
+  /* Why section */
   .section-why { padding: 55px 0; }
   .section-why h2 { font-size: 1.8rem; }
   .section-why .col-lg-3 {
@@ -848,6 +982,7 @@ footer {
     max-width: 50%;
   }
 
+  /* Destinations */
   .dest-hero { height: 45vh; }
   .dest-hero-content h1 { font-size: 2rem; }
   .dest-intro { padding: 40px 0 10px; }
@@ -856,45 +991,48 @@ footer {
   .dest-text { padding: 30px 20px; }
   .dest-text h2 { font-size: 1.6rem; }
 
+  /* Contact */
   .contact-hero-text h1 { font-size: 2rem; }
   .contact-map { height: 320px; }
   .contact-requirements { padding: 55px 0; }
   .contact-requirements h2 { font-size: 1.8rem; }
   .contact-form-section { padding: 55px 0; }
   .req-text { font-size: 0.9rem; }
-
-  
 }
 
 /* =========================================================
    MEDIA QUERIES — SMALL MOBILE (max-width: 480px)
 ========================================================= */
+
 @media (max-width: 480px) {
+  /* Hero */
   .hero-content h1 { font-size: 1.4rem; }
   .hero-tag { font-size: 0.65rem; }
   .btn-hero { padding: 10px 24px; font-size: 0.8rem; }
 
+  /* Stats */
   .welcome-stat { flex-direction: column; gap: 14px; }
 
+  /* Fact cards */
   .fact-card {
     flex: 1 1 calc(33% - 10px);
     padding: 12px 4px;
   }
-  .fact-label { font-size: 0.55rem; }
-  .fact-value { font-size: 0.78rem; }
 
+  /* Why section */
   .section-why .col-lg-3 {
     flex: 0 0 100%;
     max-width: 100%;
   }
 
+  /* Destinations */
   .dest-hero-content h1 { font-size: 1.5rem; }
   .dest-text h2 { font-size: 1.4rem; }
 
+  /* Contact */
   .contact-hero-text h1 { font-size: 1.6rem; }
   .contact-map { height: 260px; }
   .req-item { padding: 14px 14px; }
   .req-text { font-size: 0.85rem; }
   .btn-contact-submit { padding: 12px 28px; font-size: 0.8rem; }
-  
 }
