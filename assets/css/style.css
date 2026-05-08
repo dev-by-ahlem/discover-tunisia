@@ -1,15 +1,19 @@
+
 /* =========================================================
    CSS VARIABLES — Theme Colors & Fonts
 ========================================================= */
 :root {
-  --gold: #C9A84C;
-  --terracotta: #A0522D;
-  --blue: #2E86AB;
-  --cream: #F5F0E8;
-  --dark: #1A1A2E;
+  --gold:        #C9A84C;
+  --terracotta:  #A0522D;
+  --blue:        #2E86AB;
+  --cream:       #F5F0E8;
+  --dark:        #1A1A2E;
+  --radius-soft: 18px;
+  --radius-oval: 45px;
+  --transition:  0.35s ease;
 
   --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', sans-serif;
+  --font-body:    'Lato', sans-serif;
 }
 
 /* =========================================================
@@ -86,35 +90,43 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — HERO SECTION
+   - image-rendering: crisp-edge removes blur
+   - overlay at ~15% so it's very light (almost transparent)
+   - min-height: 100vh + padding-bottom ensures all content shows
 ========================================================= */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;           /* min- so content never gets cut */
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 }
 
 .hero-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;  /* anchor image to top so mosque shows fully */
+  image-rendering: crisp-edges; /* removes fog/blur effect */
+  filter: none;                 /* ensure no CSS blur is applied */
 }
 
+/* Very light overlay — almost transparent */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 46, 0.45);
+  background: rgba(26, 26, 46, 0.18);
 }
 
 .hero-content {
-  position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;          /* sits above overlay */
+  z-index: 1;
+  padding: 80px 20px 60px;     /* top padding clears navbar */
+  width: 100%;
   text-align: center;
-  width: 90%;
-  max-width: 620px;
 }
 
 .hero-tag {
@@ -301,7 +313,7 @@ h1, h2, h3 {
 }
 
 @keyframes scrollUp {
-  0% { transform: translateY(0); }
+  0%   { transform: translateY(0); }
   100% { transform: translateY(-50%); }
 }
 
@@ -619,7 +631,7 @@ footer {
 }
 
 /* =========================================================
-   CONTACT — REQUIREMENTS
+   CONTACT — REQUIREMENTS SECTION
 ========================================================= */
 .contact-requirements {
   padding: 80px 0;
@@ -642,6 +654,7 @@ footer {
   margin-bottom: 40px;
 }
 
+/* Each checklist row */
 .req-item {
   display: flex;
   align-items: flex-start;
@@ -649,7 +662,7 @@ footer {
   background-color: #fff;
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 10px;
-  padding: 18px 20px;
+  padding: 20px 24px;     /* slightly bigger padding */
   cursor: pointer;
   margin-bottom: 16px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -661,6 +674,7 @@ footer {
   background-color: rgba(201,168,76,0.05);
 }
 
+/* Hidden real checkbox */
 .req-checkbox-hidden {
   position: absolute;
   opacity: 0;
@@ -668,9 +682,10 @@ footer {
   height: 0;
 }
 
+/* Custom visible checkbox box */
 .req-box {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border: 2px solid rgba(201,168,76,0.4);
   border-radius: 4px;
   flex-shrink: 0;
@@ -680,6 +695,7 @@ footer {
   background-color: #fff;
 }
 
+/* Checked state — gold background + tick */
 .req-checkbox-hidden:checked + .req-item .req-box {
   background-color: var(--gold);
   border-color: var(--gold);
@@ -692,7 +708,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--dark);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -701,11 +717,14 @@ footer {
   background-color: rgba(201,168,76,0.05);
 }
 
+/* Bigger text for requirements */
 .req-text {
-  font-size: 0.98rem;
-  color: #555;
+  font-size: 1.08rem;   /* increased from 0.98rem */
+  color: #444;
   line-height: 1.6;
 }
+
+/* Warning shown until last box checked */
 .req-warning {
   margin-top: 10px;
   margin-bottom: 30px;
@@ -716,7 +735,9 @@ footer {
 }
 
 /* =========================================================
-   CONTACT — FORM UNLOCK (Pure CSS)
+   CONTACT — FORM UNLOCK (Pure CSS trick)
+   When checkbox #req5 is checked, the form wrapper appears.
+   The ~ selector targets any FOLLOWING sibling in the same parent.
 ========================================================= */
 .contact-form-wrapper {
   display: none;
@@ -724,11 +745,13 @@ footer {
   max-width: 750px;
 }
 
-#req8:checked ~ .contact-form-wrapper {
+/* Show form only when the LAST checkbox (req5) is checked */
+#req5:checked ~ .contact-form-wrapper {
   display: block;
 }
 
-#req8:checked ~ .req-warning {
+/* Hide warning once req5 is checked */
+#req5:checked ~ .req-warning {
   display: none;
 }
 
@@ -748,6 +771,7 @@ footer {
   margin-bottom: 36px;
 }
 
+/* Form inputs styling */
 .contact-input {
   background-color: var(--cream);
   border: 1px solid rgba(201,168,76,0.3);
@@ -774,6 +798,62 @@ footer {
   margin-bottom: 6px;
 }
 
+/* =========================================================
+   CONTACT — THANK YOU (Pure CSS)
+   The thank-you overlay is hidden by default.
+   When the hidden submit checkbox is checked, it appears.
+========================================================= */
+.thankyou-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show when hidden submit-trigger checkbox is checked */
+#submit-trigger:checked ~ .thankyou-overlay,
+#submit-trigger:checked + .thankyou-overlay {
+  display: flex;
+}
+
+.thankyou-box {
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 60px 50px;
+  text-align: center;
+  max-width: 520px;
+  width: 90%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.thankyou-emoji {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.thankyou-box h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.thankyou-box h2 span {
+  color: var(--gold);
+}
+
+.thankyou-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* Submit button — styled as gold pill */
 .btn-contact-submit {
   display: inline-block;
   background-color: var(--gold);
@@ -799,42 +879,10 @@ footer {
 .btn-contact-submit i {
   margin-left: 8px;
 }
-/* ========================================================= */
-/*                     COLOR VARIABLES                       */
-/* ========================================================= */
-:root {
-  --gold: #C9A84C;
-  --terracotta: #A0522D;
-  --blue: #2E86AB;
-  --cream: #F5F0E8;
-  --dark: #1A1A2E;
-  --radius-soft: 18px;
-  --radius-oval: 45px;
-  --transition: 0.35s ease;
-}
-/* ========================================================= */
-/*                     CULTURE — HERO                        */
-/* ========================================================= */
-.culture-hero {
-  background: var(--blue);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
 
-.culture-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-.culture-hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: auto;
-}
-/* ========================================================= */
-/*                     CULTURE — HERO                        */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — HERO
+========================================================= */
 .culture-hero {
   background: var(--blue);
   color: white;
@@ -853,22 +901,25 @@ footer {
   margin: auto;
 }
 
-/* ========================================================= */
-/*                     CULTURE SECTION                       */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — SECTION WRAPPER
+========================================================= */
 .culture-section {
   padding: 50px 20px;
 }
 
-/* ========================================================= */
-/*                           TABS                             */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — TABS (Pure CSS radio trick)
+   Hidden radio inputs control which content panel is visible.
+   Labels act as clickable tab buttons.
+========================================================= */
 
-/* Hide radios globally */
+/* Hide all radio inputs globally */
 input[type="radio"] {
   display: none;
 }
 
+/* Tab button row */
 .ch-tabs {
   display: flex;
   justify-content: center;
@@ -877,6 +928,7 @@ input[type="radio"] {
   margin-bottom: 35px;
 }
 
+/* Default tab button style */
 .ch-tab {
   padding: 12px 22px;
   border: 2px solid var(--blue);
@@ -893,38 +945,46 @@ input[type="radio"] {
   color: white;
 }
 
-/* Active tab = GOLD */
-#tab-food:checked + label,
-#tab-traditions:checked + label,
-#tab-arts:checked + label,
-#tab-clothing:checked + label {
+/* ——— ACTIVE TAB STATE ———
+   When a radio is checked, its corresponding label turns gold.
+   These selectors rely on the radio inputs being BEFORE the
+   .ch-tabs div in the HTML (sibling + descendant relationship). */
+#tab-food:checked      ~ .ch-tabs label[for="tab-food"],
+#tab-traditions:checked ~ .ch-tabs label[for="tab-traditions"],
+#tab-arts:checked      ~ .ch-tabs label[for="tab-arts"],
+#tab-clothing:checked  ~ .ch-tabs label[for="tab-clothing"] {
   background: var(--gold);
   color: var(--dark);
   border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* ========================================================= */
-/*                     TAB CONTENT LOGIC                     */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — TAB CONTENT PANELS
+========================================================= */
+
+/* All panels hidden by default */
 .ch-content {
   display: none;
   margin-top: 20px;
   animation: fadeIn 0.4s ease;
 }
 
-#tab-food:checked ~ #content-food { display: block; }
+/* Show the matching panel when its radio is checked */
+#tab-food:checked      ~ #content-food       { display: block; }
 #tab-traditions:checked ~ #content-traditions { display: block; }
-#tab-arts:checked ~ #content-arts { display: block; }
-#tab-clothing:checked ~ #content-clothing { display: block; }
+#tab-arts:checked      ~ #content-arts        { display: block; }
+#tab-clothing:checked  ~ #content-clothing    { display: block; }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ========================================================= */
-/*                     CURLY BLUE BORDER                     */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — DECORATIVE DIVIDER
+========================================================= */
 .curly-top {
   width: 100%;
   height: 40px;
@@ -932,9 +992,11 @@ input[type="radio"] {
   margin: 20px 0 30px;
 }
 
-/* ========================================================= */
-/*                     FOOD & CLOTHING CARDS                 */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — FOOD & CLOTHING CARDS
+   Images fill the full card (aspect-ratio square).
+   Text overlays the bottom of the image with a dark gradient.
+========================================================= */
 .food-grid,
 .clothing-grid {
   display: grid;
@@ -943,35 +1005,71 @@ input[type="radio"] {
   padding: 10px 0;
 }
 
+/* Card is a circle / oval using border-radius 50% */
 .food-card,
 .cloth-card {
-  background: white;
-  border-radius: 40px;
-  padding: 25px;
-  text-align: center;
-  border: 2px solid var(--terracotta);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  border-radius: 50%;              /* circular cards */
+  aspect-ratio: 1 / 1;            /* perfect square so circle works */
+  overflow: hidden;
+  border: 3px solid var(--terracotta);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
   transition: var(--transition);
-}
-
-.food-card img,
-.cloth-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 25px;
-  margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .food-card:hover,
 .cloth-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+  border-color: var(--gold);
 }
 
-/* ========================================================= */
-/*                     TRADITIONS LIST (Option A)            */
-/* ========================================================= */
+/* Image fills the entire card */
+.food-card img,
+.cloth-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.food-card:hover img,
+.cloth-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Text overlay — dark gradient from bottom */
+.food-card-text,
+.cloth-card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 12px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 100%);
+  text-align: center;
+}
+
+.food-card-text h3,
+.cloth-card-text h3 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.food-card-text p,
+.cloth-card-text p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+/* =========================================================
+   CULTURE — TRADITIONS LIST
+========================================================= */
 .trad-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1005,11 +1103,12 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-/* ========================================================= */
-/*                     ARTS CARDS (Option C)                 */
-/* ========================================================= */
+/* =========================================================
+   CULTURE — ARTS CARDS
+========================================================= */
 .arts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1036,177 +1135,25 @@ input[type="radio"] {
   font-size: 2.4rem;
   margin-bottom: 12px;
 }
-#tab-food:checked ~ .ch-tabs label[for="tab-food"],
-#tab-traditions:checked ~ .ch-tabs label[for="tab-traditions"],
-#tab-arts:checked ~ .ch-tabs label[for="tab-arts"],
-#tab-clothing:checked ~ .ch-tabs label[for="tab-clothing"] {
-  background: var(--terracotta);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* ========================================================= */
-/*                        RESPONSIVE                         */
-/* ========================================================= */
-@media (max-width: 992px) {
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trad-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ch-tabs {
-    gap: 10px;
-  }
-}
-.ch-tabs label,
-.ch-tab {
-  -webkit-tap-highlight-color: transparent !important;
-  background-color: white !important;
-}
-
-.ch-tabs label:active,
-.ch-tabs label:focus,
-.ch-tab:active,
-.ch-tab:focus {
-  background-color: white !important;
-  outline: none !important;
-  box-shadow: none !important;
-
-}
-
-/* ========================================================= */
-/*                        RESPONSIVE                         */
-/* ========================================================= */
-@media (max-width: 992px) {
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trad-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ch-tabs {
-    gap: 10px;
-  }
-}
-
-
-/* ========================================================= */
-/*                        RESPONSIVE                         */
-/* ========================================================= */
-@media (max-width: 992px) {
-  .food-grid,
-  .clothing-grid,
-  .traditions-grid,
-  .arts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .food-grid,
-  .clothing-grid,
-  .traditions-grid,
-  .arts-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ch-tabs {
-    gap: 10px;
-  }
-}
-
-
-/* ========================================================= */
-/*                      RESPONSIVE DESIGN                    */
-/* ========================================================= */
-@media (max-width: 992px) {
-  .ch-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .ch-grid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-  }
-
-  .ch-tabs {
-    gap: 10px;
-  }
-}
-
 
 /* =========================================================
-   RESPONSIVE
-========================================================= */
-@media (max-width: 992px) {
-  .ch-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 576px) {
-  .ch-header h2 {
-    font-size: 2rem;
-  }
-  .ch-grid {
-    grid-template-columns: 1fr;
-  }
-  .ch-tabs-row {
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-}
-
-
-/* =========================================================
-   MEDIA QUERIES — TABLET / LARGE MOBILE (max-width: 768px)
+   RESPONSIVE — TABLET (max-width: 768px)
 ========================================================= */
 @media (max-width: 768px) {
 
   /* Hero */
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content { top: 5%; }
-  .hero-tag { font-size: 0.8rem; }
-  .hero-sub { font-size: 1rem; }
-
-  /* Welcome */
-  .section-welcome { padding: 55px 0 30px; }
+  .hero-content h1  { font-size: 2rem; }
+  .hero-tag         { font-size: 0.8rem; }
+  .hero-sub         { font-size: 1rem; }
+  .section-welcome  { padding: 55px 0 30px; }
   .section-welcome h2 { font-size: 1.8rem; }
 
   /* Scrolling gallery */
-  .scroll-gallery { height: 300px; margin-top: 32px; }
+  .scroll-gallery   { height: 300px; margin-top: 32px; }
   .scroll-track img { height: 150px; }
 
   /* Fact cards */
-  .facts-row { gap: 10px; }
+  .facts-row        { gap: 10px; }
   .fact-card {
     flex: 1 1 calc(33% - 10px);
     min-width: 0;
@@ -1214,54 +1161,47 @@ input[type="radio"] {
   }
 
   /* Why cards */
-  .section-why { padding: 55px 0; }
-  .section-why h2 { font-size: 1.8rem; }
+  .section-why      { padding: 55px 0; }
+  .section-why h2   { font-size: 1.8rem; }
   .section-why .col-lg-3 {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
   /* Destinations */
-  .dest-hero { height: 45vh; }
+  .dest-hero        { height: 45vh; }
   .dest-hero-content h1 { font-size: 2rem; }
-  .dest-intro { padding: 40px 0 10px; }
-  .dest-intro h2 { font-size: 1.7rem; }
-  .dest-img-wrap { min-height: 280px; }
-  .dest-text { padding: 30px 20px; }
-  .dest-text h2 { font-size: 1.6rem; }
+  .dest-intro       { padding: 40px 0 10px; }
+  .dest-intro h2    { font-size: 1.7rem; }
+  .dest-img-wrap    { min-height: 280px; }
+  .dest-text        { padding: 30px 20px; }
+  .dest-text h2     { font-size: 1.6rem; }
 
   /* Contact */
-  .contact-hero-text h1 { font-size: 2rem; }
-  .contact-map { height: 320px; }
-  .contact-requirements { padding: 55px 0; }
+  .contact-hero-text h1   { font-size: 2rem; }
+  .contact-map            { height: 320px; }
+  .contact-requirements   { padding: 55px 0; }
   .contact-requirements h2 { font-size: 1.8rem; }
 
-  /* Culture — Tabs spacing */
-  .tab-btn {
-    padding: 14px 16px;
-    font-size: 0.95rem;
+  /* Culture grids */
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Culture — Timeline spacing */
-  .timeline {
-    margin-left: 10px;
-    padding-left: 16px;
-  }
-
-  .timeline-icon {
-    left: -30px;
-  }
+  .trad-list { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
-   MEDIA QUERIES — SMALL MOBILE (max-width: 480px)
+   RESPONSIVE — SMALL MOBILE (max-width: 480px)
 ========================================================= */
 @media (max-width: 480px) {
 
   /* Hero */
   .hero-content h1 { font-size: 1.4rem; }
-  .hero-tag { font-size: 0.65rem; }
-  .btn-hero { padding: 10px 24px; font-size: 0.8rem; }
+  .hero-tag        { font-size: 0.65rem; }
+  .btn-hero        { padding: 10px 24px; font-size: 0.8rem; }
 
   /* Welcome stats */
   .welcome-stat {
@@ -1283,35 +1223,22 @@ input[type="radio"] {
 
   /* Destinations */
   .dest-hero-content h1 { font-size: 1.5rem; }
-  .dest-text h2 { font-size: 1.4rem; }
+  .dest-text h2         { font-size: 1.4rem; }
 
   /* Contact */
   .contact-hero-text h1 { font-size: 1.6rem; }
-  .contact-map { height: 260px; }
-  .req-item { padding: 14px; }
-  .req-text { font-size: 0.85rem; }
-  .btn-contact-submit { padding: 12px 28px; font-size: 0.8rem; }
+  .contact-map          { height: 260px; }
+  .req-item             { padding: 14px; }
+  .req-text             { font-size: 0.9rem; }
+  .btn-contact-submit   { padding: 12px 28px; font-size: 0.8rem; }
+  .thankyou-box         { padding: 40px 24px; }
 
-  /* Culture — Tabs */
-  .tab-btn {
-    padding: 12px 14px;
-    font-size: 0.9rem;
+  /* Culture */
+  .food-grid,
+  .clothing-grid,
+  .arts-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Culture — Timeline */
-  .timeline {
-    border-left: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-  .timeline-icon {
-    position: static;
-    margin-bottom: 8px;
-  }
-
-  /* Culture — Arts cards */
-  .arts-card img {
-    height: 180px;
-  }
+  .ch-tabs { gap: 10px; }
 }

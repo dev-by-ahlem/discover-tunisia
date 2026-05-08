@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-
-  <!-- ================= BASIC PAGE SETUP ================= -->
+  <!-- ================= PAGE SETUP ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinations - Discover Tunisia</title>
@@ -18,14 +17,12 @@
 
   <!-- ================= CUSTOM CSS ================= -->
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
 
   <!-- =====================================================
-       NAVBAR — identical on every page
-       Active class is on "Destinations" here
+       NAVBAR — "Destinations" link is active
   ====================================================== -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -46,10 +43,10 @@
 
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link"        href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
-          <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link"        href="culture.html">Culture</a></li>
+          <li class="nav-item"><a class="nav-link"        href="contact.html">Contact</a></li>
         </ul>
       </div>
 
@@ -58,26 +55,21 @@
 
   <!-- =====================================================
        HERO BANNER
-       Background image with dark overlay + centered text.
-       Shorter than home hero (60vh instead of 100vh).
+       Shorter than home (60vh). Background image set in CSS.
+       Dark overlay + centered heading on top.
   ====================================================== -->
   <section class="dest-hero">
-
-    <!-- Dark overlay for readability -->
     <div class="dest-hero-overlay"></div>
-
-    <!-- Centered text on top of overlay -->
     <div class="dest-hero-content">
       <p class="hero-tag">Explore the Beauty</p>
       <h1>Top <span>Destinations</span><br>in Tunisia</h1>
       <p class="hero-sub">From ancient ruins to golden beaches — find your next adventure</p>
     </div>
-
   </section>
 
   <!-- =====================================================
-       INTRO SECTION
-       Short paragraph introducing the destinations list.
+       INTRO
+       Short intro paragraph before the destinations list.
   ====================================================== -->
   <section class="dest-intro">
     <div class="container">
@@ -93,24 +85,20 @@
 
   <!-- =====================================================
        DESTINATIONS LIST
-       Magazine-style layout: image on one side, text on other.
-       Rows alternate: image left / image right.
-       Uses container-fluid + g-0 so content goes edge to edge.
+       Magazine-style layout: image one side, text the other.
+       Rows alternate left/right using flex-lg-row-reverse.
+       container-fluid px-0 = edge-to-edge on large screens.
   ====================================================== -->
   <section class="dest-list">
     <div class="container-fluid px-0">
 
-      <!-- ===== DESTINATION 1 — Sidi Bou Said (image LEFT) ===== -->
+      <!-- ===== 1. SIDI BOU SAID — image LEFT ===== -->
       <div class="dest-row row g-0">
-
-        <!-- Image side -->
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/scrolling-images/sidi-bou-said.jpg" alt="Sidi Bou Said village">
           </div>
         </div>
-
-        <!-- Text side -->
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-camera"></i> Must See</span>
@@ -121,24 +109,21 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Tunis Area</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> April – October</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Blue & white architecture, sea views</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> April – October</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Blue & white architecture, sea views</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 2 — Carthage (image RIGHT) ===== -->
-      <!-- flex-lg-row-reverse flips the columns on large screens -->
+      <!-- ===== 2. CARTHAGE — image RIGHT ===== -->
+      <!-- flex-lg-row-reverse flips the two columns on large screens -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/scrolling-images/carthage-jam.png" alt="Ancient ruins of Carthage">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
@@ -149,23 +134,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Tunis Area</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> March – May, Sept – Nov</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Roman ruins, ancient history</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> March – May, Sept – Nov</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Roman ruins, ancient history</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 3 — El Jem (image LEFT) ===== -->
+      <!-- ===== 3. EL JEM — image LEFT ===== -->
       <div class="dest-row row g-0">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/scrolling-images/jam.png" alt="El Jem Roman Amphitheatre">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
@@ -176,23 +158,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Central Tunisia</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> March – June</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Roman architecture, history</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> March – June</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Roman architecture, history</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 4 — Sahara (image RIGHT) ===== -->
+      <!-- ===== 4. SAHARA — image RIGHT ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/scrolling-images/sahara.png" alt="Sahara Desert dunes">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-hiking"></i> Adventure</span>
@@ -203,23 +182,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> South Tunisia</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> October – March</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Camel rides, dunes, stargazing</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> October – March</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Camel rides, dunes, stargazing</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 5 — Kairouan (image LEFT) ===== -->
+      <!-- ===== 5. KAIROUAN — image LEFT ===== -->
       <div class="dest-row row g-0">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Great Mosque of Kairouan">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-mosque"></i> Spiritual</span>
@@ -230,23 +206,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Central Tunisia</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> All year round</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Islamic heritage, architecture</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> All year round</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Islamic heritage, architecture</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 6 — Bizerte (image RIGHT) ===== -->
+      <!-- ===== 6. BIZERTE — image RIGHT ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
             <img src="assets/images/view-port.jpg" alt="Bizerte Old Port">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-anchor"></i> Port City</span>
@@ -257,23 +230,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> North Tunisia</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> May – September</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Old port, medina, beaches</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> May – September</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Old port, medina, beaches</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 7 — Djerba (image LEFT) ===== -->
+      <!-- ===== 7. DJERBA — image LEFT ===== -->
       <div class="dest-row row g-0">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Djerba island coastline">
+            <img src="assets/images/djerba.jpg" alt="Djerba island coastline">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-sun"></i> Island Life</span>
@@ -284,23 +254,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> South Coast</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> April – October</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Beaches, heritage, island life</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> April – October</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Beaches, heritage, island life</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 8 — Korbus (image RIGHT) ===== -->
+      <!-- ===== 8. KORBUS — image RIGHT ===== -->
       <div class="dest-row dest-row-reverse row g-0 flex-lg-row-reverse">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Korbus hot springs by the sea">
+            <img src="assets/images/korbus.jpg" alt="Korbus hot springs by the sea">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-hot-tub"></i> Nature</span>
@@ -311,23 +278,20 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Cap Bon</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> October – April</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Natural hot springs, sea views</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> October – April</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Natural hot springs, sea views</li>
             </ul>
           </div>
         </div>
-
       </div>
 
-      <!-- ===== DESTINATION 9 — Sousse (image LEFT) ===== -->
+      <!-- ===== 9. SOUSSE — image LEFT ===== -->
       <div class="dest-row row g-0">
-
         <div class="col-lg-6">
           <div class="dest-img-wrap">
-            <img src="" alt="Sousse medina and coastline">
+            <img src="assets/images/sousse.jpg" alt="Sousse medina and coastline">
           </div>
         </div>
-
         <div class="col-lg-6 d-flex align-items-center">
           <div class="dest-text">
             <span class="dest-category"><i class="fas fa-landmark"></i> UNESCO Site</span>
@@ -338,19 +302,18 @@
             </p>
             <ul class="dest-info">
               <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> East Coast</li>
-              <li><i class="fas fa-sun"></i> <strong>Best Time:</strong> May – October</li>
-              <li><i class="fas fa-star"></i> <strong>Known For:</strong> Medina, beaches, nightlife</li>
+              <li><i class="fas fa-sun"></i>            <strong>Best Time:</strong> May – October</li>
+              <li><i class="fas fa-star"></i>           <strong>Known For:</strong> Medina, beaches, nightlife</li>
             </ul>
           </div>
         </div>
-
       </div>
 
     </div>
   </section>
 
   <!-- =====================================================
-       FOOTER — identical on every page
+       FOOTER — same on every page
   ====================================================== -->
   <footer>
     <div class="container">
