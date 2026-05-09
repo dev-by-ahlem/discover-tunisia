@@ -3,9 +3,6 @@
 
 - [Project Goals](#project-goals)
 - [Responsive Design](#responsive-design)
-  - [Bootstrap's Responsive Grid System](#bootstraps-responsive-grid-system)
-  - [Custom Media Queries](#custom-media-queries)
-  - [Flexible Images and Layouts](#flexible-images-and-layouts)
 - [Target Audience](#target-audience)
 - [User Goals](#user-goals)
 - [User Experience (UX)](#user-experience-ux)
