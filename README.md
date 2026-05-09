@@ -118,7 +118,7 @@ Click here to explore the live version of my website:
  
  ## 👥User Stories & Acceptance Criteria
 
-### User Story 1: User-friendly navigation and responsive design(must-have)
+### 1️⃣User Story 1: User-friendly navigation and responsive design(must-have)
 
 **User story:**  
 
@@ -136,7 +136,7 @@ As a First-Time Visitor, I need easy navigation and a user-friendly design, incl
 
 ---
 
-### User Story 2: High-quality images and engaging descriptions (must-have)
+### 2️⃣User Story 2: High-quality images and engaging descriptions (must-have)
 
 **User story:**  
 
@@ -157,7 +157,7 @@ As a Tourist, I want to see high-quality images and engaging descriptions of Tun
 ---
 
 
-### User Story 3: Detailed destination and culture information with interactive gallery (must-have)
+### 3️⃣User Story 3: Detailed destination and culture information with interactive gallery (must-have)
 
 **User story:**  
 
@@ -177,7 +177,7 @@ As a Traveler, I want to find clear information about destinations, culture, and
 
 ---
 
-### User Story 4: Contact form for inquiries (must-have)
+### 4️⃣User Story 4: Contact form for inquiries (must-have)
 
 **User story:**  
 
@@ -198,7 +198,7 @@ As a Visitor, I want to send inquiries using a simple contact form, so I can eas
   
 ---
 
-### User Story 5: Subtle animations and micro-interactions (should-have)
+### 5️⃣User Story 5: Subtle animations and micro-interactions (should-have)
 
 **User story:** 
 
@@ -214,7 +214,7 @@ As a User, I want smooth animations and interactions (e.g., fade-ins, hover effe
 - Add CSS transitions and animations to interactive elements.
 - Test performance on various devices.
 
-### User Story 6: Social media integration (could-have)
+### 6️⃣User Story 6: Social media integration (could-have)
 
 **User story:**
 
@@ -232,7 +232,7 @@ As a Visitor, I want links to social media for real-time updates and community e
 
 ---
 
-### User Story 7: Newsletter sign-up form (could-have)
+### 7️⃣User Story 7: Newsletter sign-up form (could-have)
 
 **User story:**  
 
@@ -249,7 +249,7 @@ As a Regular Visitor, I want to sign up for newsletters and updates, so I can st
 
 ---
 
-### User Story 8: Interactive map for destinations (could-have)
+### 8️⃣User Story 8: Interactive map for destinations (could-have)
 
 **User story:**  
 
@@ -266,7 +266,7 @@ As a Traveler, I want an interactive map showing key destinations in Tunisia, so
 - Add markers and popups for each destination.
 
 ---
-### User Story 9: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have)
+### 9️⃣User Story 9: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have)
 
 **User story:**  
 
@@ -284,7 +284,7 @@ As a Prospective Visitor, I want to read testimonials from other travelers, so I
 
 ---
 
-### User Story 10: Location, contact details, and travel information (could-have)
+### 🔟User Story 10: Location, contact details, and travel information (could-have)
 
 **User story:**  
 
@@ -300,7 +300,7 @@ As a Prospective Traveler, I need to find essential information such as location
 - Design and place a section for contact details and travel information.
 - Ensure the contact section is clearly visible and accessible from all parts of the website, adhering to common design standards.
 
-### User Story 11: Travel quiz or itinerary builder (could-have)
+### 1️⃣1️⃣User Story 11: Travel quiz or itinerary builder (could-have)
 
 **User story:**  
 
