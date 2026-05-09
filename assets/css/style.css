@@ -29,7 +29,7 @@ body {
   font-family: var(--font-body);  /* Lato for all body text */
   color: var(--dark);             /* default dark navy text */
   background-color: var(--cream); /* off-white page background */
-  overflow-x: hidden;             /* prevent horizontal scroll on small screens */
+  overflow-x: hidden;  /* prevent horizontal scroll on small screens */
 }
 
 /* All headings use the elegant serif font */
