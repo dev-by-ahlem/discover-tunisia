@@ -15,17 +15,17 @@ Click here to explore the live version of my website:
 - [User Goals](#user-goals)
 - [User Experience (UX)](#user-experience-ux)
 - [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
-  - [User Story 1: User-friendly navigation and responsive design](#user-story-1-User-friendly-navigation-and-responsive-design-(must-have))
-  - [User Story 2: High-quality images and engaging descriptions](#user-story-2-High-quality-images-and-engaging-descriptions-(must-have))
-  - [User Story 3: Location, contact details, and travel information](#user-story-3-Location,-contact-details,-and-travel-information-(must-have))
-  - [User Story 4: Contact form for inquiries](#user-story-4-Contact-form-for-inquiries-(must-have))
-  - [User Story 5: Detailed destination and culture information with interactive gallery](#user-story-5-Detailed-destination-and-culture-information-with-interactive-gallery-(should-have))
-  - [User Story 6: Social media integration](#user-story-6-Social-media-integration-(should-have))
-  - [User Story 7: Subtle animations and micro-interactions](#user-story-7-Subtle-animations-and-micro-interactions-(should-have))
-  - [User Story 8: Newsletter sign-up form](#user-story-8-Newsletter-sign-up-form-(could-have))
-  - [User Story 9: Interactive map for destinations](#user-story-9-Interactive-map-for-destinations-(could-have))
-  - [User Story 10: User testimonials](#user-story-10-User-testimonials-(could-have))
-  - [User Story 11: Travel quiz or itinerary builder](#user-story-11-Travel-quiz-or-itinerary-builder-(could-have))
+  - [User Story 1: User-friendly navigation and responsive design (must-have)](#user-story-1-User-friendly-navigation-and-responsive-design-(must-have))
+  - [User Story 2: High-quality images and engaging descriptions (must-have)](#user-story-2-High-quality-images-and-engaging-descriptions-(must-have))
+  - [User Story 3: Location, contact details, and travel information (must-have)](#user-story-3-Location,-contact-details,-and-travel-information-(must-have))
+  - [User Story 4: Contact form for inquiries (must-have)](#user-story-4-Contact-form-for-inquiries-(must-have))
+  - [User Story 5: Detailed destination and culture information with interactive gallery (should-have)](#user-story-5-Detailed-destination-and-culture-information-with-interactive-gallery-(should-have))
+  - [User Story 6: Social media integration (should-have)](#user-story-6-Social-media-integration-(should-have))
+  - [User Story 7: Subtle animations and micro-interactions (should-have)](#user-story-7-Subtle-animations-and-micro-interactions-(should-have))
+  - [User Story 8: Newsletter sign-up form (could-have)](#user-story-8-Newsletter-sign-up-form-(could-have))
+  - [User Story 9: Interactive map for destinations (could-have)](#user-story-9-Interactive-map-for-destinations-(could-have))
+  - [User Story 10: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have))
+  - [User Story 11: Travel quiz or itinerary builder (could-have)](#user-story-11-Travel-quiz-or-itinerary-builder-(could-have))
 - [Design Justification](#design-justification)
   - [Color Palette](#color-palette)
   - [Imagery & Themes](#imagery--themes)
@@ -108,5 +108,73 @@ Click here to explore the live version of my website:
      - Navigate easily thanks to a clean layout and responsive design.
      - Stay connected through social media links and optional newsletter sign‑up.
      - Enjoy a modern experience with subtle animations and interactive elements.
+ 
+ ## 👥User Stories & Acceptance Criteria
+
+### User Story 1: User-friendly navigation and responsive design(must-have)
+
+
+
+---
+
+### User Story 2: High-quality images and engaging descriptions (must-have)
+
+
+
+---
+
+### User Story 3: Location, contact details, and travel information (must-have)
+
+
+
+---
+
+### User Story 4: Contact form for inquiries (must-have)
+
+
+
+
+---
+
+### User Story 5: Detailed destination and culture information with interactive gallery (should-have)
+
+
+
+---
+
+### User Story 6: Social media integration (should-have)
+
+
+
+---
+
+### [User Story 7: Subtle animations and micro-interactions (should-have)
+
+
+
+---
+
+### User Story 8: Newsletter sign-up form (could-have)
+
+
+
+---
+
+### User Story 9: Interactive map for destinations (could-have)
+
+
+
+---
+### User Story 10: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have)
+
+
+
+---
+### User Story 11: Travel quiz or itinerary builder (could-have)
+
+
+
+---
+
   
   
