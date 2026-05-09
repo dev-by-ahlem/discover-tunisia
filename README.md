@@ -9,11 +9,13 @@ Click here to explore the live version of my website:
  
  ## 📑Table of Contents
 
+- [Updates](#project-updates)
 - [Project Goals](#project-goals)
 - [Responsive Design](#responsive-design)
 - [Target Audience](#target-audience)
 - [User Goals](#user-goals)
 - [User Experience (UX)](#user-experience-ux)
+- [Website-Flowchart](#flowchart)
 - [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
   - [User Story 1: User-friendly navigation and responsive design (must-have)](#user-story-1-User-friendly-navigation-and-responsive-design-(must-have))
   - [User Story 2: High-quality images and engaging descriptions (must-have)](#user-story-2-High-quality-images-and-engaging-descriptions-(must-have))
@@ -29,7 +31,6 @@ Click here to explore the live version of my website:
 - [Design Justification](#design-justification)
   - [Color Palette](#color-palette)
   - [Imagery & Themes](#imagery--themes)
-  - [Emotional Message](#emotional-message)
 - [Homepage](#homepage)
   - [Navbar](#navbar)
   - [Hero Section](#hero-section)
@@ -70,6 +71,21 @@ Click here to explore the live version of my website:
  
     ------------------
     ------------------
+ ## 🔄Updates
+
+At the top of this README, a **mockup generated using Canva** showcases screenshots of the website displayed on different devices, including desktop, tablet, laptop and mobile. This visual overview highlights the website’s responsive design and ensures a quick, at-a-glance understanding of how the layout adapts across screen sizes.
+
+  ### ✔️Scrolling Gallery Enhancements
+  - Implemented a pure CSS scrolling gallery using @keyframes to animate horizontal movement.
+  - Used transform: translateX() to shift the entire image track from right to left smoothly.
+  - Applied a linear animation to maintain constant scrolling speed across all devices.
+  - Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
+
+  ### ✔️Naming Conventions
+- All **HTML, CSS, and image file names** now follow a consistent naming convention:
+  - **Lowercase letters**
+  - **Hyphens (`-`)** to separate words  
+  _Example: `hero-destination.jpg`, `kairaoun.mosque.png`_   
  
  ## 🎯Project Goals
     
@@ -115,7 +131,17 @@ Click here to explore the live version of my website:
      - Navigate easily thanks to a clean layout and responsive design.
      - Stay connected through social media links and optional newsletter sign‑up.
      - Enjoy a modern experience with subtle animations and interactive elements.
- 
+
+ ## 📐Flowchart
+
+  - This flowchart represents the navigation structure of the Discover Tunisia website.
+  - All pages — Home, Destinations, Culture, and Contact — are fully accessible from one another through the main navigation bar, ensuring smooth and intuitive browsing. 
+  - The arrows in the diagram show the possible navigation paths, highlighting that every section can be reached directly without unnecessary steps.
+
+ 🌀The flowchart was created using Miro to visually map out the user journey and overall site architecture.
+
+ ![Flowchart](assets\images\screenshots\flowchart.png)
+
  ## 👥User Stories & Acceptance Criteria
 
 ### 1️⃣User Story 1: User-friendly navigation and responsive design(must-have)
@@ -317,6 +343,24 @@ As a Tourist, I want a fun quiz or simple tool to help build a personalized itin
 - Display results with recommended destinations.
 
 ---
+## 🎨Design Justification
 
-  
-  
+The visual design of Discover Tunisia is crafted to reflect the essence of the country: warm, vibrant, cultural, and naturally beautiful. Every color, image, and layout choice supports the goal of presenting Tunisia as a welcoming destination rich in history, landscapes, and traditions.
+
+  ### 🌈Color Palette
+
+  - Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
+  - Soft beige and white backgrounds create clarity, balance, and readability, allowing images and cultural elements to stand out without overwhelming the user.
+  - Deep blues and Mediterranean-inspired accents subtly reference Tunisia’s coastline, evoking feelings of calm, travel, and exploration.
+  - The palette is intentionally minimal so that the vibrant images of food, clothing, and destinations become the main visual storytellers.Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
+
+  ![Palette](assets/images/screenshots/palette.png)
+
+
+  ### ✍️Typography
+
+  - The website uses Playfair Display for headings to create an elegant, cultural, and traditional feel that reflects Tunisia’s heritage.
+  - Lato is used for body text because it is modern, clean, and highly readable on all screen sizes, including mobile devices.
+  - The combination of a serif font (Playfair Display) and a sans‑serif font (Lato) creates a balanced visual identity that feels both authentic and contemporary, matching the website’s goal of showcasing Tunisia’s culture in a modern way.
+
+  ![Flowchart](assets\images\screenshots\font.png)
