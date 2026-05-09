@@ -224,7 +224,7 @@ As a Visitor, I want to send inquiries using a simple contact form, so I can eas
   
 ---
 
-### 5️⃣User Story 5: Subtle animations and micro-interactions (should-have)
+### 5️⃣User Story 5: Subtle animations and micro-interactions (must-have)
 
 **User story:** 
 
@@ -292,7 +292,7 @@ As a Traveler, I want an interactive map showing key destinations in Tunisia, so
 - Add markers and popups for each destination.
 
 ---
-### 9️⃣User Story 9: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have)
+### 9️⃣User Story 9: User testimonials (could-have)
 
 **User story:**  
 
