@@ -1,159 +1,203 @@
 # Project Planning - User Stories for Discover Tunisia Website
 
-## User Story 1: User-friendly navigation and responsive design (must-have)
+ ## User Stories & Acceptance Criteria
+
+### User Story 1: User-friendly navigation and responsive design(must-have)
+
 **User story:**  
+
 As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device, so I can find information quickly and efficiently without frustration.
 
 ### Acceptance Criteria
+
 - The website is fully responsive across various devices and screen sizes.
 - The site layout and navigation are intuitive, allowing easy access to different sections.
 
 ### Tasks
+
 - Apply responsive design principles using Bootstrap to ensure the website is accessible on various devices.
 - Arrange the site layout and navigation based on best practices, ensuring all key sections and pages are easily accessible.
 
 ---
 
-## User Story 2: High-quality images and engaging descriptions (must-have)
+### User Story 2: High-quality images and engaging descriptions (must-have)
+
 **User story:**  
+
 As a Tourist, I want to see high-quality images and engaging descriptions of Tunisia's destinations and culture, so I can decide if it's the right place for me to visit and explore.
 
 ### Acceptance Criteria
+
 - The homepage features a hero section and high-quality scrolling images of Tunisia that rotate automatically and pause when hovered over.
 - Engaging descriptions of destinations and cultural aspects are displayed clearly and concisely within the site's content.
 - The homepage layout prominently features the images and descriptions in an uncluttered manner.
 
 ### Tasks
+
 - Integrate high-quality images of Tunisia into the website using a CSS-based scrolling animation.
 - Embed engaging descriptions for destinations and culture within the site's content.
 - Design and implement a homepage layout that prominently features the images and descriptions.
 
 ---
 
-## User Story 3: Location, contact details, and travel information (must-have)
+
+### User Story 3: Detailed destination and culture information with interactive gallery (must-have)
+
 **User story:**  
-As a Prospective Traveler, I need to find essential information such as location highlights, contact details, and travel tips clearly and concisely, so I can easily plan my visit or get in touch.
 
-### Acceptance Criteria
-- The website contains a dedicated section for contact details and travel information.
-- This section is clearly visible and accessible from all parts of the website.
-
-### Tasks
-- Design and place a section for contact details and travel information.
-- Ensure the contact section is clearly visible and accessible from all parts of the website, adhering to common design standards.
-
----
-
-## User Story 4: Contact form for inquiries (must-have)
-**User story:**  
-As a Visitor, I want to send inquiries using a simple contact form, so I can easily get more information or assistance for my trip.
-
-### Acceptance Criteria
-- The contact form is easy to find and simple to use.
-- The form includes all necessary fields: Name, Email, Message.
-- All fields must be completed before the user can submit the form.
-- When the form is completed correctly, the user receives a success message.
-
-### Tasks
-- Implement a contact form on the website.
-- Apply HTML validation to ensure all required fields are completed.
-- Create a success message or page to confirm submission.
-
----
-
-## User Story 5: Detailed destination and culture information with interactive gallery (should-have)
-**User story:**  
 As a Traveler, I want to find clear information about destinations, culture, and experiences, along with an interactive gallery of images with hover effects, so I can plan my visit based on my interests and preferences while visualizing the places.
 
 ### Acceptance Criteria
+
 - Clear and accurate information about destinations and culture is displayed and easy to find.
 - Detailed descriptions are presented on dedicated pages.
 - An interactive gallery includes hover effects and image modals.
 
 ### Tasks
+
 - Display information about destinations using engaging content.
 - Clearly present cultural information with detailed descriptions.
 - Create an integrated gallery section with hover effects and image modals.
 
 ---
 
-## User Story 6: Social media integration (should-have)
+### User Story 4: Contact form for inquiries (must-have)
+
 **User story:**  
+
+As a Visitor, I want to send inquiries using a simple contact form, so I can easily get more information or assistance for my trip.
+
+### Acceptance Criteria
+
+- The contact form is easy to find and simple to use.
+- The form includes all necessary fields: Name, Email, Message.
+- All fields must be completed before the user can submit the form.
+- When the form is completed correctly, the user receives a success message.
+
+### Tasks
+
+- Implement a contact form on the website.
+- Apply HTML validation to ensure all required fields are completed.
+- Create a success message or page to confirm submission.
+  
+---
+
+### User Story 5: Subtle animations and micro-interactions (should-have)
+
+**User story:** 
+
+As a User, I want smooth animations and interactions (e.g., fade-ins, hover effects), so the website feels modern and engaging without being distracting.
+
+### Acceptance Criteria
+
+- Elements like buttons, images, and sections include subtle CSS animations.
+- Animations enhance user experience without affecting performance.
+
+### Tasks
+
+- Add CSS transitions and animations to interactive elements.
+- Test performance on various devices.
+
+### User Story 6: Social media integration (could-have)
+
+**User story:**
+
 As a Visitor, I want links to social media for real-time updates and community engagement, so I can stay connected and see current happenings in Tunisia.
 
 ### Acceptance Criteria
+
 - Social media icons in the footer link to relevant accounts.
 - Optional embedded feeds or posts if applicable.
 
 ### Tasks
+
 - Add social media icons to the footer.
 - Link to Tunisia tourism or related accounts.
 
 ---
 
-## User Story 7: Subtle animations and micro-interactions (should-have)
+### User Story 7: Newsletter sign-up form (could-have)
+
 **User story:**  
-As a User, I want smooth animations and interactions (e.g., fade-ins, hover effects), so the website feels modern and engaging without being distracting.
 
-### Acceptance Criteria
-- Elements like buttons, images, and sections include subtle CSS animations.
-- Animations enhance user experience without affecting performance.
-
-### Tasks
-- Add CSS transitions and animations to interactive elements.
-- Test performance on various devices.
-
----
-
-## User Story 8: Newsletter sign-up form (could-have)
-**User story:**  
 As a Regular Visitor, I want to sign up for newsletters and updates, so I can stay informed about travel tips, new destinations, and cultural events.
 
 ### Acceptance Criteria
+
 - The website includes a newsletter sign-up form.
 - The form is placed in the footer on every page.
 
 ### Tasks
+
 - Integrate the newsletter sign-up form into the website footer.
 
 ---
 
-## User Story 9: Interactive map for destinations (could-have)
+### User Story 8: Interactive map for destinations (could-have)
+
 **User story:**  
+
 As a Traveler, I want an interactive map showing key destinations in Tunisia, so I can visualize locations and plan my itinerary more effectively.
 
 ### Acceptance Criteria
+
 - An embedded interactive map (e.g., Google Maps) highlights major destinations.
 - The map is easy to navigate and includes markers with brief information.
 
 ### Tasks
+
 - Embed an interactive map on the destinations page.
 - Add markers and popups for each destination.
 
 ---
+### User Story 9: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have)
 
-## User Story 10: User testimonials (could-have)
 **User story:**  
+
 As a Prospective Visitor, I want to read testimonials from other travelers, so I can gain insights from real experiences and build confidence in visiting Tunisia.
 
 ### Acceptance Criteria
+
 - A testimonials section displays quotes and ratings from visitors.
 - Testimonials are presented in an attractive, easy-to-read format.
 
 ### Tasks
+
 - Create a testimonials section on the home or culture page.
 - Populate it with sample testimonials.
 
 ---
 
-## User Story 11: Travel quiz or itinerary builder (could-have)
+### User Story 10: Location, contact details, and travel information (could-have)
+
 **User story:**  
+
+As a Prospective Traveler, I need to find essential information such as location highlights, contact details, and travel tips clearly and concisely, so I can easily plan my visit or get in touch.
+
+### Acceptance Criteria
+
+- The website contains a dedicated section for contact details and travel information.
+- This section is clearly visible and accessible from all parts of the website.
+
+### Tasks
+
+- Design and place a section for contact details and travel information.
+- Ensure the contact section is clearly visible and accessible from all parts of the website, adhering to common design standards.
+
+### User Story 11: Travel quiz or itinerary builder (could-have)
+
+**User story:**  
+
 As a Tourist, I want a fun quiz or simple tool to help build a personalized itinerary, so I can customize my trip based on my interests.
 
 ### Acceptance Criteria
+
 - A quiz or builder asks questions about user preferences (e.g., beaches, history).
 - It provides tailored suggestions based on answers.
 
-### Tasks
-- Implement a simple JavaScript-based quiz.
+### Task
+
+- Implement a simple based quiz.
 - Display results with recommended destinations.
+
+---ed destinations.
