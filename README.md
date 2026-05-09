@@ -354,7 +354,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   - Deep blues and Mediterranean-inspired accents subtly reference Tunisia’s coastline, evoking feelings of calm, travel, and exploration.
   - The palette is intentionally minimal so that the vibrant images of food, clothing, and destinations become the main visual storytellers.Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
 
-  ![Palette](assets/images/screenshots/palette.png)
+  ![Palette](assets\images\screenshots\palette.png)
 
 
   ### ✍️Typography
@@ -362,5 +362,5 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   - The website uses Playfair Display for headings to create an elegant, cultural, and traditional feel that reflects Tunisia’s heritage.
   - Lato is used for body text because it is modern, clean, and highly readable on all screen sizes, including mobile devices.
   - The combination of a serif font (Playfair Display) and a sans‑serif font (Lato) creates a balanced visual identity that feels both authentic and contemporary, matching the website’s goal of showcasing Tunisia’s culture in a modern way.
-
+  
   ![Flowchart](assets\images\screenshots\font.png)
