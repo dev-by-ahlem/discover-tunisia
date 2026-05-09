@@ -1,177 +1,191 @@
-
 /* =========================================================
-   CSS VARIABLES — Theme Colors & Fonts
+   CSS VARIABLES — Theme colors and font families
+   Use var(--name) anywhere to apply these values globally
 ========================================================= */
 :root {
-  --gold:        #C9A84C;
-  --terracotta:  #A0522D;
-  --blue:        #2E86AB;
-  --cream:       #F5F0E8;
-  --dark:        #1A1A2E;
-  --radius-soft: 18px;
-  --radius-oval: 45px;
-  --transition:  0.35s ease;
-
-  --font-heading: 'Playfair Display', serif;
-  --font-body:    'Lato', sans-serif;
+  --gold:         #C9A84C;                    /* warm gold — highlights and accents */
+  --terracotta:   #A0522D;                    /* earthy red — labels and card borders */
+  --blue:         #2E86AB;                    /* Mediterranean blue — culture section */
+  --cream:        #F5F0E8;                    /* off-white — page background */
+  --dark:         #1A1A2E;                    /* very dark navy — navbar, text */
+  --transition:   0.35s ease;                 /* reusable smooth transition speed */
+  --font-heading: 'Playfair Display', serif;  /* elegant serif for all headings */
+  --font-body:    'Lato', sans-serif;         /* clean sans-serif for body text */
 }
 
 /* =========================================================
-   GLOBAL RESET
+   GLOBAL RESET — strip all default browser spacing
 ========================================================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;              /* remove all default margins */
+  padding: 0;             /* remove all default padding */
+  box-sizing: border-box; /* border & padding included in element width */
 }
 
 /* =========================================================
    GLOBAL BODY
 ========================================================= */
 body {
-  font-family: var(--font-body);
-  color: var(--dark);
-  background-color: var(--cream);
+  font-family: var(--font-body);  /* Lato for all body text */
+  color: var(--dark);             /* default dark navy text */
+  background-color: var(--cream); /* off-white page background */
+  overflow-x: hidden;             /* prevent horizontal scroll on small screens */
 }
 
+/* All headings use the elegant serif font */
 h1, h2, h3 {
-  font-family: var(--font-heading);
+  font-family: var(--font-heading); /* Playfair Display for headings */
 }
 
 /* =========================================================
-   NAVBAR
+   NAVBAR — dark top bar, logo left, links right
 ========================================================= */
 .navbar {
-  background-color: var(--dark);
-  padding: 10px 0;
+  background-color: var(--dark); /* dark navy background */
+  padding: 10px 0;               /* small vertical padding */
 }
 
+/* Brand = logo + site name */
 .navbar-brand {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--gold) !important;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-family: var(--font-heading); /* serif for brand name */
+  font-size: 1.2rem;                /* slightly smaller on all screens */
+  color: var(--gold) !important;    /* gold text, overrides Bootstrap */
+  display: flex;                    /* logo and text side by side */
+  align-items: center;              /* vertically centred */
+  gap: 8px;                         /* space between logo and text */
 }
 
+/* Circular logo image */
 .navbar-brand img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  border-radius: 50%;
+  width: 38px;          /* responsive size */
+  height: 38px;
+  object-fit: contain;  /* no cropping */
+  border-radius: 50%;   /* circular */
 }
 
+/* Nav links — default cream colour */
 .navbar-nav .nav-link {
-  color: var(--cream) !important;
+  color: var(--cream) !important; /* light text on dark bar */
   font-weight: 400;
   letter-spacing: 0.5px;
-  margin: 0 6px;
-  transition: color 0.3s ease;
+  margin: 0 4px;                  /* small horizontal gap */
+  transition: color 0.3s ease;   /* smooth colour change */
 }
 
+/* Hover and active page link — gold */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: var(--gold) !important;
 }
 
+/* Hamburger toggle button — mobile only */
 .navbar-toggler {
   border-color: var(--gold);
   background-color: transparent;
 }
 
+/* Gold glow ring on focus (accessibility) */
 .navbar-toggler:focus {
   box-shadow: 0 0 0 2px var(--gold);
 }
 
+/* Custom gold hamburger icon (SVG inline) */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* =========================================================
    HOME — HERO SECTION
-   - image-rendering: crisp-edge removes blur
-   - overlay at ~15% so it's very light (almost transparent)
-   - min-height: 100vh + padding-bottom ensures all content shows
+   min-height 100vh so content is never cut.
+   object-position: center bottom keeps girl+flag visible.
+   Overlay at 18% — almost transparent, image stays crisp.
 ========================================================= */
 .hero {
-  position: relative;
+  position: relative;      /* so children can use position absolute */
   width: 100%;
-  min-height: 100vh;           /* min- so content never gets cut */
-  overflow: hidden;
+  min-height: 100vh;       /* full screen minimum, grows with content */
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; /* content starts at top */
+  overflow: hidden;
 }
 
+/* Full-bleed background photo */
 .hero-img {
-  position: absolute;
-  inset: 0;
+  position: absolute;             /* removed from flow, sits behind text */
+  inset: 0;                       /* stretches to all 4 edges */
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;  /* anchor image to top so mosque shows fully */
-  image-rendering: crisp-edges; /* removes fog/blur effect */
-  filter: none;                 /* ensure no CSS blur is applied */
+  object-fit: cover;              /* cover without distorting */
+  object-position: center bottom; /* anchor bottom so girl+flag shows */
+  image-rendering: crisp-edges;   /* no browser blur */
+  filter: none;                   /* remove any inherited blur */
 }
 
-/* Very light overlay — almost transparent */
+/* Very light dark overlay — just enough contrast for text */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 46, 0.18);
+  background: rgba(26, 26, 46, 0.18); /* 18% opacity — almost transparent */
 }
 
+/* Text block — sits above the overlay */
 .hero-content {
-  position: relative;          /* sits above overlay */
+  position: relative;      /* above the absolute overlay */
   z-index: 1;
-  padding: 80px 20px 60px;     /* top padding clears navbar */
+  padding: 100px 16px 60px; /* top padding clears navbar height */
   width: 100%;
   text-align: center;
 }
 
+/* Small uppercase tag above heading */
 .hero-tag {
-  font-size: 1.2rem;
-  letter-spacing: 4px;
+  font-size: 1rem;          /* slightly smaller for small screens */
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 8px;
 }
 
+/* Main hero heading */
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: clamp(1.6rem, 5vw, 4rem); /* fluid size: min 1.6rem, max 4rem */
   color: #fff;
   line-height: 1.25;
-  text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
-  margin-bottom: 8px;
+  text-shadow: 1px 2px 10px rgba(0,0,0,0.5); /* readability shadow */
+  margin-bottom: 10px;
 }
 
+/* Gold word inside heading */
 .hero-content h1 span {
   color: var(--gold);
 }
 
+/* Subtitle below heading */
 .hero-sub {
-  font-size: 1.4rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.4rem); /* fluid size */
   color: rgba(245, 240, 232, 0.85);
   font-weight: 300;
   letter-spacing: 1px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
+/* CTA button */
 .btn-hero {
   display: inline-block;
   background-color: var(--gold);
   color: var(--dark);
   font-weight: 700;
-  padding: 16px 40px;
+  padding: 14px 32px;        /* comfortable touch target */
   border: 2px solid var(--gold);
   border-radius: 2px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
+/* Button hover — invert colours */
 .btn-hero:hover {
   background-color: transparent;
   color: #fff;
@@ -180,48 +194,58 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — WELCOME SECTION
+   Two columns: text left, gallery right.
+   Fact cards span full width below.
 ========================================================= */
 .section-welcome {
-  padding: 80px 0 50px;
+  padding: 70px 0 50px;
   background-color: var(--cream);
 }
 
+/* Small uppercase section label */
 .section-label {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--terracotta);
   margin-bottom: 12px;
 }
 
+/* Welcome heading */
 .section-welcome h2 {
-  font-size: 2.4rem;
+  font-size: clamp(1.5rem, 3vw, 2.4rem); /* fluid */
   color: var(--dark);
   margin-bottom: 18px;
   line-height: 1.3;
 }
 
+/* Gold word in welcome heading */
 .section-welcome h2 span {
   color: var(--gold);
 }
 
+/* Welcome body text */
 .section-welcome p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
 }
 
+/* Stats row: 3 numbers side by side */
 .welcome-stat {
-  margin-top: 32px;
+  margin-top: 28px;
   display: flex;
-  gap: 36px;
+  gap: 28px;
+  flex-wrap: wrap; /* wrap on very small screens */
 }
 
+/* Stat number */
 .welcome-stat .stat h3 {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   color: var(--terracotta);
 }
 
+/* Stat label */
 .welcome-stat .stat p {
   font-size: 0.82rem;
   color: #777;
@@ -229,89 +253,104 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — FACT CARDS
+   Flex row — each card grows equally to fill the full width.
+   On small screens they wrap to 2 per row, then 1.
 ========================================================= */
 .facts-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 16px;
+  flex-wrap: wrap;              /* allow wrapping on small screens */
   margin-top: 50px;
   padding-top: 40px;
-  border-top: 1px solid rgba(201,168,76,0.25);
+  border-top: 1px solid rgba(201,168,76,0.25); /* gold divider above */
 }
 
+/* Individual fact card — grows equally */
 .fact-card {
-  flex: 1;
-  min-width: 130px;
+  flex: 1 1 calc(16.66% - 1px); /* 6 cards per row on desktop */
   background-color: #fff;
-  border-radius: 12px;
-  padding: 22px 16px;
+  border-right: 1px solid rgba(201,168,76,0.15); /* vertical divider */
+  padding: 24px 12px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   transition: 0.3s ease;
 }
 
+/* Remove trailing border on last card */
+.fact-card:last-child {
+  border-right: none;
+}
+
+/* Hover — lift and faint gold tint */
 .fact-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  background-color: rgba(201,168,76,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
+/* Gold icon above label */
 .fact-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--gold);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+/* Small uppercase label */
 .fact-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #999;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
+/* Main value text */
 .fact-value {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--dark);
 }
 
+/* Optional sub-text below the value */
 .fact-value span {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #888;
 }
 
 /* =========================================================
    HOME — SCROLLING GALLERY
+   Vertical auto-scroll strip — pauses on hover.
 ========================================================= */
 .scroll-gallery {
   width: 100%;
-  height: 460px;
-  overflow: hidden;
+  height: 460px;       /* fixed clip height */
+  overflow: hidden;    /* hides images outside the visible area */
   border-radius: 8px;
 }
 
+/* Moving track — animates upward continuously */
 .scroll-track {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: scrollUp 20s linear infinite;
+  animation: scrollUp 20s linear infinite; /* infinite upward scroll */
 }
 
+/* Pause on hover so user can look at images */
 .scroll-gallery:hover .scroll-track {
   animation-play-state: paused;
 }
 
+/* Each image in the strip */
 .scroll-track img {
   width: 100%;
   height: 210px;
   object-fit: cover;
   border-radius: 6px;
-  flex-shrink: 0;
+  flex-shrink: 0; /* never shrink */
 }
 
+/* Keyframe — moves up by exactly 50% (one full set = seamless loop) */
 @keyframes scrollUp {
   0%   { transform: translateY(0); }
   100% { transform: translateY(-50%); }
@@ -319,107 +358,122 @@ h1, h2, h3 {
 
 /* =========================================================
    HOME — WHY VISIT SECTION
+   Dark background, 4 feature cards.
 ========================================================= */
 .section-why {
   padding: 80px 0;
   background-color: var(--dark);
 }
 
+/* Gold label on dark background */
 .section-why .section-label {
   color: var(--gold);
 }
 
+/* Section heading */
 .section-why h2 {
-  font-size: 2.4rem;
+  font-size: clamp(1.5rem, 3vw, 2.4rem); /* fluid */
   color: #fff;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
 }
 
+/* Gold word */
 .section-why h2 span {
   color: var(--gold);
 }
 
+/* Feature card */
 .why-card {
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255,255,255,0.05); /* subtle white tint on dark */
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 4px;
-  padding: 32px 24px;
+  padding: 28px 20px;
   text-align: center;
   transition: 0.3s ease;
   height: 100%;
 }
 
+/* Hover — lift and gold border */
 .why-card:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
 }
 
+/* Gold icon */
 .why-card .icon {
   font-size: 2rem;
   color: var(--gold);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
+/* Card title */
 .why-card h4 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #fff;
   margin-bottom: 10px;
 }
 
+/* Card description */
 .why-card p {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: #aaa;
   line-height: 1.8;
 }
 
 /* =========================================================
-   FOOTER
+   FOOTER — identical on every page
 ========================================================= */
 footer {
   background-color: var(--cream);
   border-top: 1px solid rgba(201,168,76,0.3);
-  padding: 12px 0 6px;
+  padding: 16px 0 8px;
 }
 
+/* Brand name */
 .footer-brand {
   font-family: var(--font-heading);
   font-size: 1rem;
   color: var(--dark);
 }
 
+/* Tagline */
 .footer-tagline {
   font-size: 0.85rem;
   color: #888;
 }
 
+/* Social icons row */
 .footer-social {
   display: flex;
   justify-content: center;
   gap: 16px;
 }
 
+/* Individual social icon */
 .footer-social a {
   color: var(--dark);
   font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover — gold and lift */
 .footer-social a:hover {
   color: var(--gold);
   transform: translateY(-3px);
 }
 
+/* Copyright line */
 .footer-bottom {
   border-top: 1px solid rgba(0,0,0,0.08);
-  margin-top: 8px;
+  margin-top: 10px;
   padding-top: 8px;
   text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #999;
 }
 
 /* =========================================================
-   DESTINATIONS — HERO
+   DESTINATIONS — HERO BANNER (60vh, shorter than home)
 ========================================================= */
 .dest-hero {
   position: relative;
@@ -433,25 +487,30 @@ footer {
   justify-content: center;
 }
 
+/* Dark overlay for text readability */
 .dest-hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(26, 26, 46, 0.60);
 }
 
+/* Text block */
 .dest-hero-content {
   position: relative;
   text-align: center;
   z-index: 1;
+  padding: 0 16px; /* prevent text touching edges on small screens */
 }
 
+/* Heading */
 .dest-hero-content h1 {
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 4vw, 3rem); /* fluid */
   color: #fff;
   text-shadow: 1px 2px 10px rgba(0,0,0,0.5);
   margin-bottom: 10px;
 }
 
+/* Gold word */
 .dest-hero-content h1 span {
   color: var(--gold);
 }
@@ -464,17 +523,20 @@ footer {
   background-color: var(--cream);
 }
 
+/* Heading */
 .dest-intro h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem); /* fluid */
   color: var(--dark);
   margin-bottom: 16px;
   line-height: 1.3;
 }
 
+/* Gold word */
 .dest-intro h2 span {
   color: var(--gold);
 }
 
+/* Paragraph */
 .dest-intro p {
   font-size: 1rem;
   color: #555;
@@ -483,20 +545,19 @@ footer {
 }
 
 /* =========================================================
-   DESTINATIONS — LIST
+   DESTINATIONS — LIST (magazine rows alternating left/right)
 ========================================================= */
 .dest-list {
   background-color: var(--cream);
 }
 
+/* Each destination row */
 .dest-row {
   min-height: 500px;
   border-bottom: 1px solid rgba(201,168,76,0.15);
 }
 
-/* =========================================================
-   DESTINATIONS — IMAGE SIDE
-========================================================= */
+/* Image side */
 .dest-img-wrap {
   width: 100%;
   height: 100%;
@@ -507,6 +568,7 @@ footer {
   box-shadow: 8px 8px 30px rgba(0,0,0,0.15);
 }
 
+/* Image fills frame */
 .dest-img-wrap img {
   width: 100%;
   height: 100%;
@@ -514,193 +576,216 @@ footer {
   transition: 0.5s ease;
 }
 
+/* Zoom on row hover */
 .dest-row:hover .dest-img-wrap img {
   transform: scale(1.04);
 }
 
-/* =========================================================
-   DESTINATIONS — TEXT SIDE
-========================================================= */
+/* Text side */
 .dest-text {
-  padding: 50px 60px;
+  padding: 40px 40px;
 }
 
+/* Category badge */
 .dest-category {
   display: inline-block;
   background-color: rgba(201,168,76,0.15);
   color: var(--terracotta);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 6px 16px;
+  padding: 5px 14px;
   border-radius: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   border: 1px solid rgba(201,168,76,0.3);
 }
 
+/* Icon inside badge */
 .dest-category i {
   margin-right: 6px;
   color: var(--gold);
 }
 
+/* Destination name */
 .dest-text h2 {
-  font-size: 2.4rem;
+  font-size: clamp(1.4rem, 2.5vw, 2.4rem); /* fluid */
   color: var(--dark);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
+/* Description */
 .dest-text p {
   font-size: 1rem;
   color: #555;
   line-height: 1.9;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   text-align: justify;
 }
 
+/* Info list */
 .dest-info {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
+/* Info list item */
 .dest-info li {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: #666;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+/* Info icon */
 .dest-info li i {
   color: var(--gold);
   font-size: 1rem;
   width: 18px;
+  flex-shrink: 0; /* never shrink the icon */
 }
 
+/* Info bold label */
 .dest-info li strong {
   color: var(--dark);
 }
 
+/* Alternating rows have white background */
 .dest-row-reverse {
   background-color: #fff;
 }
 
 /* =========================================================
-   CONTACT — HERO
+   CONTACT — HERO (dark title block + Google Map)
 ========================================================= */
 .contact-hero {
-  position: relative;
   width: 100%;
 }
 
+/* Dark title block */
 .contact-hero-text {
   background-color: var(--dark);
   text-align: center;
   padding: 50px 20px 30px;
 }
 
+/* Heading */
 .contact-hero-text h1 {
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 4vw, 2.8rem); /* fluid */
   color: #fff;
   margin-bottom: 10px;
 }
 
+/* Gold word */
 .contact-hero-text h1 span {
   color: var(--gold);
 }
 
+/* Subtitle */
 .contact-hero-text .hero-sub {
   font-size: 1rem;
   color: rgba(245, 240, 232, 0.8);
   font-weight: 300;
 }
 
+/* Google Map container */
 .contact-map {
   width: 100%;
-  height: 450px;
+  height: 420px;
 }
 
+/* Map iframe fills container */
 .contact-map iframe {
   width: 100%;
   height: 100%;
-  display: block;
+  display: block; /* removes inline gap */
 }
 
 /* =========================================================
-   CONTACT — REQUIREMENTS SECTION
+   CONTACT — REQUIREMENTS CHECKLIST
+   Pure CSS checkbox trick — no JavaScript.
+   Hidden <input> + visible <label> for each item.
+   When #req5 is checked, the form wrapper appears.
 ========================================================= */
 .contact-requirements {
-  padding: 80px 0;
+  padding: 70px 0;
   background-color: var(--cream);
 }
 
+/* Section heading */
 .contact-requirements h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem); /* fluid */
   color: var(--dark);
   margin-bottom: 12px;
 }
 
+/* Gold word */
 .contact-requirements h2 span {
   color: var(--gold);
 }
 
+/* Subtitle */
 .req-subtitle {
   font-size: 1rem;
   color: #777;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
-/* Each checklist row */
+/* Checklist row (visible label) */
 .req-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   background-color: #fff;
   border: 1px solid rgba(201,168,76,0.2);
   border-radius: 10px;
-  padding: 20px 24px;     /* slightly bigger padding */
+  padding: 18px 20px;
   cursor: pointer;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   max-width: 750px;
 }
 
+/* Hover state */
 .req-item:hover {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
-/* Hidden real checkbox */
+/* The real checkbox — completely invisible */
 .req-checkbox-hidden {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
+  pointer-events: none; /* prevent accidental clicks on the invisible element */
 }
 
 /* Custom visible checkbox box */
 .req-box {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  min-width: 22px; /* never shrink on small screens */
   border: 2px solid rgba(201,168,76,0.4);
   border-radius: 4px;
-  flex-shrink: 0;
   margin-top: 2px;
   transition: 0.3s ease;
   position: relative;
   background-color: #fff;
 }
 
-/* Checked state — gold background + tick */
+/* Checked state — gold fill */
 .req-checkbox-hidden:checked + .req-item .req-box {
   background-color: var(--gold);
   border-color: var(--gold);
 }
 
+/* Checkmark inside the box */
 .req-checkbox-hidden:checked + .req-item .req-box::after {
   content: '✓';
   position: absolute;
@@ -708,26 +793,27 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--dark);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
+/* Checked row — gold border + faint gold tint */
 .req-checkbox-hidden:checked + .req-item {
   border-color: var(--gold);
   background-color: rgba(201,168,76,0.05);
 }
 
-/* Bigger text for requirements */
+/* Requirement text — bigger for readability */
 .req-text {
-  font-size: 1.08rem;   /* increased from 0.98rem */
+  font-size: 1.05rem;
   color: #444;
   line-height: 1.6;
 }
 
-/* Warning shown until last box checked */
+/* Warning shown until all boxes are checked */
 .req-warning {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 8px;
+  margin-bottom: 24px;
   font-size: 0.95rem;
   color: var(--terracotta);
   font-weight: 600;
@@ -735,43 +821,46 @@ footer {
 }
 
 /* =========================================================
-   CONTACT — FORM UNLOCK (Pure CSS trick)
-   When checkbox #req5 is checked, the form wrapper appears.
-   The ~ selector targets any FOLLOWING sibling in the same parent.
+   CONTACT — FORM WRAPPER (CSS-only reveal)
+   Hidden by default. Shown when #req5 is checked.
+   The ~ selector targets following siblings in the same parent.
 ========================================================= */
 .contact-form-wrapper {
-  display: none;
-  padding: 50px 0 20px;
+  display: none;         /* hidden until req5 is checked */
+  padding: 40px 0 20px;
   max-width: 750px;
 }
 
-/* Show form only when the LAST checkbox (req5) is checked */
+/* Reveal form when last checkbox is checked */
 #req5:checked ~ .contact-form-wrapper {
   display: block;
 }
 
-/* Hide warning once req5 is checked */
+/* Hide warning when form is revealed */
 #req5:checked ~ .req-warning {
   display: none;
 }
 
+/* Form heading */
 .contact-form-wrapper h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 3vw, 2.2rem); /* fluid */
   color: var(--dark);
   margin-bottom: 10px;
 }
 
+/* Gold word */
 .contact-form-wrapper h2 span {
   color: var(--gold);
 }
 
+/* Subtitle */
 .form-subtitle {
   font-size: 1rem;
   color: #777;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 
-/* Form inputs styling */
+/* Styled inputs and textareas */
 .contact-input {
   background-color: var(--cream);
   border: 1px solid rgba(201,168,76,0.3);
@@ -780,9 +869,11 @@ footer {
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--dark);
+  width: 100%; /* always full width */
   transition: border-color 0.3s ease;
 }
 
+/* Focus — gold border + soft glow */
 .contact-input:focus {
   border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
@@ -790,6 +881,7 @@ footer {
   background-color: #fff;
 }
 
+/* Form labels */
 .contact-form .form-label {
   font-size: 0.85rem;
   font-weight: 600;
@@ -799,67 +891,84 @@ footer {
 }
 
 /* =========================================================
-   CONTACT — THANK YOU (Pure CSS)
-   The thank-you overlay is hidden by default.
-   When the hidden submit checkbox is checked, it appears.
+   CONTACT — THANK YOU OVERLAY (CSS-only popup)
+
+   BUG FIX: The overlay is now INSIDE .contact-form-wrapper,
+   so it only appears AFTER the form is already visible.
+   This prevents it showing on an empty/unchecked form.
+
+   HOW IT WORKS:
+   - #submit-trigger is a hidden checkbox inside the wrapper
+   - The submit button is a <label for="submit-trigger">
+   - Clicking it checks the checkbox
+   - CSS then shows .thankyou-overlay via the ~ sibling selector
 ========================================================= */
+
+/* Full-screen overlay — hidden by default */
 .thankyou-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(26, 26, 46, 0.85);
-  z-index: 9999;
+  display: none;            /* hidden until submit is triggered */
+  position: fixed;          /* covers the entire viewport */
+  inset: 0;                 /* all 4 edges */
+  background: rgba(26, 26, 46, 0.88); /* dark semi-transparent backdrop */
+  z-index: 9999;            /* on top of everything */
   align-items: center;
   justify-content: center;
+  padding: 20px;            /* prevent box touching edges on small screens */
 }
 
-/* Show when hidden submit-trigger checkbox is checked */
-#submit-trigger:checked ~ .thankyou-overlay,
-#submit-trigger:checked + .thankyou-overlay {
-  display: flex;
+/* Show overlay when the hidden #submit-trigger checkbox is checked.
+   The submit button is a <label for="submit-trigger"> so clicking
+   it checks the checkbox — no JavaScript needed. */
+#submit-trigger:checked ~ .thankyou-overlay {
+  display: flex; /* flex so the centering works */
 }
 
+/* The popup card */
 .thankyou-box {
   background: var(--cream);
   border-radius: 20px;
-  padding: 60px 50px;
+  padding: 50px 40px;
   text-align: center;
-  max-width: 520px;
-  width: 90%;
+  max-width: 500px;
+  width: 100%;              /* responsive on small screens */
   border: 3px solid var(--gold);
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
+/* Large emoji at top */
 .thankyou-emoji {
-  font-size: 4rem;
-  margin-bottom: 16px;
+  font-size: 3.5rem;
+  margin-bottom: 14px;
   display: block;
 }
 
+/* Popup heading */
 .thankyou-box h2 {
-  font-size: 2rem;
+  font-size: clamp(1.3rem, 3vw, 2rem); /* fluid */
   color: var(--dark);
   margin-bottom: 14px;
 }
 
+/* Gold word in heading */
 .thankyou-box h2 span {
   color: var(--gold);
 }
 
+/* Popup text */
 .thankyou-box p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
   line-height: 1.8;
   margin-bottom: 10px;
 }
 
-/* Submit button — styled as gold pill */
+/* Submit button (actually a label) — gold pill */
 .btn-contact-submit {
   display: inline-block;
   background-color: var(--gold);
   color: var(--dark);
   font-weight: 700;
-  padding: 14px 40px;
+  padding: 14px 36px;
   border: 2px solid var(--gold);
   border-radius: 25px;
   font-family: var(--font-body);
@@ -870,89 +979,97 @@ footer {
   transition: 0.3s ease;
 }
 
+/* Hover — invert to outline */
 .btn-contact-submit:hover {
   background-color: transparent;
   color: var(--gold);
   transform: translateY(-2px);
 }
 
+/* Icon inside button */
 .btn-contact-submit i {
   margin-left: 8px;
 }
 
 /* =========================================================
-   CULTURE — HERO
+   CULTURE — HERO BANNER (solid blue background)
 ========================================================= */
 .culture-hero {
   background: var(--blue);
   color: white;
-  padding: 80px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
+/* Main heading */
 .culture-hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.6rem, 4vw, 2.8rem); /* fluid */
+  margin-bottom: 12px;
 }
 
+/* Subtitle */
 .culture-hero p {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 2vw, 1.2rem); /* fluid */
   max-width: 700px;
   margin: auto;
+  line-height: 1.7;
 }
 
 /* =========================================================
    CULTURE — SECTION WRAPPER
 ========================================================= */
 .culture-section {
-  padding: 50px 20px;
+  padding: 40px 16px 60px; /* smaller side padding for small screens */
 }
 
 /* =========================================================
    CULTURE — TABS (Pure CSS radio trick)
-   Hidden radio inputs control which content panel is visible.
-   Labels act as clickable tab buttons.
+   Hidden radio inputs sit BEFORE .ch-tabs in the HTML.
+   Clicking a label checks its linked radio.
+   CSS then shows the matching content panel and highlights the tab.
 ========================================================= */
 
-/* Hide all radio inputs globally */
+/* Hide all radio inputs — only labels are visible */
 input[type="radio"] {
   display: none;
 }
 
-/* Tab button row */
+/* Tab buttons row */
 .ch-tabs {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 35px;
+  gap: 10px;
+  flex-wrap: wrap; /* wrap to new line on small screens */
+  margin-bottom: 30px;
 }
 
-/* Default tab button style */
+/* Default tab button — blue outline pill */
 .ch-tab {
-  padding: 12px 22px;
+  padding: 10px 18px;
   border: 2px solid var(--blue);
   background: white;
   color: var(--blue);
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 0.9rem;       /* slightly smaller for small screens */
   transition: var(--transition);
+  white-space: nowrap;     /* prevent tab text wrapping mid-word */
 }
 
+/* Hover — fill with blue */
 .ch-tab:hover {
   background: var(--blue);
   color: white;
 }
 
-/* ——— ACTIVE TAB STATE ———
-   When a radio is checked, its corresponding label turns gold.
-   These selectors rely on the radio inputs being BEFORE the
-   .ch-tabs div in the HTML (sibling + descendant relationship). */
-#tab-food:checked      ~ .ch-tabs label[for="tab-food"],
+/* Active tab — gold fill
+   Works because radio inputs appear before .ch-tabs in HTML,
+   so the ~ sibling selector can reach the labels inside it. */
+#tab-food:checked       ~ .ch-tabs label[for="tab-food"],
 #tab-traditions:checked ~ .ch-tabs label[for="tab-traditions"],
-#tab-arts:checked      ~ .ch-tabs label[for="tab-arts"],
-#tab-clothing:checked  ~ .ch-tabs label[for="tab-clothing"] {
+#tab-arts:checked       ~ .ch-tabs label[for="tab-arts"],
+#tab-clothing:checked   ~ .ch-tabs label[for="tab-clothing"] {
   background: var(--gold);
   color: var(--dark);
   border-color: var(--gold);
@@ -968,22 +1085,23 @@ input[type="radio"] {
 .ch-content {
   display: none;
   margin-top: 20px;
-  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.4s ease; /* smooth appear */
 }
 
-/* Show the matching panel when its radio is checked */
-#tab-food:checked      ~ #content-food       { display: block; }
+/* Show panel matching the checked radio */
+#tab-food:checked       ~ #content-food       { display: block; }
 #tab-traditions:checked ~ #content-traditions { display: block; }
-#tab-arts:checked      ~ #content-arts        { display: block; }
-#tab-clothing:checked  ~ #content-clothing    { display: block; }
+#tab-arts:checked       ~ #content-arts       { display: block; }
+#tab-clothing:checked   ~ #content-clothing   { display: block; }
 
+/* Fade in animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================================================
-   CULTURE — DECORATIVE DIVIDER
+   CULTURE — DECORATIVE DIVIDER (above Traditions)
 ========================================================= */
 .curly-top {
   width: 100%;
@@ -993,24 +1111,25 @@ input[type="radio"] {
 }
 
 /* =========================================================
-   CULTURE — FOOD & CLOTHING CARDS
-   Images fill the full card (aspect-ratio square).
-   Text overlays the bottom of the image with a dark gradient.
+   CULTURE — FOOD CARDS
+   Circular cards (border-radius 50%).
+   Text sits BELOW the card — outside, as a caption.
+   Each .food-item = circle on top + caption below.
 ========================================================= */
-.food-grid,
-.clothing-grid {
+
+/* Food grid — 4 columns on desktop */
+.food-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+  gap: 24px;
   padding: 10px 0;
 }
 
-/* Card is a circle / oval using border-radius 50% */
-.food-card,
-.cloth-card {
+/* food-card = the circular image only */
+.food-card {
   position: relative;
-  border-radius: 50%;              /* circular cards */
-  aspect-ratio: 1 / 1;            /* perfect square so circle works */
+  border-radius: 50%;            /* perfect circle */
+  aspect-ratio: 1 / 1;          /* forces square so circle is correct */
   overflow: hidden;
   border: 3px solid var(--terracotta);
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -1018,15 +1137,83 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.food-card:hover,
-.cloth-card:hover {
+/* Hover — lift and gold border */
+.food-card:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 16px 32px rgba(0,0,0,0.18);
   border-color: var(--gold);
 }
 
-/* Image fills the entire card */
-.food-card img,
+/* Image fills the full circle */
+.food-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom image slightly on hover */
+.food-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Text caption below the circle (outside) */
+.food-card-text {
+  text-align: center;
+  margin-top: 10px; /* gap between circle and text */
+  padding: 0 4px;
+}
+
+/* Food item name */
+.food-card-text h3 {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+/* Food item description */
+.food-card-text p {
+  font-size: 0.78rem;
+  color: #777;
+  margin: 0;
+}
+
+/* =========================================================
+   CULTURE — CLOTHING CARDS
+   Square with rounded corners (border-radius 16px).
+   Text overlays the bottom of the image with a dark gradient.
+========================================================= */
+
+/* Clothing grid — 4 columns on desktop */
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/* Square card with rounded corners */
+.cloth-card {
+  position: relative;
+  border-radius: 16px;           /* rounded square — NOT circle */
+  aspect-ratio: 1 / 1;          /* perfect square */
+  overflow: hidden;
+  border: 3px solid var(--terracotta);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+/* Hover — lift and gold border */
+.cloth-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+  border-color: var(--gold);
+}
+
+/* Image fills the full square card */
 .cloth-card img {
   width: 100%;
   height: 100%;
@@ -1035,210 +1222,297 @@ input[type="radio"] {
   transition: transform 0.4s ease;
 }
 
-.food-card:hover img,
+/* Zoom on hover */
 .cloth-card:hover img {
   transform: scale(1.08);
 }
 
-/* Text overlay — dark gradient from bottom */
-.food-card-text,
+/* Text overlay at the bottom with dark gradient */
 .cloth-card-text {
-  position: absolute;
+  position: absolute; /* sits on top of image */
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 30px 12px 16px;
-  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, transparent 100%);
+  padding: 28px 10px 12px; /* tall top padding for gradient fade */
+  background: linear-gradient(to top, rgba(0,0,0,0.80) 0%, transparent 100%);
   text-align: center;
 }
 
-.food-card-text h3,
+/* Clothing item name */
 .cloth-card-text h3 {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #fff;
   margin-bottom: 2px;
 }
 
-.food-card-text p,
+/* Clothing item description */
 .cloth-card-text p {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.8);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.85);
   margin: 0;
 }
 
 /* =========================================================
    CULTURE — TRADITIONS LIST
+   2-column grid, white cards, blue left border, emoji icon.
+   Matches the provided screenshot exactly.
 ========================================================= */
+
+/* 2-column traditions grid */
 .trad-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  gap: 20px;
   margin-top: 10px;
 }
 
+/* Each tradition card */
 .trad-item {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   background: white;
-  padding: 20px;
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,0.1);
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-left: 4px solid var(--blue); /* blue accent left border (screenshot) */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: var(--transition);
+  align-items: flex-start;
 }
 
+/* Hover — lift */
 .trad-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
 }
 
+/* Emoji in blue rounded square */
 .trad-icon {
-  font-size: 2rem;
-  width: 55px;
-  height: 55px;
-  background: var(--blue);
-  color: white;
-  border-radius: 12px;
+  font-size: 1.5rem;
+  min-width: 48px;         /* never shrink */
+  width: 48px;
+  height: 48px;
+  background: var(--blue); /* blue fill */
+  border-radius: 10px;     /* rounded square */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
+/* Tradition title */
+.trad-item h3 {
+  font-size: 0.98rem;
+  color: var(--dark);
+  margin-bottom: 5px;
+}
+
+/* Tradition description */
+.trad-item p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* =========================================================
-   CULTURE — ARTS CARDS
+   CULTURE — ARTS & CRAFTS CARDS
+   3-column grid, big emoji, white rounded cards.
 ========================================================= */
+
+/* 3-column arts grid */
 .arts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  gap: 24px;
   padding: 10px 0;
 }
 
+/* Arts card */
 .arts-card {
   background: white;
-  border-radius: 25px;
-  padding: 25px;
+  border-radius: 20px;
+  padding: 28px 20px;
   text-align: center;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: var(--transition);
 }
 
+/* Hover — lift */
 .arts-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
+/* Large emoji icon */
 .arts-emoji {
-  font-size: 2.4rem;
+  font-size: 3rem;     /* bigger than before */
   margin-bottom: 12px;
+  display: block;
+}
+
+/* Arts title */
+.arts-card h3 {
+  font-size: 1rem;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+/* Arts description */
+.arts-card p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLET (max-width: 992px)
+========================================================= */
+@media (max-width: 992px) {
+  /* Fact cards — 3 per row */
+  .fact-card            { flex: 1 1 calc(33.33% - 1px); }
+  /* Destination image shorter */
+  .dest-img-wrap        { min-height: 300px; }
+  /* Destination text less padding */
+  .dest-text            { padding: 30px 24px; }
+  /* Culture grids — 2 columns */
+  .food-grid            { grid-template-columns: repeat(2, 1fr); }
+  .clothing-grid        { grid-template-columns: repeat(2, 1fr); }
+  .arts-grid            { grid-template-columns: repeat(2, 1fr); }
+  /* Traditions — single column */
+  .trad-list            { grid-template-columns: 1fr; }
 }
 
 /* =========================================================
    RESPONSIVE — TABLET (max-width: 768px)
 ========================================================= */
 @media (max-width: 768px) {
-
-  /* Hero */
-  .hero-content h1  { font-size: 2rem; }
-  .hero-tag         { font-size: 0.8rem; }
-  .hero-sub         { font-size: 1rem; }
-  .section-welcome  { padding: 55px 0 30px; }
-  .section-welcome h2 { font-size: 1.8rem; }
-
-  /* Scrolling gallery */
-  .scroll-gallery   { height: 300px; margin-top: 32px; }
-  .scroll-track img { height: 150px; }
-
-  /* Fact cards */
-  .facts-row        { gap: 10px; }
-  .fact-card {
-    flex: 1 1 calc(33% - 10px);
-    min-width: 0;
-    padding: 14px 6px;
-  }
-
-  /* Why cards */
-  .section-why      { padding: 55px 0; }
-  .section-why h2   { font-size: 1.8rem; }
-  .section-why .col-lg-3 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  /* Destinations */
-  .dest-hero        { height: 45vh; }
-  .dest-hero-content h1 { font-size: 2rem; }
-  .dest-intro       { padding: 40px 0 10px; }
-  .dest-intro h2    { font-size: 1.7rem; }
-  .dest-img-wrap    { min-height: 280px; }
-  .dest-text        { padding: 30px 20px; }
-  .dest-text h2     { font-size: 1.6rem; }
-
-  /* Contact */
-  .contact-hero-text h1   { font-size: 2rem; }
-  .contact-map            { height: 320px; }
-  .contact-requirements   { padding: 55px 0; }
-  .contact-requirements h2 { font-size: 1.8rem; }
-
-  /* Culture grids */
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .trad-list { grid-template-columns: 1fr; }
+  /* Welcome section less vertical padding */
+  .section-welcome      { padding: 50px 0 30px; }
+  /* Scrolling gallery shorter */
+  .scroll-gallery       { height: 260px; margin-top: 28px; }
+  .scroll-track img     { height: 130px; }
+  /* Fact cards — 3 per row, tighter padding */
+  .fact-card            { flex: 1 1 calc(33.33% - 1px); padding: 16px 8px; }
+  /* Why section — 2 cards per row */
+  .section-why .col-lg-3  { flex: 0 0 50%; max-width: 50%; }
+  /* Destinations hero shorter */
+  .dest-hero            { height: 40vh; }
+  /* Destination image shorter */
+  .dest-img-wrap        { min-height: 250px; }
+  /* Destination text tighter */
+  .dest-text            { padding: 24px 20px; }
+  /* Contact map shorter */
+  .contact-map          { height: 300px; }
+  /* Footer columns centred */
+  footer .col-md-4      { text-align: center; margin-bottom: 10px; }
 }
 
 /* =========================================================
-   RESPONSIVE — SMALL MOBILE (max-width: 480px)
+   RESPONSIVE — MOBILE (max-width: 576px)
 ========================================================= */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  /* Hero less padding top */
+  .hero-content         { padding: 90px 16px 50px; }
+  /* Stats stack vertically */
+  .welcome-stat         { flex-direction: column; gap: 12px; }
+  /* Fact cards — 2 per row */
+  .fact-card            { flex: 1 1 calc(50% - 1px); padding: 14px 8px; }
+  /* Why cards — full width */
+  .section-why .col-lg-3  { flex: 0 0 100%; max-width: 100%; }
+  /* Why section less padding */
+  .section-why          { padding: 50px 0; }
+  /* Destination image shorter */
+  .dest-img-wrap        { min-height: 220px; }
+  /* Destination text tighter */
+  .dest-text            { padding: 20px 16px; }
+  /* Contact requirements less padding */
+  .contact-requirements { padding: 50px 0; }
+  /* Contact form full width */
+  .contact-form-wrapper { max-width: 100%; }
+  /* Thank you box less padding */
+  .thankyou-box         { padding: 36px 20px; }
+  /* Culture section side padding */
+  .culture-section      { padding: 30px 12px 50px; }
+  /* Tab buttons smaller */
+  .ch-tab               { padding: 8px 14px; font-size: 0.82rem; }
+  /* All culture grids — 2 columns */
+  .food-grid            { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .clothing-grid        { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .arts-grid            { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  /* Checklist rows tighter */
+  .req-item             { padding: 14px 16px; }
+  .req-text             { font-size: 0.95rem; }
+}
 
-  /* Hero */
-  .hero-content h1 { font-size: 1.4rem; }
-  .hero-tag        { font-size: 0.65rem; }
-  .btn-hero        { padding: 10px 24px; font-size: 0.8rem; }
-
-  /* Welcome stats */
-  .welcome-stat {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  /* Fact cards */
-  .fact-card {
-    flex: 1 1 calc(33% - 10px);
-    padding: 12px 4px;
-  }
-
-  /* Why cards */
-  .section-why .col-lg-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  /* Destinations */
-  .dest-hero-content h1 { font-size: 1.5rem; }
-  .dest-text h2         { font-size: 1.4rem; }
-
-  /* Contact */
-  .contact-hero-text h1 { font-size: 1.6rem; }
-  .contact-map          { height: 260px; }
-  .req-item             { padding: 14px; }
-  .req-text             { font-size: 0.9rem; }
-  .btn-contact-submit   { padding: 12px 28px; font-size: 0.8rem; }
-  .thankyou-box         { padding: 40px 24px; }
-
-  /* Culture */
-  .food-grid,
-  .clothing-grid,
-  .arts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .ch-tabs { gap: 10px; }
+/* =========================================================
+   RESPONSIVE — VERY SMALL (max-width: 400px)
+   Covers 350px screens and anything smaller cleanly.
+========================================================= */
+@media (max-width: 400px) {
+  /* Navbar — smaller brand */
+  .navbar-brand         { font-size: 0.95rem; }
+  .navbar-brand img     { width: 30px; height: 30px; }
+  /* Hero — tighter padding and smaller text */
+  .hero-content         { padding: 75px 12px 36px; }
+  .hero-tag             { font-size: 0.6rem; letter-spacing: 2px; }
+  .btn-hero             { padding: 10px 20px; font-size: 0.78rem; letter-spacing: 1px; }
+  /* Fact cards — 2 per row, very compact */
+  .fact-card            { flex: 1 1 calc(50% - 1px); padding: 10px 4px; }
+  .fact-icon            { font-size: 1rem; margin-bottom: 5px; }
+  .fact-label           { font-size: 0.6rem; letter-spacing: 1px; }
+  .fact-value           { font-size: 0.78rem; }
+  .fact-value span      { font-size: 0.68rem; }
+  /* Why cards — full width, smaller padding */
+  .section-why .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
+  .why-card             { padding: 18px 12px; }
+  /* Destinations — very compact */
+  .dest-hero            { height: 32vh; }
+  .dest-img-wrap        { min-height: 200px; }
+  .dest-text            { padding: 16px 12px; }
+  .dest-text p          { font-size: 0.88rem; }
+  .dest-info li         { font-size: 0.8rem; }
+  /* Contact map shorter */
+  .contact-map          { height: 220px; }
+  /* Checklist — compact */
+  .req-item             { padding: 10px 10px; gap: 8px; }
+  .req-text             { font-size: 0.85rem; }
+  .req-box              { width: 18px; height: 18px; min-width: 18px; }
+  /* Submit button full width */
+  .btn-contact-submit   { width: 100%; text-align: center; padding: 12px 16px; }
+  /* Thank you popup — compact */
+  .thankyou-box         { padding: 26px 14px; }
+  .thankyou-emoji       { font-size: 2.5rem; }
+  /* Culture tabs — very compact, allow wrapping */
+  .ch-tab               { padding: 6px 10px; font-size: 0.75rem; }
+  .ch-tabs              { gap: 6px; }
+  /* All culture grids — 2 columns, tight gap */
+  .food-grid            { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .clothing-grid        { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .arts-grid            { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  /* Arts emoji smaller */
+  .arts-emoji           { font-size: 2rem; }
+  /* Arts card padding */
+  .arts-card            { padding: 18px 12px; }
+  /* Traditions — single column, compact */
+  .trad-list            { grid-template-columns: 1fr; gap: 10px; }
+  .trad-icon            { width: 38px; height: 38px; min-width: 38px; font-size: 1.1rem; }
+  .trad-item            { padding: 12px; gap: 10px; }
+  .trad-item h3         { font-size: 0.88rem; }
+  .trad-item p          { font-size: 0.78rem; }
+  /* Food card text smaller */
+  .food-card-text h3    { font-size: 0.82rem; }
+  .food-card-text p     { font-size: 0.72rem; }
+  /* Clothing card text smaller */
+  .cloth-card-text h3   { font-size: 0.8rem; }
+  .cloth-card-text p    { font-size: 0.7rem; }
+  /* Footer compact */
+  footer .col-md-4      { text-align: center; margin-bottom: 8px; }
+  .footer-bottom        { font-size: 0.68rem; }
+  /* Section headings smaller */
+  .dest-intro h2        { font-size: 1.3rem; }
+  .contact-requirements h2 { font-size: 1.3rem; }
+  .contact-form-wrapper h2 { font-size: 1.3rem; }
 }
