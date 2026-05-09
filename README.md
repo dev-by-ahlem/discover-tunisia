@@ -401,50 +401,81 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
   🖥️ Desktop Screenshots
 
+![Home-Desktop-Screenshot](assets/images/screenshots/home-ls.png)
+
   📱 Mobile Screenshots
+
+![Home-Mobile-Screenshot](assets/images/screenshots/home-ss.png)
 
 ### 📍Destinations Page
   
   🖥️ Desktop Screenshots
 
+![Home-Mobile-Screenshot](assets/images/screenshots/destination-ls.png)
+
   📱 Mobile Screenshots
+
+![Home-Mobile-Screenshot](assets/images/screenshots/destination-ss.png)
 
 ### 🎭Culture Page
 
   🖥️ Desktop Screenshots
 
+![Home-Mobile-Screenshot](assets/images/screenshots/culture-ls.png)
+
   📱 Mobile Screenshots
+
+![Home-Mobile-Screenshot](assets/images/screenshots/culture-ss.png)
 
   ### 🍽️Food & Drinks
 
   🖥️ Desktop Screenshots
 
+  ![Home-Mobile-Screenshot](assets/images/screenshots/food-ls.png)
+
   📱 Mobile Screenshots
+
+  ![Home-Mobile-Screenshot](assets/images/screenshots/food-ss.png)
 
   ### 🎉Traditions
 
   🖥️ Desktop Screenshots
 
+  ![Home-Mobile-Screenshot](assets/images/screenshots/tradition-ls.png)
+
   📱 Mobile Screenshots
+
+  ![Home-Mobile-Screenshot](assets/images/screenshots/tradition-ss.png)
 
   ### 🎨Arts & Crafts
 
   🖥️ Desktop Screenshots
 
+  ![Home-Mobile-Screenshot](assets/images/screenshots/art-ls.png)
+
   📱 Mobile Screenshots
+
+  ![Home-Mobile-Screenshot](assets/images/screenshots/art-ss.png)
 
   ### 👗Traditional Clothing
 
     🖥️ Desktop Screenshots
 
+  ![Home-Mobile-Screenshot](assets/images/screenshots/clothing-ls.png)
+
     📱 Mobile Screenshots
+
+  ![Home-Mobile-Screenshot](assets/images/screenshots/clothing-ss.png)
 
 ## ✉️Contact Page
 
     🖥️ Desktop Screenshots
 
+  ![Home-Mobile-Screenshot](assets/images/screenshots/contact-ls.png)
+
     📱 Mobile Screenshots
 
+![Home-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
 
