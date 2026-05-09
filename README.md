@@ -23,7 +23,7 @@ Click here to explore the live version of my website:
   - [User Story 6: Social media integration (should-have)](#user-story-6-Social-media-integration-(should-have))
   - [User Story 7: Newsletter sign-up form (could-have)](#User-Story-7:-Newsletter-sign-up-form-(could-have))
   - [User Story 8: Interactive map for destinations (could-have)](#User-Story-8:-Interactive-map-for-destinations-(could-have))
-  - [User Story 9: User testimonials (could-have)(#user-story-10-User-testimonials-(could-have))
+  - [User Story 9: User testimonials (could-have)](#user-story-10-User-testimonials-(could-have))
   - [User Story 10: Location, contact details, and travel information (could-have)](#User-Story-10:-Location,-contact-details,-and-travel-information-(could-have))
   - [User Story 11: Travel quiz or itinerary builder (could-have)](#User-Story-11:-Travel-quiz-or-itinerary-builder-(could-have))
 - [Design Justification](#design-justification)
