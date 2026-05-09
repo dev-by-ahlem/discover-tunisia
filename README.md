@@ -40,7 +40,6 @@ Click here to explore the live version of my website:
      - [Arts & Crafs](#art-craft)
      - [Traditional Clothing](#traditional-clothing)
   - [Contact Page](#contact)
-- [Validations](#validations)
 - [Screenshots](#screenshots)
   - [Homepage](#homepage-screenshots)
   - [Destinations](#destinationspage-screenshots)
@@ -351,20 +350,15 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
      All pages contain: Navbar, Hero and Footer
 
     ### 🏠Home Page
+    
+    - The Home page introduces the website with a welcoming hero image, a short introduction, and a visual gallery that highlights Tunisia’s beauty. 
+    - It sets the tone for the site and guides users toward exploring destinations, culture, and contact options.
 
-     - Navbar
-     - Hero section
-     - Scrolling gallery displayed vertically and stops when hovering the mouse
-     - Introduction & Facts about Tunisia
-     - Reason to love section
-     - Footer
 
   ## 📍Destinations Page
       
-     - Navbar
-     - Hero section
-     - A magazine-inspired zig‑zag image gallery where each card reacts with a hover    effect for added interactivity 
-     - Footer
+     - The Destinations page presents a collection of key Tunisian locations through images and short descriptions. 
+     - It gives users a quick visual overview of the country’s most iconic regions and encourages them to explore each place.
 
   ## 🎭Culture Page
 
@@ -396,4 +390,8 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
        - The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
        -  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
 
+  ## ✉️Contact Page
+
+    - The Contact page provides a simple way for users to get in touch. 
+    - It includes a short checklist, a clean contact form, and a confirmation message after submission, making communication easy and accessible.
 
