@@ -19,7 +19,7 @@ Click here to explore the live version of my website:
   - [User Story 2: High-quality images and engaging descriptions (must-have)](#user-story-2-High-quality-images-and-engaging-descriptions-(must-have))
   - [User Story 3: Detailed destination and culture information with interactive gallery (must-have)](#User-Story-3:Detailed-destination-and-culture-information-with-interactive-gallery-(must-have))
   - [User Story 4: Contact form for inquiries (must-have)](#user-story-4-Contact-form-for-inquiries-(must-have))
-  - [User Story 5: Subtle animations and micro-interactions (should-have)](#User-Story-5:-Subtle-animations-and-micro-interactions-(should-have))
+  - [User Story 5: Subtle animations and micro-interactions (must-have)](#User-Story-5:-Subtle-animations-and-micro-interactions-(should-have))
   - [User Story 6: Social media integration (should-have)](#user-story-6-Social-media-integration-(should-have))
   - [User Story 7: Newsletter sign-up form (could-have)](#User-Story-7:-Newsletter-sign-up-form-(could-have))
   - [User Story 8: Interactive map for destinations (could-have)](#User-Story-8:-Interactive-map-for-destinations-(could-have))
