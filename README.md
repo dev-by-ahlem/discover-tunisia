@@ -96,5 +96,17 @@ Click here to explore the live version of my website:
 
 ## 🎨User Experience (UX)
 
+- The Discover Tunisia website is designed to offer a smooth, enjoyable, and intuitive experience for all visitors. The UX focuses on clarity, simplicity, and visual engagement.
+- The Discover Tunisia website is designed to support the needs of different types of visitors.
+- Below are the main goals users want to achieve when visiting the site:
+     - Learn about Tunisia quickly through clear sections, images, and descriptions.
+     - Explore destinations and understand what each place offers.
+     - Discover Tunisian culture, including food, clothing, and traditions.
+     - View high‑quality images to visualize the country before visiting.
+     - Find essential travel information, including contact details and location.
+     - Use a simple contact form to ask questions or request more information.
+     - Navigate easily thanks to a clean layout and responsive design.
+     - Stay connected through social media links and optional newsletter sign‑up.
+     - Enjoy a modern experience with subtle animations and interactive elements.
   
   
