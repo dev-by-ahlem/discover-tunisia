@@ -419,14 +419,6 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ### 🎭Culture Page
 
-  🖥️ Desktop Screenshots
-
-![Home-Mobile-Screenshot](assets/images/screenshots/culture-ls.png)
-
-  📱 Mobile Screenshots
-
-![Home-Mobile-Screenshot](assets/images/screenshots/culture-ss.png)
-
   ### 🍽️Food & Drinks
 
   🖥️ Desktop Screenshots
@@ -475,7 +467,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
     📱 Mobile Screenshots
 
-![Home-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
+   ![Home-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
 
