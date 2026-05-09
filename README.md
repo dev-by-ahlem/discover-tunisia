@@ -308,7 +308,7 @@ As a Prospective Visitor, I want to read testimonials from other travelers, so I
 - Create a testimonials section on the home or culture page.
 - Populate it with sample testimonials.
 
----
+----
 
 ### 🔟User Story 10: Location, contact details, and travel information (could-have)
 
