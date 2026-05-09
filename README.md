@@ -30,35 +30,16 @@ Click here to explore the live version of my website:
   - [User Story 11: Travel quiz or itinerary builder (could-have)](#User-Story-11:-Travel-quiz-or-itinerary-builder-(could-have))
 - [Design Justification](#design-justification)
   - [Color Palette](#color-palette)
-  - [Imagery & Themes](#imagery--themes)
-- [Homepage](#homepage)
-  - [Navbar](#navbar)
-  - [Hero Section](#hero-section)
-  - [Introduction Section](#introduction-section)
-  - [Scrolling Images](#[scrolling-images)
-  - [Content Section](#content-section)
-  - [Footer](#footer)
-- [Destinations Page](#destinations-page)
-  - [Navbar](#Navbar)
-  - [Hero Section](#hero-section)
-  - [Introduction Section](#introduction-section)
-  - [Text & Images](#[text-&-images)
-  - [Footer](#footer)
-- [Culture Page](#culture-page)
-  - [Navbar](#Navbar)
-  - [Hero Section](#hero-section)
-  - [Food & Drink Tab](#food-&-drink-tab)
-  - [Traditions Tab](#traditions-tab)
-  - [Arts & Crafts Tab](#arts-&-crafts-tab)
-  - [Traditional Clothing Tab](#traditioanl-clothing-tab)
-  - [Footer](#footer)
-- [Contact](#contact)
-  - [Navbar](#navbar)
-  - [Hero Section](#hero-section)
-  - [Check List](#check-list)
-  - [Form](#form)
-  - [Thank You Message](#thx-msg)
-  - [Footer](#footer)
+  - [Imagery & Themes](#imagery-themes)
+- [Pages Overview](#page-overview)
+  - [Home Page](#home)
+  - [Destinations Page](#destinations)
+  - [Culture Page](#culture)
+     - [Food & Drinks](#[food-drinks)
+     - [Traditions](#traditions)
+     - [Arts & Crafs](#art-craft)
+     - [Traditional Clothing](#traditional-clothing)
+  - [Contact Page](#contact)
 - [Validations](#validations)
 - [Screenshots](#screenshots)
   - [Homepage](#homepage-screenshots)
@@ -364,3 +345,55 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   - The combination of a serif font (Playfair Display) and a sans‑serif font (Lato) creates a balanced visual identity that feels both authentic and contemporary, matching the website’s goal of showcasing Tunisia’s culture in a modern way.
   
   ![Font](assets/images/screenshots/font.png)
+
+  ## 📄Pages Overview
+     
+     All pages contain: Navbar, Hero and Footer
+
+    ### 🏠Home Page
+
+     - Navbar
+     - Hero section
+     - Scrolling gallery displayed vertically and stops when hovering the mouse
+     - Introduction & Facts about Tunisia
+     - Reason to love section
+     - Footer
+
+  ## 📍Destinations Page
+      
+     - Navbar
+     - Hero section
+     - A magazine-inspired zig‑zag image gallery where each card reacts with a hover    effect for added interactivity 
+     - Footer
+
+  ## 🎭Culture Page
+
+    - The Culture page is divided into four interactive sub‑sections — Food & Drink, Traditions, Arts & Crafts, and Traditional Clothing. 
+    - Each tab presents a different aspect of Tunisian culture, allowing users to explore the country’s heritage in a structured and engaging way. 
+    - All sections are accessible through the tab navigation at the top of the page.
+    - The four interactive sub‑sections are:
+  
+       ### 🍽️Food & Drinks
+
+      - This section showcases Tunisia’s rich culinary heritage through a grid of realistic food images. 
+      - Each card includes a dish photo and a short description, highlighting traditional meals such as couscous, brik, lablabi, and mint tea. 
+      - The layout is visual and appetizing, designed to immerse users in the flavors of Tunisia. 
+
+       ### 🎉Traditions
+
+      - The Traditions tab presents cultural practices, celebrations, and customs in a clean text‑based layout. 
+      - Each item includes an icon, a title, and a short explanation.
+      - This section focuses on storytelling — explaining rituals, seasonal events, and daily cultural habits that shape Tunisian life.
+
+       ### 🎨Arts & Crafts
+
+       - This section highlights Tunisia’s artistic identity through text cards describing traditional crafts such as pottery, weaving, wood carving, and mosaic art. 
+       - The layout is simple and elegant, allowing users to learn about the craftsmanship and creativity behind Tunisian artisanal work.
+
+
+       ### 👗Traditional Clothing
+
+       - The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
+       -  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
+
+
