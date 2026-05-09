@@ -411,11 +411,11 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   
   🖥️ Desktop Screenshots
 
-![Home-Mobile-Screenshot](assets/images/screenshots/destination-ls.png)
+![Destinations-Mobile-Screenshot](assets/images/screenshots/destination-ls.png)
 
   📱 Mobile Screenshots
 
-![Home-Mobile-Screenshot](assets/images/screenshots/destination-ss.png)
+![Destinations-Mobile-Screenshot](assets/images/screenshots/destination-ss.png)
 
 ### 🎭Culture Page
 
@@ -423,51 +423,51 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
   🖥️ Desktop Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/food-ls.png)
+  ![Food-Mobile-Screenshot](assets/images/screenshots/food-ls.png)
 
   📱 Mobile Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/food-ss.png)
+  ![Food-Mobile-Screenshot](assets/images/screenshots/food-ss.png)
 
   ### 🎉Traditions
 
   🖥️ Desktop Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/tradition-ls.png)
+  ![Tradition-Desktop-Screenshot](assets/images/screenshots/tradition-ls.png)
 
   📱 Mobile Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/tradition-ss.png)
+  ![Tradition-Mobile-Screenshot](assets/images/screenshots/tradition-ss.png)
 
   ### 🎨Arts & Crafts
 
   🖥️ Desktop Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/art-ls.png)
+  ![Art-Craft](assets/images/screenshots/art-ls.png)
 
   📱 Mobile Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/art-ss.png)
+  ![Art-Craft](assets/images/screenshots/art-ss.png)
 
   ### 👗Traditional Clothing
 
     🖥️ Desktop Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/clothing-ls.png)
+  ![Traditional-Desktop-Screenshot](assets/images/screenshots/clothing-ls.png)
 
     📱 Mobile Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/clothing-ss.png)
+  ![Traditional-Mobile-Screenshot](assets/images/screenshots/clothing-ss.png)
 
 ## ✉️Contact Page
 
     🖥️ Desktop Screenshots
 
-  ![Home-Mobile-Screenshot](assets/images/screenshots/contact-ls.png)
+  ![Contact-Mobile-Screenshot](assets/images/screenshots/contact-ls.png)
 
     📱 Mobile Screenshots
 
-   ![Home-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
+   ![Contact-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
 
