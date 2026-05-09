@@ -345,47 +345,47 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   
   ![Font](assets/images/screenshots/font.png)
 
-  ## 📄Pages Overview
+## 📄Pages Overview
      
      All pages contain: Navbar, Hero and Footer
 
-    ### 🏠Home Page
+  ### 🏠Home Page
     
     - The Home page introduces the website with a welcoming hero image, a short introduction, and a visual gallery that highlights Tunisia’s beauty. 
     - It sets the tone for the site and guides users toward exploring destinations, culture, and contact options.
 
 
-  ## 📍Destinations Page
+  ### 📍Destinations Page
       
      - The Destinations page presents a collection of key Tunisian locations through images and short descriptions. 
      - It gives users a quick visual overview of the country’s most iconic regions and encourages them to explore each place.
 
-  ## 🎭Culture Page
+  ### 🎭Culture Page
 
     - The Culture page is divided into four interactive sub‑sections — Food & Drink, Traditions, Arts & Crafts, and Traditional Clothing. 
     - Each tab presents a different aspect of Tunisian culture, allowing users to explore the country’s heritage in a structured and engaging way. 
     - All sections are accessible through the tab navigation at the top of the page.
     - The four interactive sub‑sections are:
   
-       ### 🍽️Food & Drinks
+  ### 🍽️Food & Drinks
 
       - This section showcases Tunisia’s rich culinary heritage through a grid of realistic food images. 
       - Each card includes a dish photo and a short description, highlighting traditional meals such as couscous, brik, lablabi, and mint tea. 
       - The layout is visual and appetizing, designed to immerse users in the flavors of Tunisia. 
 
-       ### 🎉Traditions
+  ### 🎉Traditions
 
       - The Traditions tab presents cultural practices, celebrations, and customs in a clean text‑based layout. 
       - Each item includes an icon, a title, and a short explanation.
       - This section focuses on storytelling — explaining rituals, seasonal events, and daily cultural habits that shape Tunisian life.
 
-       ### 🎨Arts & Crafts
+  ### 🎨Arts & Crafts
 
        - This section highlights Tunisia’s artistic identity through text cards describing traditional crafts such as pottery, weaving, wood carving, and mosaic art. 
        - The layout is simple and elegant, allowing users to learn about the craftsmanship and creativity behind Tunisian artisanal work.
 
 
-       ### 👗Traditional Clothing
+  ### 👗Traditional Clothing
 
        - The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
        -  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
@@ -394,4 +394,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
     - The Contact page provides a simple way for users to get in touch. 
     - It includes a short checklist, a clean contact form, and a confirmation message after submission, making communication easy and accessible.
+
+## 📸Screenshots
+
 
