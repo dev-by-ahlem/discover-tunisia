@@ -614,7 +614,9 @@ This happened because:
 
 ## 🔮Planned Future Updates
 
-- The following "could‑have" user stories are planned for future development and may be added in later versions of the project:
+- ✨The Lighthouse performance test was completed at a later stage of the project, which limited the time available for deeper optimization; further improvements are planned in future updates.
+
+- ✨The following "could‑have" user stories are planned for future development and may be added in later versions of the project:
 
    - Newsletter Sign‑Up Form — allowing visitors to subscribe for updates.
    - Interactive Destination Map — helping users explore Tunisia visually.
@@ -636,3 +638,4 @@ This happened because:
 
 - Throughout the project, I made a consistent effort to commit as frequently as possible in order to clearly document every update, fix, and improvement.
 -  This ensured full transparency in the development process and made it easier to track changes over time.   
+

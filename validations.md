@@ -36,63 +36,33 @@ There are no erros or warnings on the HTML validations. Below are the validation
 ![HTML-Validation-Contact()](assets/images/validations/html-contact.png)
 
 ---
+## 📌Lighthouse Testing
 
-**Performance, Accessibility, Best Practices and SEO validations were carried out using the Lighthouse developer tool**
+Lighthouse is a Chrome tool that analyzes my website’s performance, accessibility, best practices, and SEO, and provides scores and recommendations for improvement.
 
-The table below provides the reference ranges and explanations for Lighthouse scores.
+## ⚡Performance, Accessibility, Best Practices and SEO validations
 
-| Category        | Score Range | Color Indicator | Explanation                                                                 |
-|----------------|-------------|------------------|------------------------------------------------------------------------------|
-| **Performance** | 90–100      | 🟢 Green         | Fast site loading and good runtime performance.                             |
-|                 | 50–89       | 🟡 Orange        | Moderate performance; room for improvement.                                 |
-|                 | 0–49        | 🔴 Red           | Poor performance; likely slow loading and resource-heavy.                   |
-| **Accessibility** | 90–100    | 🟢 Green         | Most users, including those with disabilities, can navigate the content.    |
-|                 | 50–89       | 🟡 Orange        | Some accessibility issues that may block certain users.                     |
-|                 | 0–49        | 🔴 Red           | Major accessibility barriers for users with disabilities.                   |
-| **Best Practices** | 90–100   | 🟢 Green         | Secure, modern web practices are followed.                                  |
-|                 | 50–89       | 🟡 Orange        | Some outdated or risky practices found.                                     |
-|                 | 0–49        | 🔴 Red           | Several critical issues affecting reliability or security.                  |
-| **SEO**         | 90–100      | 🟢 Green         | Good visibility to search engines and adherence to SEO basics.              |
-|                 | 50–89       | 🟡 Orange        | SEO could be improved for better search engine indexing.                    |
-|                 | 0–49        | 🔴 Red           | Poor SEO setup, affecting discoverability.                                  |
+#### Home - 🖥️Desktop
 
+![Lighthouse Validation - Home Desktop](assets/images/lighthouse/desktop-lighthouse-home.png)
 
-### Performance
+#### Home - 📱Mobile
+![Lighthouse Validation - Home Mobile](assets/images/lighthouse/mobile-lighthouse-home.png)
 
+#### Destinations - 🖥️Desktop
+![Lighthouse Validation - Destinations Desktop](assets/images/lighthouse/desktop-lighthouse-destinations.png)
 
-### Accessibility
+#### Destinations - 📱Mobile
+![Lighthouse Validation - Destinations Mobile](assets/images/lighthouse/mobile-lighthouse-destinations.png)
 
+#### Culture - 🖥️Desktop
+![Lighthouse Validation - Culture Desktop](assets/images/lighthouse/desktop-lighthouse-culture.png)
 
-### Best Practices
+#### Culture - 📱Mobile
+![Lighthouse Validation - Culture Mobile](assets/images/lighthouse/mobile-lighthouse-culture.png)
 
+#### Contact - 🖥️Desktop
+![Lighthouse Validation - Contact Desktop](assets/images/lighthouse/desktop-lighthouse-contact.png)
 
-### SEO
-SEO validation resulted in a score of 100%.
-
-### Lighthouse Validation Results
-*Please see the results of the validations below.*
-
-#### Home Page - Desktop
-![Lighthouse Validation - Home Desktop](assets/images/validations/lighthouse-home-desktop.png)
-
-#### Home Page - Mobile
-![Lighthouse Validation - Home Mobile](assets/images/validations/lighthouse-home-mobile.png)
-
-#### Destinations - Desktop
-![Lighthouse Validation - Destinations Desktop](assets/images/validations/lighthouse-destinations-desktop.png)
-
-#### Destinations - Mobile
-![Lighthouse Validation - Destinations Mobile](assets/images/validations/lighthouse-destinations-mobile.png)
-
-#### Culture - Desktop
-![Lighthouse Validation - Culture Desktop](assets/images/validations/lighthouse-culture-desktop.png)
-
-#### Culture - Mobile
-![Lighthouse Validation - Culture Mobile](assets/images/validations/lighthouse-culture-mobile.png)
-
-#### Contact - Desktop
-![Lighthouse Validation - Contact Desktop](assets/images/validations/lighthouse-contact-desktop.png)
-
-#### Contact - Mobile
-![Lighthouse Validation - Contact Mobile](assets/images/validations/lighthouse-contact-mobile.png)
-
+#### Contact - 📱Mobile
+![Lighthouse Validation - Contact Mobile](assets/images/lighthouse/mobile-lighthouse-contact.png)
