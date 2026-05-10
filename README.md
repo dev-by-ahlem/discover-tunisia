@@ -50,6 +50,7 @@ Click here to explore the live version of my website:
 - [Wireframe Home Page](#wireframe)
   - [Desktop](#desktop)
   - [Mobile](#mobie)
+- [Bugs & Errors](#bugs-erros)
 
     ---------------------
     ---------------------
@@ -557,3 +558,26 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 ### 📱Mobile
 
 ![Using-AI](assets/images/screenshots/wireframe-home-mobile.png) 
+
+## 🐞 Bugs & Errors
+
+- All validation issues and debugging notes are documented in the "validation.md" file.
+However, one recurring problem deserves special mention:
+
+###  🐛CSS Update Side‑Effects
+
+- During development, I frequently encountered a situation where updating one part of the CSS caused other sections to break or behave unexpectedly.
+This happened because:
+  - Styles were shared across multiple components
+
+  - Some selectors were too broad
+
+  - Small changes cascaded into other layouts
+
+  - Media queries overlapped
+
+  - Old rules were still affecting new sections
+
+- This issue required repeated debugging and careful restructuring to ensure that updates in one area did not unintentionally affect others.
+
+- All detailed notes, examples, and fixes are included in the validation.me file.
