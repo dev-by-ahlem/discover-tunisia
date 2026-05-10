@@ -565,11 +565,33 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 - All validation issues and debugging notes found after checking with W3C validators are documented below:
 
+### 🔤 Heading Hierarchy Error (H1 → H3 Skipped Level)
+
+- This validation warning appears because HTML requires headings to follow a logical order.
+- I used <h1> and then jumped directly to <h3>, without an <h2> in between. 
+
+
 ![Error Home Page](assets/images/validations/error-home-page.png)
 
 ![Error Culture Page](assets/images/validations/error-culture-page.png)
 
+✔️ Solution:
+
+- To fix that, I added a <h2> tag between <h1> & <h3>
+
+### 🧩 Iframe Width & Height Validation Errors
+
+- 1️⃣ Error: “Bad value 100% for attribute width on element iframe”
+- 2️⃣ Error: “Bad value 100% for attribute height on element iframe”
+- These errors appear because HTML validation rules do NOT allow percentage values (100%) inside the width and height attributes of an <iframe>.
+
 ![Error Contact Page](assets/images/validations/error-contact-page.png)
+
+✔️ Solution:
+
+- To fix the width and height errors:
+   -  I removed width="100%" from the iframe and applied width: 100% using CSS instead.
+   -  I removed height="100%" from the iframe and used CSS to control the iframe height  instead of the HTML attribute.
 
 However, one recurring problem deserves special mention:
 ###  🐛CSS Update Side‑Effects
