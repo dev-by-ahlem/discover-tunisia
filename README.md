@@ -146,9 +146,9 @@ Click here to explore the live version of my website:
 
  ## 👥User Stories & Acceptance Criteria
 
-### 1️⃣User Story 1: User-friendly navigation and responsive design(must-have)
+### 1️⃣ User Story 1 – User-friendly navigation and responsive design
 
-**User story:**  
+**User story (must-have):**  
 
 As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device, so I can find information quickly and efficiently without frustration.
 
@@ -164,9 +164,9 @@ As a First-Time Visitor, I need easy navigation and a user-friendly design, incl
 
 ---
 
-### 2️⃣User Story 2: High-quality images and engaging descriptions (must-have)
+### 2️⃣ User Story 2 – High-quality images and engaging descriptions
 
-**User story:**  
+**User story (must-have):**  
 
 As a Tourist, I want to see high-quality images and engaging descriptions of Tunisia's destinations and culture, so I can decide if it's the right place for me to visit and explore.
 
@@ -184,9 +184,9 @@ As a Tourist, I want to see high-quality images and engaging descriptions of Tun
 
 ---
 
-### 3️⃣User Story 3: Detailed destination and culture information with interactive gallery (must-have)
+### 3️⃣ User Story 3 – Detailed destination and culture information with interactive gallery
 
-**User story:**  
+**User story (must-have):**  
 
 As a Traveler, I want to find clear information about destinations, culture, and experiences, along with an interactive gallery of images with hover effects, so I can plan my visit based on my interests and preferences while visualizing the places.
 
