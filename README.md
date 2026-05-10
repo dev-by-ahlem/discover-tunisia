@@ -51,8 +51,8 @@ Click here to explore the live version of my website:
   - [Desktop](#desktop)
   - [Mobile](#mobie)
 
-    ------------------
-    ------------------
+    ---------------------
+    ---------------------
  ## 🔄Updates
 
 ### ✔️Mockup generated using Canva
