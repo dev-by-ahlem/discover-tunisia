@@ -476,8 +476,8 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
    ![Contact-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
- ## ⭐Technologies Used
- 
+ ## ⭐Technologies Used 
+
  - My project was developed using a combination of modern web technologies and professional development tools.
 
  ![Technologies-Used](assets/images/screenshots/technologies.png)
