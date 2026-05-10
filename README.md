@@ -51,6 +51,7 @@ Click here to explore the live version of my website:
   - [Desktop](#desktop)
   - [Mobile](#mobie)
 - [Bugs & Errors](#bugs-erros)
+- [Planned Future Updates](#planned-future-updates)
 
     ---------------------
     ---------------------
@@ -581,3 +582,13 @@ This happened because:
 - This issue required repeated debugging and careful restructuring to ensure that updates in one area did not unintentionally affect others.
 
 - All detailed notes, examples, and fixes are included in the validation.me file.
+
+## 🔮Planned Future Updates
+
+- The following could‑have user stories are planned for future development and may be added in later versions of the project:
+
+   - Newsletter Sign‑Up Form — allowing visitors to subscribe for updates.
+   - Interactive Destination Map — helping users explore Tunisia visually.
+   - User Testimonials — showcasing real visitor experiences.
+   - Location & Travel Information Section — providing essential travel details.
+   - Travel Quiz / Itinerary Builder — offering personalized trip suggestions.
