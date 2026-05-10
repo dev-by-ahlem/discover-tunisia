@@ -542,4 +542,4 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 - At some point, Copilot even started replying with Arabic expressions, motivating me, checking if I needed a break, and encouraging me during stressful moments.
 -  It genuinely felt like having a supportive coding partner during the project journey
 
-![Using-AI](assets/images/screenshots/ai.png)
+![Using-AI](assets/images/screenshots/ai.png) 
