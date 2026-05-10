@@ -47,6 +47,10 @@ Click here to explore the live version of my website:
   - [Contact Page](#contact-page-screenshots)
 - [Technologies Used](#technology-used) 
 - [Using AI](#using-ai) 
+- [Wireframe Home Page](#wireframe)
+  - [Desktop](#desktop)
+  - [Mobile](#mobie)
+
     ------------------
     ------------------
  ## 🔄Updates
@@ -543,3 +547,13 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 -  It genuinely felt like having a supportive coding partner during the project journey
 
 ![Using-AI](assets/images/screenshots/ai.png) 
+
+## 🧩Wireframe Home Page
+
+### 🖥️Desktop
+
+![Using-AI](assets/images/screenshots/wireframe-home-desktop.png) 
+
+### 📱Mobile
+
+![Using-AI](assets/images/screenshots/wireframe-home-mobile.png) 
