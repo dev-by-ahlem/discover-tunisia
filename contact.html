@@ -305,30 +305,52 @@
   </footer>
   <!-- Bootstrap JS -->
 <script>
+
+  // Find the form with class "contact-form" and listen for when it gets submitted
   document.querySelector(".contact-form").addEventListener("submit", function(e) {
 
-    // Prevent page refresh
+    // Prevent the browser's default behaviour of refreshing the page on submit
     e.preventDefault();
 
+    // Find the Name input by its placeholder text, read what the user typed, and remove extra spaces
     const name = document.querySelector("input[placeholder='e.g. John Smith']").value.trim();
+
+    // Find the Email input by its placeholder text, read what the user typed, and remove extra spaces
     const email = document.querySelector("input[placeholder='e.g. john@email.com']").value.trim();
+
+    // Find the Subject input by its placeholder text, read what the user typed, and remove extra spaces
     const subject = document.querySelector("input[placeholder='e.g. Planning a trip to Tunisia']").value.trim();
+
+    // Find the textarea (Message field), read what the user typed, and remove extra spaces
     const message = document.querySelector("textarea").value.trim();
 
+    // Check if any field is empty — !name means "name is empty", || means OR
     if (!name || !email || !subject || !message) {
 
+      // If at least one field is empty, show a browser alert warning the user
       alert("Please fill in all fields before submitting.");
 
     } else {
 
-      // Show popup
+      // All fields are filled — find the thank-you overlay div and store it in a variable
       const popup = document.querySelector(".thankyou-overlay");
+
+      // Make the popup visible by setting its CSS display to flex
       popup.style.display = "flex";
 
-      // Hide after 8 seconds
+      // Wait 5000 milliseconds (5 seconds), then run the function inside
       setTimeout(() => {
+
+        // Hide the popup again after 5 seconds by setting display to none
         popup.style.display = "none";
+
+      // 5000 = the delay in milliseconds before the function above runs
       }, 5000);
+
+    }
+
+  });
+</script>
 
     }
 
