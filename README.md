@@ -60,29 +60,29 @@ Click here to explore the live version of my website:
     ---------------------
  ## 🔄Updates
 
-### ✔️Mockup generated using Canva
+### ✔️ Mockup generated using Canva
 
 - At the top of this README, a **mockup generated using Canva** showcases screenshots of the website displayed on different devices, including desktop, tablet and mobile.
 - This visual overview highlights the website’s responsive design and ensures a quick  understanding of how the layout adapts across screen sizes.
 
-### ✔️Flowchart created using Miro
+### ✔️ Flowchart created using Miro
 
 - The flowchart bellow was created using Miro to represent the navigation structure of the Discover Tunisia website.
 
-### ✔️Scrolling Gallery Enhancements
+### ✔️ Scrolling Gallery Enhancements
   
 - Implemented a pure CSS scrolling gallery using @keyframes to animate vertical movement.
 - Used transform: translateY() to shift the entire image track from top to bottom smoothly.
 - Applied a linear animation to maintain constant scrolling speed across all devices.
 - Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
 
-### ✔️Using CSS Variables
+### ✔️ Using CSS Variables
 
 “This project uses CSS variables defined in the :root selector to create a centralized design system. This approach improves maintainability, ensures visual consistency, and makes it easy to implement theming such as dark mode by updating variables in one place.”
 
 ![Css Variable](assets/images/screenshots/root.png)
 
-### ✔️Naming Conventions
+### ✔️ Naming Conventions
 
 - All **HTML, CSS, and image file names** now follow a consistent naming convention:
 - **Lowercase letters**
@@ -534,7 +534,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 - I used Miro to create the flowchart of my website structure, which helped me visualize the navigation between pages and organize the user journey clearly.
 
-## 🤖Using AI 
+## 🤖 Using AI 
 
 - AI tools played an important role in helping me build, improve, and polish this project.
 - I used copilot to generate hero images for home and destinations pages & also the wireframes.
@@ -559,7 +559,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ![Using-AI](assets/images/screenshots/ai.png) 
 
-## 🧩Wireframe Home Page
+## 🧩 Wireframe Home Page
 
 ### 🖥️Desktop
 
