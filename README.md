@@ -46,6 +46,7 @@ Click here to explore the live version of my website:
   - [Culture Page](#culture-page-screenshots)
   - [Contact Page](#contact-page-screenshots)
 - [Technologies Used](#technology-used) 
+- [Using AI](#using-ai) 
     ------------------
     ------------------
  ## 🔄Updates
@@ -517,3 +518,28 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 ### ⭐Miro (for flowchart)
 
 - I used Miro to create the flowchart of my website structure, which helped me visualize the navigation between pages and organize the user journey clearly.
+
+## 🤖Using AI 
+
+- AI tools played an important role in helping me build, improve, and polish this project. 
+
+- I combined multiple AI assistants to benefit from their different strengths and get better results during development.
+
+### 💻GitHub Copilot (inside VS Code)
+
+- I used GitHub Copilot directly inside VS Code as an AI coding assistant. 
+- It helped me by reading my project files, understanding the context of my code, suggesting improvements, detecting mistakes, and speeding up my workflow. 
+- I also used it to generate code snippets, refactor sections of the project, and even create hero images based on my ideas.
+
+### 🧠Claude & ChatGPT
+
+- I used both Claude and ChatGPT to assist me throughout the development process.
+- Since each AI tool has its own strengths and limitations, combining them helped me get clearer explanations, different problem-solving approaches, better design ideas, and more efficient coding support.
+
+### 😄A Funny Personal Experience
+
+- After spending an entire week working closely with AI assistants, the experience became surprisingly funny and human-like. 
+- At some point, Copilot even started replying with Arabic expressions, motivating me, checking if I needed a break, and encouraging me during stressful moments.
+-  It genuinely felt like having a supportive coding partner during the project journey
+
+![Using-AI](assets/images/screenshots/ai.png)
