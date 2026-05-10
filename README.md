@@ -565,11 +565,11 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 - All validation issues and debugging notes found after checking with W3C validators are documented below:
 
-![Error Home Page](assets/images/validations/error-home-page.png.png)
+![Error Home Page](assets/images/validations/error-home-page.png)
 
-![Error Culture Page](assets/images/validations/error-culture-page.png.png)
+![Error Culture Page](assets/images/validations/error-culture-page.png)
 
-![Error Contact Page](assets/images/validations/error-contact-page.png.png)
+![Error Contact Page](assets/images/validations/error-contact-page.png)
 
 However, one recurring problem deserves special mention:
 ###  🐛CSS Update Side‑Effects
