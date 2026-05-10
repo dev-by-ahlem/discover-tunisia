@@ -69,27 +69,27 @@ Click here to explore the live version of my website:
 
 - The flowchart bellow was created using Miro to represent the navigation structure of the Discover Tunisia website.
 
-  ### ✔️Scrolling Gallery Enhancements
+### ✔️Scrolling Gallery Enhancements
   
-  - Implemented a pure CSS scrolling gallery using @keyframes to animate vertical movement.
-  - Used transform: translateY() to shift the entire image track from top to bottom smoothly.
-  - Applied a linear animation to maintain constant scrolling speed across all devices.
-  - Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
+- Implemented a pure CSS scrolling gallery using @keyframes to animate vertical movement.
+- Used transform: translateY() to shift the entire image track from top to bottom smoothly.
+- Applied a linear animation to maintain constant scrolling speed across all devices.
+- Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
 
-  ### ✔️Using CSS Variables
+### ✔️Using CSS Variables
 
-  “This project uses CSS variables defined in the :root selector to create a centralized design system. This approach improves maintainability, ensures visual consistency, and makes it easy to implement theming such as dark mode by updating variables in one place.”
+“This project uses CSS variables defined in the :root selector to create a centralized design system. This approach improves maintainability, ensures visual consistency, and makes it easy to implement theming such as dark mode by updating variables in one place.”
 
 ![Css Variable](assets/images/screenshots/root.png)
 
-  ### ✔️Naming Conventions
+### ✔️Naming Conventions
 
-  - All **HTML, CSS, and image file names** now follow a consistent naming convention:
-  - **Lowercase letters**
-  - **Hyphens (`-`)** to separate words  
-  _Example: `hero-destination.jpg`, `kairaoun.mosque.png`_   
+- All **HTML, CSS, and image file names** now follow a consistent naming convention:
+- **Lowercase letters**
+- **Hyphens (`-`)** to separate words  
+ _Example: `hero-destination.jpg`, `kairaoun.mosque.png`_   
  
- ## 🎯Project Goals
+## 🎯Project Goals
     
 - Create an informative and visually engaging website that showcases Tunisia as a travel destination.
 - Promote Tunisia’s rich culture, history, and landscapes through high-quality images, interactive sections, and well-structured content.
@@ -134,21 +134,21 @@ Click here to explore the live version of my website:
      - Stay connected through social media links and optional newsletter sign‑up.
      - Enjoy a modern experience with subtle animations and interactive elements.
 
- ## 📐Flowchart
+## 📐Flowchart
 
-  - This flowchart represents the navigation structure of the Discover Tunisia website.
-  - All pages — Home, Destinations, Culture, and Contact — are fully accessible from one another through the main navigation bar, ensuring smooth and intuitive browsing. 
-  - The arrows in the diagram show the possible navigation paths, highlighting that every section can be reached directly without unnecessary steps.
+- This flowchart represents the navigation structure of the Discover Tunisia website.
+- All pages — Home, Destinations, Culture, and Contact — are fully accessible from one another through the main navigation bar, ensuring smooth and intuitive browsing. 
+- The arrows in the diagram show the possible navigation paths, highlighting that every section can be reached directly without unnecessary steps.
 
- 🌀The flowchart was created using Miro to visually map out the user journey and overall site architecture.
+🌀The flowchart was created using Miro to visually map out the user journey and overall site architecture.
 
  ![Flowchart](assets/images/screenshots/flowchart.png)
 
- ## 👥User Stories & Acceptance Criteria
+## 👥User Stories & Acceptance Criteria
 
-### 1️⃣ User Story 1 – User-friendly navigation and responsive design
+### 1️⃣ User Story 1 – User-friendly navigation and responsive design (must-have)
 
-**User story (must-have):**  
+**User story:**  
 
 As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device, so I can find information quickly and efficiently without frustration.
 
@@ -164,9 +164,9 @@ As a First-Time Visitor, I need easy navigation and a user-friendly design, incl
 
 ---
 
-### 2️⃣ User Story 2 – High-quality images and engaging descriptions
+### 2️⃣ User Story 2 – High-quality images and engaging descriptions (must-have)
 
-**User story (must-have):**  
+**User story:**  
 
 As a Tourist, I want to see high-quality images and engaging descriptions of Tunisia's destinations and culture, so I can decide if it's the right place for me to visit and explore.
 
@@ -184,9 +184,9 @@ As a Tourist, I want to see high-quality images and engaging descriptions of Tun
 
 ---
 
-### 3️⃣ User Story 3 – Detailed destination and culture information with interactive gallery
+### 3️⃣ User Story 3 – Detailed destination and culture information with interactive gallery (must-have)
 
-**User story (must-have):**  
+**User story:**  
 
 As a Traveler, I want to find clear information about destinations, culture, and experiences, along with an interactive gallery of images with hover effects, so I can plan my visit based on my interests and preferences while visualizing the places.
 
@@ -349,68 +349,68 @@ As a Tourist, I want a fun quiz or simple tool to help build a personalized itin
 
 The visual design of Discover Tunisia is crafted to reflect the essence of the country: warm, vibrant, cultural, and naturally beautiful. Every color, image, and layout choice supports the goal of presenting Tunisia as a welcoming destination rich in history, landscapes, and traditions.
 
-  ### 🌈Color Palette
+### 🌈Color Palette
 
-  - Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
-  - Soft beige and white backgrounds create clarity, balance, and readability, allowing images and cultural elements to stand out without overwhelming the user.
-  - Deep blues and Mediterranean-inspired accents subtly reference Tunisia’s coastline, evoking feelings of calm, travel, and exploration.
-  - The palette is intentionally minimal so that the vibrant images of food, clothing, and destinations become the main visual storytellers.Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
+- Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
+- Soft beige and white backgrounds create clarity, balance, and readability, allowing images and cultural elements to stand out without overwhelming the user.
+- Deep blues and Mediterranean-inspired accents subtly reference Tunisia’s coastline, evoking feelings of calm, travel, and exploration.
+- The palette is intentionally minimal so that the vibrant images of food, clothing, and destinations become the main visual storytellers.Warm gold tones are used to represent heritage, tradition, and elegance. Gold reflects Tunisia’s historical richness, from ancient architecture to artisanal crafts, and adds a premium, modern touch to the interface.
 
   ![Palette](assets/images/screenshots/palette.png)
 
 
-  ### ✍️Typography : Google font
+### ✍️Typography : Google font
 
-  - The website uses Playfair Display for headings to create an elegant, cultural, and traditional feel that reflects Tunisia’s heritage.
-  - Lato is used for body text because it is modern, clean, and highly readable on all screen sizes, including mobile devices.
-  - The combination of a serif font (Playfair Display) and a sans‑serif font (Lato) creates a balanced visual identity that feels both authentic and contemporary, matching the website’s goal of showcasing Tunisia’s culture in a modern way.
+- The website uses Playfair Display for headings to create an elegant, cultural, and traditional feel that reflects Tunisia’s heritage.
+- Lato is used for body text because it is modern, clean, and highly readable on all screen sizes, including mobile devices.
+- The combination of a serif font (Playfair Display) and a sans‑serif font (Lato) creates a balanced visual identity that feels both authentic and contemporary, matching the website’s goal of showcasing Tunisia’s culture in a modern way.
   
   ![Font](assets/images/screenshots/font.png)
 
 ## 📄Pages Overview
      
-  - All pages contain: Navbar, Hero and Footer
+- All pages contain: Navbar, Hero and Footer
 
 ### 🏠Home Page
     
-  - The Home page introduces the website with a welcoming hero image, a short introduction, and a visual gallery that highlights Tunisia’s beauty. 
-  - It sets the tone for the site and guides users toward exploring destinations, culture, and contact options.
+- The Home page introduces the website with a welcoming hero image, a short introduction, and a visual gallery that highlights Tunisia’s beauty. 
+- It sets the tone for the site and guides users toward exploring destinations, culture, and contact options.
 
 
 ### 📍Destinations Page
       
-  - The Destinations page presents a collection of key Tunisian locations through images and short descriptions. 
-  - It gives users a quick visual overview of the country’s most iconic regions and encourages them to explore each place.
+- The Destinations page presents a collection of key Tunisian locations through images and short descriptions. 
+- It gives users a quick visual overview of the country’s most iconic regions and encourages them to explore each place.
 
-  ### 🎭Culture Page
+### 🎭Culture Page
 
-  - The Culture page is divided into four interactive sub‑sections — Food & Drink, Traditions, Arts & Crafts, and Traditional Clothing. 
-  - Each tab presents a different aspect of Tunisian culture, allowing users to explore the country’s heritage in a structured and engaging way. 
-  - All sections are accessible through the tab navigation at the top of the page.
-  - The four interactive sub‑sections are:
+- The Culture page is divided into four interactive sub‑sections — Food & Drink, Traditions, Arts & Crafts, and Traditional Clothing. 
+- Each tab presents a different aspect of Tunisian culture, allowing users to explore the country’s heritage in a structured and engaging way. 
+- All sections are accessible through the tab navigation at the top of the page.
+- The four interactive sub‑sections are:
   
 ### Section 1: 🍽️Food & Drinks 
 
-  - This section showcases Tunisia’s rich culinary heritage through a grid of realistic food images. 
-  - Each card includes a dish photo and a short description, highlighting traditional meals such as couscous, brik, lablabi, and mint tea. 
-  - The layout is visual and appetizing, designed to immerse users in the flavors of Tunisia. 
+- This section showcases Tunisia’s rich culinary heritage through a grid of realistic food images. 
+- Each card includes a dish photo and a short description, highlighting traditional meals such as couscous, brik, lablabi, and mint tea. 
+- The layout is visual and appetizing, designed to immerse users in the flavors of Tunisia. 
 
 ### Section 2:🎉Traditions
 
-  - The Traditions tab presents cultural practices, celebrations, and customs in a clean text‑based layout. 
-  - Each item includes an icon, a title, and a short explanation.
-  - This section focuses on storytelling — explaining rituals, seasonal events, and daily cultural habits that shape Tunisian life.
+- The Traditions tab presents cultural practices, celebrations, and customs in a clean text‑based layout. 
+- Each item includes an icon, a title, and a short explanation.
+- This section focuses on storytelling — explaining rituals, seasonal events, and daily cultural habits that shape Tunisian life.
 
 ### Section 3:🎨Arts & Crafts
 
-  - This section highlights Tunisia’s artistic identity through text cards describing traditional crafts such as pottery, weaving, wood carving, and mosaic art. 
-  - The layout is simple and elegant, allowing users to learn about the craftsmanship and creativity behind Tunisian artisanal work.
+- This section highlights Tunisia’s artistic identity through text cards describing traditional crafts such as pottery, weaving, wood carving, and mosaic art. 
+- The layout is simple and elegant, allowing users to learn about the craftsmanship and creativity behind Tunisian artisanal work.
 
 
-  ### Section 4:👗Traditional Clothing
+### Section 4:👗Traditional Clothing
 
-  - The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
-  -  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
+- The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
+-  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
 
 ## ✉️Contact Page
 
@@ -421,11 +421,11 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ### 🏠Home Page
 
-  🖥️ Desktop Screenshots
+🖥️ Desktop Screenshots
 
 ![Home-Desktop-Screenshot](assets/images/screenshots/home-ls.png)
 
-  📱 Mobile Screenshots
+📱 Mobile Screenshots
 
 ![Home-Mobile-Screenshot](assets/images/screenshots/home-ss.png)
 
@@ -441,7 +441,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ### 🎭Culture Page
 
-  ### 🍽️Food & Drinks
+### 🍽️Food & Drinks
 
   🖥️ Desktop Screenshots
 
@@ -451,7 +451,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
   ![Food-Mobile-Screenshot](assets/images/screenshots/food-ss.png)
 
-  ### 🎉Traditions
+### 🎉Traditions
 
   🖥️ Desktop Screenshots
 
@@ -461,7 +461,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
   ![Tradition-Mobile-Screenshot](assets/images/screenshots/tradition-ss.png)
 
-  ### 🎨Arts & Crafts
+### 🎨Arts & Crafts
 
   🖥️ Desktop Screenshots
 
@@ -471,7 +471,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
   ![Art-Craft](assets/images/screenshots/art-ss.png)
 
-  ### 👗Traditional Clothing
+### 👗Traditional Clothing
 
     🖥️ Desktop Screenshots
 
@@ -492,7 +492,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
    ![Contact-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
- ## ⭐Technologies Used 
+## ⭐Technologies Used 
 
  - My project was developed using a combination of modern web technologies and professional development tools.
 
@@ -537,7 +537,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 ## 🤖Using AI 
 
 - AI tools played an important role in helping me build, improve, and polish this project.
-- I used copilot to generate hero images as I want for home and destinations pages.
+- I used copilot to generate hero images for home and destinations pages & also the wireframes.
 - I combined multiple AI assistants to benefit from their different strengths and get better results during development.
 
 ### 💻GitHub Copilot (inside VS Code)
@@ -606,15 +606,15 @@ However, one recurring problem deserves special mention:
 
 - During development, I frequently encountered a situation where updating one part of the CSS caused other sections to break or behave unexpectedly.
 This happened because:
-  - Styles were shared across multiple components
+- Styles were shared across multiple components
 
-  - Some selectors were too broad
+- Some selectors were too broad
 
-  - Small changes cascaded into other layouts
+- Small changes cascaded into other layouts
 
-  - Media queries overlapped
+- Media queries overlapped
 
-  - Old rules were still affecting new sections
+- Old rules were still affecting new sections
 
 - This issue required repeated debugging and careful restructuring to ensure that updates in one area did not unintentionally affect others.
 
