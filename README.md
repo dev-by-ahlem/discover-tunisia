@@ -586,7 +586,7 @@ This happened because:
 
 ## 🔮Planned Future Updates
 
-- The following could‑have user stories are planned for future development and may be added in later versions of the project:
+- The following "could‑have" user stories are planned for future development and may be added in later versions of the project:
 
    - Newsletter Sign‑Up Form — allowing visitors to subscribe for updates.
    - Interactive Destination Map — helping users explore Tunisia visually.

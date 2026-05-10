@@ -21,9 +21,7 @@
 
 <body>
 
-  <!-- =====================================================
-       NAVBAR — "Contact" link is active
-  ====================================================== -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
 
@@ -43,9 +41,9 @@
 
       <div class="collapse navbar-collapse" id="navbarMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link"        href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link"        href="destinations.html">Destinations</a></li>
-          <li class="nav-item"><a class="nav-link"        href="culture.html">Culture</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -53,9 +51,7 @@
     </div>
   </nav>
 
-  <!-- =====================================================
-       HERO — Dark title block + embedded Google Map
-  ====================================================== -->
+  <!-- HERO -->
   <section class="contact-hero">
 
     <div class="contact-hero-text">
@@ -64,147 +60,21 @@
       <p class="hero-sub">Click around — your next adventure is waiting</p>
     </div>
 
-    <!-- Google Map of Tunisia -->
-    <div class="contact-map">
+    <!-- FIXED GOOGLE MAP -->
+    <div class="contact-map" style="width:100%; height:400px;">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541455.0!2d7.5!3d33.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd5c2ab6b3e27d%3A0xeae69da7f5a0b93e!2sTunisia!5e0!3m2!1sen!2stn!4v1"
-        width="100%" height="100%"
-        style="border:0;"
-        allowfullscreen=""
+        style="width:100%; height:100%; border:0;"
+        allowfullscreen
         loading="lazy">
       </iframe>
     </div>
 
   </section>
 
-  <!-- =====================================================
-       REQUIREMENTS CHECKLIST + CONTACT FORM
-  ====================================================== -->
-  <section class="contact-requirements">
-    <div class="container">
-
-      <p class="section-label">Before You Contact Us</p>
-      <h2>Please Confirm You Are <span>Ready</span> 😄</h2>
-      <p class="req-subtitle">
-        All boxes must be checked before the contact form appears.
-        We are very serious about this. 🇹🇳
-      </p>
-
-      <!-- Checkbox 1 -->
-      <input type="checkbox" id="req1" class="req-checkbox-hidden">
-      <label class="req-item" for="req1">
-        <span class="req-box"></span>
-        <span class="req-text">🧭 I am ready to get lost in a medina and pretend it was completely planned</span>
-      </label>
-
-      <!-- Checkbox 2 -->
-      <input type="checkbox" id="req2" class="req-checkbox-hidden">
-      <label class="req-item" for="req2">
-        <span class="req-box"></span>
-        <span class="req-text">🌶️ I solemnly swear I will try harissa even if it looks dangerously spicy</span>
-      </label>
-
-      <!-- Checkbox 3 -->
-      <input type="checkbox" id="req3" class="req-checkbox-hidden">
-      <label class="req-item" for="req3">
-        <span class="req-box"></span>
-        <span class="req-text">🍵 I accept that mint tea will be offered approximately 47 times per day</span>
-      </label>
-
-      <!-- Checkbox 4 -->
-      <input type="checkbox" id="req4" class="req-checkbox-hidden">
-      <label class="req-item" for="req4">
-        <span class="req-box"></span>
-        <span class="req-text">🐪 I am mentally prepared to ride a camel and pretend I am not terrified</span>
-      </label>
-
-      <!-- Checkbox 5 -->
-      <input type="checkbox" id="req5" class="req-checkbox-hidden">
-      <label class="req-item" for="req5">
-        <span class="req-box"></span>
-        <span class="req-text">❤️ I accept that I will fall in love with Tunisia and never truly want to leave</span>
-      </label>
-
-      <p class="req-warning">⚠️ Please check all boxes to unlock the contact form!</p>
-
-      <!-- =====================================================
-           CONTACT FORM WRAPPER
-      ====================================================== -->
-      <div class="contact-form-wrapper">
-
-        <p class="section-label">Get In Touch</p>
-        <h2>Send Us a <span>Message</span></h2>
-        <p class="form-subtitle">Have a question about visiting Tunisia? We'd love to hear from you!</p>
-
-        <!-- Hidden checkbox for CSS popup -->
-        <input type="checkbox" id="submit-trigger" class="req-checkbox-hidden">
-
-        <!-- Contact form -->
-        <form class="contact-form">
-
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Your Name</label>
-              <input type="text" class="form-control contact-input" placeholder="e.g. John Smith" required>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Your Email</label>
-              <input type="email" class="form-control contact-input" placeholder="e.g. john@email.com" required>
-            </div>
-          </div>
-
-          <div class="mt-3">
-            <label class="form-label">Subject</label>
-            <input type="text" class="form-control contact-input" placeholder="e.g. Planning a trip to Tunisia" required>
-          </div>
-
-          <div class="mt-3">
-            <label class="form-label">Your Message</label>
-            <textarea class="form-control contact-input" rows="6"
-                      placeholder="Tell us about your trip plans, questions, or anything else..."
-                      required></textarea>
-          </div>
-
-          <!-- REAL hidden submit button -->
-          <button type="submit" id="real-submit" style="display:none;"></button>
-
-          <!-- Visible button -->
-          <div class="mt-4 text-center">
-            <label class="btn-contact-submit"
-                   onclick="document.getElementById('real-submit').click()">
-              Send Message <i class="fas fa-paper-plane"></i>
-            </label>
-          </div>
-
-        </form>
-
-        <!-- THANK YOU POPUP -->
-        <div class="thankyou-overlay">
-          <div class="thankyou-box">
-            <span class="thankyou-emoji">🇹🇳✈️</span>
-            <h2>You're <span>Officially</span> Registered!</h2>
-            <p>
-              🎉 Thank you for reaching out! Your message has landed safely —
-              like a camel finding an oasis in the Sahara.
-            </p>
-            <p>
-              🌴 We will contact you very soon about your nearest trip to Tunisia.
-              Start packing your sunscreen, your appetite, and your sense of adventure!
-            </p>
-            <p style="font-size:0.85rem; color:#999; margin-top:14px;">
-              (Warning: After visiting Tunisia, 99% of travellers never stop talking about it. You have been warned. 😄)
-            </p>
-          </div>
-        </div>
-
-      </div><!-- /contact-form-wrapper -->
-
-    </div>
-  </section>
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
+  <!-- ===================================================== REQUIREMENTS CHECKLIST + CONTACT FORM ====================================================== --> <section class="contact-requirements"> <div class="container"> <p class="section-label">Before You Contact Us</p> <h2>Please Confirm You Are <span>Ready</span> 😄</h2> <p class="req-subtitle"> All boxes must be checked before the contact form appears. We are very serious about this. 🇹🇳 </p> <!-- Checkbox 1 --> <input type="checkbox" id="req1" class="req-checkbox-hidden"> <label class="req-item" for="req1"> <span class="req-box"></span> <span class="req-text">🧭 I am ready to get lost in a medina and pretend it was completely planned</span> </label> <!-- Checkbox 2 --> <input type="checkbox" id="req2" class="req-checkbox-hidden"> <label class="req-item" for="req2"> <span class="req-box"></span> <span class="req-text">🌶️ I solemnly swear I will try harissa even if it looks dangerously spicy</span> </label> <!-- Checkbox 3 --> <input type="checkbox" id="req3" class="req-checkbox-hidden"> <label class="req-item" for="req3"> <span class="req-box"></span> <span class="req-text">🍵 I accept that mint tea will be offered approximately 47 times per day</span> </label> <!-- Checkbox 4 --> <input type="checkbox" id="req4" class="req-checkbox-hidden"> <label class="req-item" for="req4"> <span class="req-box"></span> <span class="req-text">🐪 I am mentally prepared to ride a camel and pretend I am not terrified</span> </label> <!-- Checkbox 5 --> <input type="checkbox" id="req5" class="req-checkbox-hidden"> <label class="req-item" for="req5"> <span class="req-box"></span> <span class="req-text">❤️ I accept that I will fall in love with Tunisia and never truly want to leave</span> </label> <p class="req-warning">⚠️ Please check all boxes to unlock the contact form!</p> <!-- ===================================================== CONTACT FORM WRAPPER ====================================================== --> <div class="contact-form-wrapper"> <p class="section-label">Get In Touch</p> <h2>Send Us a <span>Message</span></h2> <p class="form-subtitle">Have a question about visiting Tunisia? We'd love to hear from you!</p> <!-- Hidden checkbox for CSS popup --> <input type="checkbox" id="submit-trigger" class="req-checkbox-hidden"> <!-- Contact form --> <form class="contact-form"> <div class="row g-3"> <div class="col-md-6"> <label class="form-label">Your Name</label> <input type="text" class="form-control contact-input" placeholder="e.g. John Smith" required> </div> <div class="col-md-6"> <label class="form-label">Your Email</label> <input type="email" class="form-control contact-input" placeholder="e.g. john@email.com" required> </div> </div> <div class="mt-3"> <label class="form-label">Subject</label> <input type="text" class="form-control contact-input" placeholder="e.g. Planning a trip to Tunisia" required> </div> <div class="mt-3"> <label class="form-label">Your Message</label> <textarea class="form-control contact-input" rows="6" placeholder="Tell us about your trip plans, questions, or anything else..." required></textarea> </div> <!-- REAL hidden submit button --> <button type="submit" id="real-submit" style="display:none;"></button> <!-- Visible button --> <div class="mt-4 text-center"> <label class="btn-contact-submit" onclick="document.getElementById('real-submit').click()"> Send Message <i class="fas fa-paper-plane"></i> </label> </div> </form> <!-- THANK YOU POPUP --> <div class="thankyou-overlay"> <div class="thankyou-box"> <span class="thankyou-emoji">🇹🇳✈️</span> <h2>You're <span>Officially</span> Registered!</h2> <p> 🎉 Thank you for reaching out! Your message has landed safely — like a camel finding an oasis in the Sahara. </p> <p> 🌴 We will contact you very soon about your nearest trip to Tunisia. Start packing your sunscreen, your appetite, and your sense of adventure! </p> <p style="font-size:0.85rem; color:#999; margin-top:14px;"> (Warning: After visiting Tunisia, 99% of travellers never stop talking about it. You have been warned. 😄) </p> </div> </div> </div>
+    <!-- /contact-form-wrapper --> </div> </section>
+      <!--FOOTER -->
   <footer>
     <div class="container">
       <div class="row align-items-center">
@@ -233,38 +103,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Bootstrap JS -->
-<script>
-  document.querySelector(".contact-form").addEventListener("submit", function(e) {
-
-    // Prevent page refresh
-    e.preventDefault();
-
-    const name = document.querySelector("input[placeholder='e.g. John Smith']").value.trim();
-    const email = document.querySelector("input[placeholder='e.g. john@email.com']").value.trim();
-    const subject = document.querySelector("input[placeholder='e.g. Planning a trip to Tunisia']").value.trim();
-    const message = document.querySelector("textarea").value.trim();
-
-    if (!name || !email || !subject || !message) {
-
-      alert("Please fill in all fields before submitting.");
-
-    } else {
-
-      // Show popup
-      const popup = document.querySelector(".thankyou-overlay");
-      popup.style.display = "flex";
-
-      // Hide after 8 seconds
-      setTimeout(() => {
-        popup.style.display = "none";
-      }, 5000);
-
-    }
-
-  });
-</script>
 
 </body>
 </html>
