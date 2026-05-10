@@ -41,17 +41,16 @@ Click here to explore the live version of my website:
      - [Traditional Clothing](#traditional-clothing)
   - [Contact Page](#contact)
 - [Screenshots](#screenshots)
-  - [Homepage](#homepage-screenshots)
-  - [Destinations](#destinationspage-screenshots)
-  - [Culture](#culture-page-screenshots)
-  - [Contact](#contact-page-screenshots)
- 
-  - [Contact Us](#contact-us)
-  - [Thank you message](#thank-you-message)
- 
+  - [Home Page](#homepage-screenshots)
+  - [Destinations Page](#destinationspage-screenshots)
+  - [Culture Page](#culture-page-screenshots)
+  - [Contact Page](#contact-page-screenshots)
+- [Technologies Used](#technology-used) 
     ------------------
     ------------------
  ## 🔄Updates
+
+### ✔️Mockup generated using Canva
 
 At the top of this README, a **mockup generated using Canva** showcases screenshots of the website displayed on different devices, including desktop, tablet, laptop and mobile. This visual overview highlights the website’s responsive design and ensures a quick, at-a-glance understanding of how the layout adapts across screen sizes.
 
@@ -61,8 +60,15 @@ At the top of this README, a **mockup generated using Canva** showcases screensh
   - Applied a linear animation to maintain constant scrolling speed across all devices.
   - Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
 
+  ### ✔️Using CSS Variables
+
+  “This project uses CSS variables defined in the :root selector to create a centralized design system. This approach improves maintainability, ensures visual consistency, and makes it easy to implement theming such as dark mode by updating variables in one place.”
+
+![Css Variable](assets/images/screenshots/root.png)
+
   ### ✔️Naming Conventions
-- All **HTML, CSS, and image file names** now follow a consistent naming convention:
+
+  - All **HTML, CSS, and image file names** now follow a consistent naming convention:
   - **Lowercase letters**
   - **Hyphens (`-`)** to separate words  
   _Example: `hero-destination.jpg`, `kairaoun.mosque.png`_   
@@ -81,12 +87,12 @@ At the top of this README, a **mockup generated using Canva** showcases screensh
 - This was achieved using Bootstrap’s grid system alongside custom CSS media queries to ensure a consistent and user-friendly experience.
 
 ## 🎯Target Audience
-- Gardeners interested in sustainable and organic practices  
-- UK residents looking for climate-friendly gardening tips  
-- People who want to support wildlife in their gardens  
 
+- Visitors: The website is designed for visitors who want to explore Tunisia through a modern and visually engaging portfolio-style experience. 
+- Travel & Business Interest: It also targets travelers and travel agencies by helping connect people interested in discovering Tunisia’s destinations, culture, and tourism opportunities.  
 
 ## 🌟User Goals
+
 - The Discover Tunisia website is designed to support the needs of different types of visitors.
 - Below are the main goals users want to achieve when visiting the site:
     - Learn about Tunisia quickly through clear sections, images, and descriptions.
@@ -161,7 +167,6 @@ As a Tourist, I want to see high-quality images and engaging descriptions of Tun
 - Design and implement a homepage layout that prominently features the images and descriptions.
 
 ---
-
 
 ### 3️⃣User Story 3: Detailed destination and culture information with interactive gallery (must-have)
 
@@ -323,6 +328,7 @@ As a Tourist, I want a fun quiz or simple tool to help build a personalized itin
 - Display results with recommended destinations.
 
 ---
+
 ## 🎨Design Justification
 
 The visual design of Discover Tunisia is crafted to reflect the essence of the country: warm, vibrant, cultural, and naturally beautiful. Every color, image, and layout choice supports the goal of presenting Tunisia as a welcoming destination rich in history, landscapes, and traditions.
@@ -337,7 +343,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   ![Palette](assets/images/screenshots/palette.png)
 
 
-  ### ✍️Typography
+  ### ✍️Typography : Google font
 
   - The website uses Playfair Display for headings to create an elegant, cultural, and traditional feel that reflects Tunisia’s heritage.
   - Lato is used for body text because it is modern, clean, and highly readable on all screen sizes, including mobile devices.
@@ -367,25 +373,25 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
   - All sections are accessible through the tab navigation at the top of the page.
   - The four interactive sub‑sections are:
   
-### 🍽️Food & Drinks
+### Section 1: 🍽️Food & Drinks 
 
   - This section showcases Tunisia’s rich culinary heritage through a grid of realistic food images. 
   - Each card includes a dish photo and a short description, highlighting traditional meals such as couscous, brik, lablabi, and mint tea. 
   - The layout is visual and appetizing, designed to immerse users in the flavors of Tunisia. 
 
-### 🎉Traditions
+### Section 2:🎉Traditions
 
   - The Traditions tab presents cultural practices, celebrations, and customs in a clean text‑based layout. 
   - Each item includes an icon, a title, and a short explanation.
   - This section focuses on storytelling — explaining rituals, seasonal events, and daily cultural habits that shape Tunisian life.
 
-### 🎨Arts & Crafts
+### Section 3:🎨Arts & Crafts
 
   - This section highlights Tunisia’s artistic identity through text cards describing traditional crafts such as pottery, weaving, wood carving, and mosaic art. 
   - The layout is simple and elegant, allowing users to learn about the craftsmanship and creativity behind Tunisian artisanal work.
 
 
-  ### 👗Traditional Clothing
+  ### Section 4:👗Traditional Clothing
 
   - The Traditional Clothing tab displays a gallery of realistic images featuring iconic Tunisian garments such as the sefsari, jebba, barnous, chechia, and kachabia.
   -  Each card includes an image and a short description, helping users understand the cultural significance and regional variations of these outfits.
@@ -470,5 +476,44 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
    ![Contact-Mobile-Screenshot](assets/images/screenshots/contact-ss.png)
 
 
+ ## ⭐Technologies Used
+ 
+ - My project was developed using a combination of modern web technologies and professional development tools.
 
+ ![Technologies-Used](assets/images/screenshots/technologies.png)
 
+### ⭐HTML: 
+
+- I used HTML5 to build the structure of my website, organize the content into sections, and create a clean semantic layout.
+
+### ⭐CSS: 
+
+- I used CSS3 to style the entire website, control colors, spacing, fonts, and make the design visually consistent.
+
+### ⭐Bootstrap
+
+- I used Bootstrap to speed up the design process with its responsive grid system and ready‑made components.
+
+### ⭐JavaScript
+
+- I used JavaScript to validate the contact form and control the custom popup that appears after submitting.
+
+### ⭐VS Code
+
+- I used VS Code as my main code editor because it helped me organize my files, preview my project, and work efficiently.
+
+### ⭐GitHub
+
+- I used GitHub to store my project online, track my changes, and keep a clean version history during development.
+
+### ⭐Git
+
+- I used Git for version control to track project changes and manage the development workflow efficiently.
+
+### ⭐Canva (for mockups)
+
+- I used Canva to design the visual mockups of my website, helping me plan the layout, colors, and overall look before starting the coding phase.
+
+### ⭐Miro (for flowchart)
+
+- I used Miro to create the flowchart of my website structure, which helped me visualize the navigation between pages and organize the user journey clearly.
