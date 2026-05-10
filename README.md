@@ -528,8 +528,8 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ## 🤖Using AI 
 
-- AI tools played an important role in helping me build, improve, and polish this project. 
-
+- AI tools played an important role in helping me build, improve, and polish this project.
+- I used copilot to generate hero images as I want for home and destinations pages.
 - I combined multiple AI assistants to benefit from their different strengths and get better results during development.
 
 ### 💻GitHub Copilot (inside VS Code)
@@ -565,11 +565,10 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 - All validation issues and debugging notes found after checking with W3C validators are documented below:
 
-### 🔤 Heading Hierarchy Error (H1 → H3 Skipped Level)
+### 🔤Heading Hierarchy Error (H1 → H3 Skipped Level)
 
 - This validation warning appears because HTML requires headings to follow a logical order.
-- I used <h1> and then jumped directly to <h3>, without an <h2> in between. 
-
+- I used h1 and then jumped directly to h3, without an h2 in between. 
 
 ![Error Home Page](assets/images/validations/error-home-page.png)
 
@@ -577,13 +576,13 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ✔️ Solution:
 
-- To fix that, I added a <h2> tag between <h1> & <h3>
+- To fix that, I added a h2 tag between h1 & h3
 
 ### 🧩 Iframe Width & Height Validation Errors
 
 - 1️⃣ Error: “Bad value 100% for attribute width on element iframe”
 - 2️⃣ Error: “Bad value 100% for attribute height on element iframe”
-- These errors appear because HTML validation rules do NOT allow percentage values (100%) inside the width and height attributes of an <iframe>.
+- These errors appear because HTML validation rules do NOT allow percentage values (100%) inside the width and height attributes of an iframe.
 
 ![Error Contact Page](assets/images/validations/error-contact-page.png)
 
@@ -594,6 +593,7 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
    -  I removed height="100%" from the iframe and used CSS to control the iframe height  instead of the HTML attribute.
 
 However, one recurring problem deserves special mention:
+
 ###  🐛CSS Update Side‑Effects
 
 - During development, I frequently encountered a situation where updating one part of the CSS caused other sections to break or behave unexpectedly.
