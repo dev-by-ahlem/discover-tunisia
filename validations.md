@@ -1,12 +1,71 @@
 
 ## 🧪 Testing & Validation
 
+### ✋ Manual Testing
+
+🔗 Navbar Links:
+
+- All navigation links were manually tested to ensure they work correctly:
+- Each link redirects to the correct page
+- Active page is highlighted
+- Links work on desktop and mobile
+- No broken or empty links
+
+🔘 Buttons:
+
+- All buttons across the website were tested:
+- Buttons respond on click
+- Hover effects work
+- Buttons redirect to the correct section/page
+- No unresponsive or inactive buttons
+
+☑️ Checklist Functionality
+
+- The checklist on the Contact page was tested to ensure:
+- Each checkbox can be selected
+- The form only appears after all required boxes are checked
+- No checkbox is blocked or unclickable
+- The scroll-to-form behavior works correctly
+
+![Manual-Checklist-Testing()](assets/images/validations/manual-testing-checklist.png)
+
+📝 Form Validation
+
+- The contact form was tested to ensure proper validation:
+- All fields must be filled (no empty inputs allowed)
+- Email field requires @ and .
+- Error messages appear when fields are invalid
+- Submit button only works when the form is valid
+- Confirmation message appears after successful submission
+
+![Manual-NameInput-Testing()](assets/images/validations/manual-testing-form-name.png)
+
+![Manual-Subject-Input-Testing()](assets/images/validations/manual-testing-subject.png)
+
+![Manual-Message-Input()](assets/images/validations/manual-testing-message.png)
+
+📧 Email Format Validation
+
+- The email input was tested with:
+- Missing “@” → rejected
+- Missing “.” → rejected
+- Random text → rejected
+- Correct format (example@mail.com) → accepted
+
+![Manual-Checklist-Testing()](assets/images/validations/manual-testing-email.png)
+
+📱 Responsive Testing
+
+- Tested on multiple screen sizes:
+- Mobile (375px)
+- Tablet (768px)
+- Desktop (1920px)
+- Navbar, images, text, and layout adjust correctly.
 - All HTML and CSS files were tested using official W3C validators.
 - Full validation results and screenshots are documented in the validation.me file.
 - Performance Testing:
 - A Lighthouse audit was performed to review Performance, Accessibility, Best Practices, and SEO.
-- All results and notes are included bellow.
-
+- All results and notes are included bellow:
 
 ### CSS
 For validating my style sheet I used a validator from [W3C Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input).
