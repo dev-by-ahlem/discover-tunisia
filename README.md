@@ -563,9 +563,15 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 
 ## 🐞 Bugs & Errors
 
-- All validation issues and debugging notes are documented in the "validation.md" file.
-However, one recurring problem deserves special mention:
+- All validation issues and debugging notes found after checking with W3C validators are documented below:
 
+![Error Home Page](assets/images/validations/error-home-page.png.png)
+
+![Error Culture Page](assets/images/validations/error-culture-page.png.png)
+
+![Error Contact Page](assets/images/validations/error-contact-page.png.png)
+
+However, one recurring problem deserves special mention:
 ###  🐛CSS Update Side‑Effects
 
 - During development, I frequently encountered a situation where updating one part of the CSS caused other sections to break or behave unexpectedly.
