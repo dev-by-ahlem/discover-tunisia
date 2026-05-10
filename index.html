@@ -1,27 +1,35 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><!-- tells the browser this is an HTML5 document — must be the very first line -->
+<html lang="en"><!-- lang="en" helps screen readers and search engines know the page language is English -->
 
 <head>
   <!-- ================= PAGE SETUP ================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discover Tunisia</title>
+  <meta charset="UTF-8"><!-- UTF-8 encoding supports all characters including Arabic and special symbols used on this page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- makes the page scale correctly on phones — without this, mobile browsers zoom out and show a desktop-sized page -->
+  <title>Discover Tunisia</title><!-- text shown in the browser tab and used by search engines as the page title -->
   <!-- Small icon shown in the browser tab -->
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png"><!-- favicon — the small logo shown in the browser tab next to the title -->
 
   <!-- ================= FONTS & ICONS ================= -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- loads two Google Fonts:
+       - Playfair Display (weights 400 & 700) → used for all headings via --font-heading in CSS
+       - Lato (weights 300, 400 & 700) → used for all body text via --font-body in CSS
+       display=swap means text shows immediately in a fallback font while the custom font loads -->
   <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
+  <!-- loads the Font Awesome icon library — provides all the <i class="fas fa-..."> icons used throughout the page -->
+  <!-- crossorigin="anonymous" is required by Font Awesome's CDN for security (CORS policy) -->
 
   <!-- ================= BOOTSTRAP ================= -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap 5 CSS — provides the grid system (container, row, col-*), utility classes (ms-auto, text-center, g-4, etc.)
+       and the navbar collapse behaviour used in the hamburger menu -->
 
   <!-- ================= CUSTOM CSS ================= -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- our own stylesheet — loaded AFTER Bootstrap so our rules override Bootstrap's defaults where needed -->
 </head>
 
-<body>
+<body><!-- everything visible on the page lives inside <body> -->
 
   <!-- =====================================================
        NAVBAR
@@ -29,11 +37,22 @@
        Collapses to hamburger on mobile.
   ====================================================== -->
   <nav class="navbar navbar-expand-lg">
+  <!-- <nav> is the semantic HTML element for navigation — helps screen readers identify this as the site menu -->
+  <!-- .navbar → our custom dark bar styles (background, padding) defined in style.css -->
+  <!-- .navbar-expand-lg → Bootstrap class: shows the full horizontal menu on large screens (≥992px),
+       collapses it to a hamburger button on smaller screens -->
+
     <div class="container">
+    <!-- Bootstrap .container centres the navbar content and adds responsive horizontal padding
+         so the logo and links don't touch the screen edges -->
 
       <a class="navbar-brand" href="index.html">
+      <!-- .navbar-brand → styled in CSS as a flex row (logo image + site name side by side)
+           href="index.html" means clicking the logo/name always returns to the home page -->
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
+        <!-- logo image — alt text is shown if the image fails to load and is read by screen readers -->
         <em>Discover Tunisia</em>
+        <!-- <em> adds subtle italic styling to the site name beside the logo -->
       </a>
 
       <!-- Hamburger (mobile only) -->
@@ -43,16 +62,33 @@
               aria-controls="navbarMenu"
               aria-expanded="false"
               aria-label="Toggle navigation">
+      <!-- this button is only visible when the navbar is collapsed (on screens below 992px) -->
+      <!-- data-bs-toggle="collapse" → tells Bootstrap JS to toggle the collapsed state of the target element -->
+      <!-- data-bs-target="#navbarMenu" → points to the div with id="navbarMenu" — that's the link list that shows/hides -->
+      <!-- aria-controls, aria-expanded, aria-label → accessibility attributes so screen readers announce the button correctly -->
         <span class="navbar-toggler-icon"></span>
+        <!-- Bootstrap renders a ≡ hamburger icon here via CSS background-image;
+             our style.css overrides it with a custom gold SVG version -->
       </button>
 
       <!-- Nav links — ms-auto pushes them to the right -->
       <div class="collapse navbar-collapse" id="navbarMenu">
+      <!-- .collapse → Bootstrap hides this div on small screens until the hamburger is clicked -->
+      <!-- .navbar-collapse → Bootstrap class that handles the expand/collapse animation -->
+      <!-- id="navbarMenu" → matches data-bs-target="#navbarMenu" on the button above — this is what toggles -->
         <ul class="navbar-nav ms-auto">
+        <!-- <ul> is the semantic list element for navigation links -->
+        <!-- .navbar-nav → Bootstrap styles the list items horizontally (removes bullets, adds flex layout) -->
+        <!-- .ms-auto → Bootstrap utility: margin-start: auto — pushes the entire link list to the right side of the navbar -->
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <!-- .active → Bootstrap/CSS class that turns this link gold to indicate it's the current page -->
+          <!-- href="index.html" → links back to the home page (this file) -->
           <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <!-- href="destinations.html" → links to the destinations page -->
           <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+          <!-- href="culture.html" → links to the culture page -->
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <!-- href="contact.html" → links to the contact page -->
         </ul>
       </div>
 
@@ -67,22 +103,38 @@
        - overlay is very light (18% opacity)
   ==================================================== -->
   <section class="hero">
+  <!-- <section> is the semantic HTML element for a standalone content block — helps screen readers and SEO -->
+  <!-- .hero → CSS sets this as position:relative with min-height:100vh and display:flex
+       so the background image, overlay, and text all stack correctly on top of each other -->
 
     <!-- Background image — crisp, no blur -->
     <img src="assets/images/hero.png"
          alt="Mediterranean coast of Tunisia"
          class="hero-img">
+    <!-- .hero-img → CSS positions this as position:absolute with inset:0 so it stretches to fill every edge of .hero -->
+    <!-- object-fit:cover makes it fill the area without distortion; object-position:center bottom keeps the key subject visible -->
+    <!-- alt text describes the image for screen readers and shows if the image fails to load -->
 
     <!-- Very light dark overlay -->
     <div class="hero-overlay"></div>
+    <!-- .hero-overlay → CSS positions this as position:absolute with inset:0 and background rgba(26,26,46,0.18)
+         the 18% opacity dark layer sits on top of the image to improve text contrast without hiding the photo -->
 
     <!-- Text content — centered over the image -->
     <div class="hero-content">
+    <!-- .hero-content → CSS sets position:relative and z-index:1 so this text block sits above both the image and the overlay -->
+    <!-- padding-top:100px clears the fixed navbar height so the tag line doesn't hide behind it -->
       <p class="hero-tag">North Africa's Best Kept Secret</p>
+      <!-- .hero-tag → small gold uppercase label above the main heading — styled with letter-spacing and text-transform:uppercase -->
       <h1>Discover a <span>Hidden Gem</span><br>of the Mediterranean</h1>
+      <!-- main page heading — the <span> around "Hidden Gem" is targeted by CSS to colour just that phrase in gold -->
+      <!-- <br> forces "of the Mediterranean" onto a new line for a deliberate two-line heading layout -->
       <p class="hero-sub">Ancient ruins · Golden dunes · Turquoise shores</p>
+      <!-- .hero-sub → subtitle below the heading — styled as light-weight cream text, slightly transparent -->
       <!-- Scrolls down to the welcome section -->
       <a href="#welcome" class="btn-hero">Explore Now</a>
+      <!-- href="#welcome" → clicking this scrolls the page down to the element with id="welcome" (the next section) -->
+      <!-- .btn-hero → CSS styles this <a> tag as a gold pill button with hover invert effect -->
     </div>
 
   </section>
@@ -93,29 +145,42 @@
        Fact cards span full width below.
   ====================================================== -->
   <section class="section-welcome" id="welcome">
-    <div class="container">
+  <!-- id="welcome" → this is the scroll target for the "Explore Now" button in the hero above -->
+  <!-- .section-welcome → CSS sets padding, background-color, and font styles for this block -->
+    <div class="container"><!-- Bootstrap .container centres content and adds responsive horizontal padding -->
 
       <div class="row align-items-center g-5">
+      <!-- Bootstrap .row creates a horizontal flex container for the two columns inside -->
+      <!-- .align-items-center → vertically centres the left text column and right gallery column relative to each other -->
+      <!-- .g-5 → Bootstrap gutter: adds 3rem of gap between the two columns -->
 
         <!-- LEFT — Text & Stats -->
         <div class="col-lg-6">
+        <!-- Bootstrap column: takes 6/12 (50%) of the row on large screens (≥992px)
+             on smaller screens it automatically becomes full-width (12/12) and stacks above the gallery -->
           <p class="section-label">Welcome To:</p>
+          <!-- .section-label → small gold uppercase label above the heading — same style used across all sections -->
           <h2>A Land Where History<br>Meets the <span>Mediterranean</span></h2>
+          <!-- section heading — <br> forces a two-line layout; <span> colours "Mediterranean" in gold -->
           <p>
             Tunisia is a country of extraordinary contrasts — where ancient Roman ruins
             stand beside golden Saharan dunes, and whitewashed villages overlook the
             sparkling blue sea.
           </p>
+          <!-- first descriptive paragraph — styled by .section-welcome p in CSS -->
           <p>
             Explore bustling souks, taste vibrant cuisine, and discover Berber villages,
             salt flats, and Mediterranean coves.
           </p>
+          <!-- second descriptive paragraph — same styling as the first -->
 
           <!-- Stats: 3 numbers side by side -->
           <div class="welcome-stat">
-            <div class="stat">
-              <h3>3,000+</h3>
-              <p>Years of History</p>
+          <!-- .welcome-stat → CSS display:flex with gap:28px places the three stat blocks side by side
+               flex-wrap:wrap lets them stack vertically on very small screens -->
+            <div class="stat"><!-- wrapper for one stat — contains the number h3 and the label p -->
+              <h3>3,000+</h3><!-- the bold stat number — styled by .welcome-stat .stat h3 in CSS -->
+              <p>Years of History</p><!-- the small label under the number -->
             </div>
             <div class="stat">
               <h3>1,300 km</h3>
@@ -130,10 +195,17 @@
 
         <!-- RIGHT — Auto-scrolling image gallery -->
         <div class="col-lg-6">
+        <!-- Bootstrap column: takes 6/12 (50%) on large screens; stacks below the text column on smaller screens -->
           <!-- Outer box clips the scroll overflow -->
           <div class="scroll-gallery">
+          <!-- .scroll-gallery → CSS sets a fixed height (460px) and overflow:hidden
+               this acts as a window — images outside this box are clipped and invisible -->
             <!-- Inner track moves upward via CSS animation -->
             <div class="scroll-track">
+            <!-- .scroll-track → CSS display:flex flex-direction:column stacks images vertically
+                 animation:scrollUp 20s linear infinite continuously moves the whole track upward
+                 hovering over .scroll-gallery pauses the animation so users can look at images -->
+
               <!-- First set of images -->
               <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
               <img src="assets/images/scrolling-images/view-port.jpg"    alt="View Port">
@@ -143,6 +215,9 @@
               <img src="assets/images/scrolling-images/old-medina.jpg"      alt="Old Medina">
               <img src="assets/images/scrolling-images/sahara.png"          alt="Sahara Desert">
               <!-- Duplicate set — keeps scroll seamless (loop) -->
+              <!-- the CSS @keyframes scrollUp moves the track up by exactly 50% of its total height
+                   since the second set is identical to the first, when the first set scrolls out of view
+                   the second set looks identical — creating a seamless infinite loop with no jump -->
               <img src="assets/images/scrolling-images/kairaoun-mosque.png" alt="Kairouan Mosque">
               <img src="assets/images/scrolling-images/carthage-jam.png"    alt="Carthage and El Jem">
               <img src="assets/images/scrolling-images/arch-of-dogga.png"   alt="Dougga Arch">
@@ -158,39 +233,44 @@
 
       <!-- FACT CARDS — 6 quick info cards across full width -->
       <div class="facts-row">
+      <!-- .facts-row → CSS display:flex flex-wrap:wrap with a gold top border
+           each .fact-card inside uses flex:1 1 calc(16.66%) to share the row equally (6 per row on desktop) -->
 
         <div class="fact-card">
+        <!-- .fact-card → CSS gives each card a white background, right border divider, centered text, and hover lift effect -->
           <div class="fact-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <p class="fact-label">Capital</p>
-          <p class="fact-value">Tunis</p>
+          <!-- .fact-icon → CSS colours this gold and adds bottom margin; the <i> renders a Font Awesome pin icon -->
+          <p class="fact-label">Capital</p><!-- .fact-label → small grey uppercase label above the value -->
+          <p class="fact-value">Tunis</p><!-- .fact-value → bold serif text showing the actual fact -->
         </div>
 
         <div class="fact-card">
-          <div class="fact-icon"><i class="fas fa-coins"></i></div>
+          <div class="fact-icon"><i class="fas fa-coins"></i></div><!-- coins icon for currency -->
           <p class="fact-label">Currency</p>
           <p class="fact-value">Tunisian Dinar <span>(TND)</span></p>
+          <!-- <span> inside .fact-value → CSS targets it with display:block to push "(TND)" onto its own line below "Tunisian Dinar" -->
         </div>
 
         <div class="fact-card">
-          <div class="fact-icon"><i class="fas fa-users"></i></div>
+          <div class="fact-icon"><i class="fas fa-users"></i></div><!-- users icon for population -->
           <p class="fact-label">Population</p>
           <p class="fact-value">12 Million</p>
         </div>
 
         <div class="fact-card">
-          <div class="fact-icon"><i class="fas fa-comment"></i></div>
+          <div class="fact-icon"><i class="fas fa-comment"></i></div><!-- speech bubble icon for language -->
           <p class="fact-label">Language</p>
           <p class="fact-value">Arabic</p>
         </div>
 
         <div class="fact-card">
-          <div class="fact-icon"><i class="fas fa-clock"></i></div>
+          <div class="fact-icon"><i class="fas fa-clock"></i></div><!-- clock icon for time zone -->
           <p class="fact-label">Time Zone</p>
           <p class="fact-value">GMT +1</p>
         </div>
 
         <div class="fact-card">
-          <div class="fact-icon"><i class="fas fa-thermometer-half"></i></div>
+          <div class="fact-icon"><i class="fas fa-thermometer-half"></i></div><!-- thermometer icon for climate -->
           <p class="fact-label">Climate</p>
           <p class="fact-value">Mediterranean</p>
         </div>
@@ -205,26 +285,36 @@
        Dark background, 4 highlight cards.
   ====================================================== -->
   <section class="section-why">
+  <!-- .section-why → CSS sets background-color:var(--dark) — this is the navy dark section contrasting with the cream above -->
     <div class="container">
 
       <p class="section-label">Why Tunisia?</p>
+      <!-- .section-label inside .section-why → CSS overrides the colour to gold (instead of terracotta) to be visible on the dark background -->
       <h2>Reasons to <span>Fall in Love</span></h2>
+      <!-- section heading — <span> colours "Fall in Love" in gold against the white heading text -->
 
       <!-- 4 cards: 2/row on tablet, 1/row on mobile -->
       <div class="row g-4">
+      <!-- Bootstrap .row creates the horizontal flex container for the 4 cards -->
+      <!-- .g-4 → Bootstrap gutter: 1.5rem gap between all cards -->
 
         <div class="col-lg-3 col-md-6">
+        <!-- col-lg-3 → 3/12 columns = 25% width on large screens (≥992px) → 4 cards in one row -->
+        <!-- col-md-6 → 6/12 columns = 50% width on medium screens (768px–991px) → 2 cards per row -->
+        <!-- on small screens (<768px) Bootstrap defaults to full width (12/12) → 1 card per row -->
           <div class="why-card">
-            <div class="icon"><i class="fas fa-landmark"></i></div>
-            <h3>With</h3>
-            <h4>Rich History</h4>
+          <!-- .why-card → CSS sets a semi-transparent dark background, gold border, centered text, and hover lift -->
+            <div class="icon"><i class="fas fa-landmark"></i></div><!-- landmark/column icon representing history -->
+            <h3>With</h3><!-- small word above the card title — part of the narrative "Reasons to Fall in Love With Rich History" -->
+            <h4>Rich History</h4><!-- .why-card h4 → CSS styles this as white card title -->
             <p>From Carthage to Roman amphitheatres, Tunisia holds some of the world's most impressive ancient sites.</p>
+            <!-- .why-card p → CSS styles this as muted grey (#aaa) description text -->
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6">
           <div class="why-card">
-            <div class="icon"><i class="fas fa-umbrella-beach"></i></div>
+            <div class="icon"><i class="fas fa-umbrella-beach"></i></div><!-- beach umbrella icon for beaches -->
             <h4>Stunning Beaches</h4>
             <p>Over 1,300 km of Mediterranean coastline with crystal-clear waters and white sandy beaches.</p>
           </div>
@@ -232,7 +322,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="why-card">
-            <div class="icon"><i class="fas fa-utensils"></i></div>
+            <div class="icon"><i class="fas fa-utensils"></i></div><!-- fork & knife icon for cuisine -->
             <h4>Delicious Cuisine</h4>
             <p>A unique blend of Berber, Arabic, and Mediterranean flavours that will delight every food lover.</p>
           </div>
@@ -240,7 +330,7 @@
 
         <div class="col-lg-3 col-md-6">
           <div class="why-card">
-            <div class="icon"><i class="fas fa-sun"></i></div>
+            <div class="icon"><i class="fas fa-sun"></i></div><!-- sun icon for weather -->
             <h4>Year-Round Sun</h4>
             <p>With over 300 sunny days a year, Tunisia is the perfect escape whatever the season.</p>
           </div>
@@ -254,36 +344,48 @@
        FOOTER — same on every page
   ====================================================== -->
   <footer>
+  <!-- <footer> is the semantic HTML element for the page footer — used on every page for consistency -->
+  <!-- CSS gives it a cream background, gold top border, and compact padding -->
     <div class="container">
       <div class="row align-items-center">
+      <!-- Bootstrap .row for the 3 footer columns -->
+      <!-- .align-items-center → vertically centres the brand text, social icons, and tagline relative to each other -->
 
         <div class="col-md-4">
-          <p class="footer-brand">Tunisia</p>
-          <p class="footer-tagline">My first project</p>
+        <!-- left column: brand name and tagline — takes 4/12 (33%) on medium+ screens, full width on mobile -->
+          <p class="footer-brand">Tunisia</p><!-- .footer-brand → serif font, dark colour — site name in the footer -->
+          <p class="footer-tagline">My first project</p><!-- .footer-tagline → small grey text below the brand name -->
         </div>
 
         <div class="col-md-4 text-center">
+        <!-- centre column: social icons — .text-center centres the icon row horizontally -->
           <div class="footer-social">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+          <!-- .footer-social → CSS display:flex justify-content:center gap:16px places icons side by side with even spacing -->
+            <a href="#"><i class="fab fa-facebook"></i></a><!-- Font Awesome Facebook icon — href="#" is a placeholder link -->
+            <a href="#"><i class="fab fa-instagram"></i></a><!-- Font Awesome Instagram icon -->
+            <a href="#"><i class="fab fa-tiktok"></i></a><!-- Font Awesome TikTok icon -->
+            <a href="#"><i class="fab fa-youtube"></i></a><!-- Font Awesome YouTube icon -->
           </div>
         </div>
 
         <div class="col-md-4 text-md-end">
+        <!-- right column: personal tagline — .text-md-end right-aligns text on medium+ screens, left-aligned on mobile -->
           <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
         </div>
 
       </div>
       <div class="footer-bottom">
+      <!-- .footer-bottom → CSS adds a faint top border, centres the text, and uses the smallest font size on the page -->
         &copy; 2026 Discover Tunisia. All rights reserved.
+        <!-- &copy; is the HTML entity for the © copyright symbol -->
       </div>
     </div>
   </footer>
 
   <!-- Bootstrap JS (required for navbar hamburger toggle) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap's JavaScript bundle — includes Popper.js (for dropdowns/tooltips) and the collapse logic
+       that powers the hamburger menu toggle; loaded at the bottom of <body> so the page renders before the script runs -->
 
 </body>
 </html>

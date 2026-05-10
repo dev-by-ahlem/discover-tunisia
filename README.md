@@ -60,11 +60,17 @@ Click here to explore the live version of my website:
 
 ### ✔️Mockup generated using Canva
 
-At the top of this README, a **mockup generated using Canva** showcases screenshots of the website displayed on different devices, including desktop, tablet, laptop and mobile. This visual overview highlights the website’s responsive design and ensures a quick, at-a-glance understanding of how the layout adapts across screen sizes.
+- At the top of this README, a **mockup generated using Canva** showcases screenshots of the website displayed on different devices, including desktop, tablet and mobile.
+- This visual overview highlights the website’s responsive design and ensures a quick  understanding of how the layout adapts across screen sizes.
+
+### ✔️Flowchart created using Miro
+
+- The flowchart bellow was created using Miro to represent the navigation structure of the Discover Tunisia website.
 
   ### ✔️Scrolling Gallery Enhancements
-  - Implemented a pure CSS scrolling gallery using @keyframes to animate horizontal movement.
-  - Used transform: translateX() to shift the entire image track from right to left smoothly.
+  
+  - Implemented a pure CSS scrolling gallery using @keyframes to animate vertical movement.
+  - Used transform: translateY() to shift the entire image track from top to bottom smoothly.
   - Applied a linear animation to maintain constant scrolling speed across all devices.
   - Ensured the gallery remains fully responsive by using flexible image sizing and overflow control.
 
