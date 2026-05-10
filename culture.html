@@ -1,185 +1,364 @@
 <!DOCTYPE html>
+<!-- Declares this as an HTML5 document — must be the very first line -->
 <html lang="en">
+<!-- lang="en" tells browsers and screen readers the page language is English -->
 
+
+<!-- ============================================================
+     HEAD SECTION
+     Contains metadata and external resources (fonts, icons, CSS).
+     Nothing here is visible on the page itself.
+============================================================ -->
 <head>
-  <!-- ================= PAGE SETUP ================= -->
+
+  <!-- ── PAGE SETUP ──────────────────────────────────────────── -->
+
+  <!-- UTF-8 encoding: supports all characters including Arabic and special symbols -->
   <meta charset="UTF-8">
+
+  <!-- Makes the page responsive on mobile: viewport = device width, no initial zoom -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text shown in the browser tab -->
   <title>Discover Tunisia</title>
+
+  <!-- Small icon shown in the browser tab (favicon) -->
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-  <!-- ================= FONTS & ICONS ================= -->
+
+  <!-- ── FONTS & ICONS ───────────────────────────────────────── -->
+
+  <!-- Loads two Google Fonts:
+       - Playfair Display (400 & 700) — used for headings
+       - Lato (300, 400 & 700)        — used for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icon library (used for social icons in the footer) -->
   <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
 
-  <!-- ================= BOOTSTRAP ================= -->
+
+  <!-- ── FRAMEWORKS & STYLES ─────────────────────────────────── -->
+
+  <!-- Bootstrap 5.3 CSS — provides the grid system and utility classes -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- ================= CUSTOM CSS ================= -->
+  <!-- Custom CSS — overrides and extends Bootstrap with the site's own design -->
   <link rel="stylesheet" href="assets/css/style.css">
-</head>
 
+</head>
+<!-- End of <head> -->
+
+
+<!-- ============================================================
+     BODY SECTION
+     Everything visible on the page lives here.
+     Structure: Navbar → Hero → Culture Tabs → Footer
+============================================================ -->
 <body>
 
-  <!-- =====================================================
-       NAVBAR — "Culture" link is active
-  ====================================================== -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
 
+  <!-- ==========================================================
+       1. NAVBAR
+       Sticky top navigation bar. Collapses into a hamburger
+       menu on screens smaller than the "lg" breakpoint.
+       The "Culture" link has class "active" (current page).
+  =========================================================== -->
+  <nav class="navbar navbar-expand-lg">
+  <!-- navbar-expand-lg: shows full nav on large screens, collapses on smaller ones -->
+
+    <div class="container">
+    <!-- container: centres content and adds horizontal padding -->
+
+      <!-- Brand / logo — clicking takes the user back to the home page -->
       <a class="navbar-brand" href="index.html">
         <img src="assets/images/logo.png" alt="Discover Tunisia Logo">
         <em>Discover Tunisia</em>
+        <!-- <em> renders the site name in italics -->
       </a>
 
+      <!-- Hamburger button — only visible on small screens.
+           data-bs-target links this button to the menu below by its id -->
       <button class="navbar-toggler" type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarMenu"
               aria-controls="navbarMenu"
               aria-expanded="false"
               aria-label="Toggle navigation">
+        <!-- The three-line hamburger icon drawn by Bootstrap -->
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <!-- Collapsible menu wrapper — hides/shows on small screens -->
       <div class="collapse navbar-collapse" id="navbarMenu">
+
+        <!-- ms-auto: pushes the nav links to the right side of the navbar -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link"        href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link"        href="destinations.html">Destinations</a></li>
+          <!-- "active" class highlights Culture as the current page -->
           <li class="nav-item"><a class="nav-link active" href="culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link"        href="contact.html">Contact</a></li>
         </ul>
+
       </div>
+      <!-- End collapsible menu -->
 
     </div>
-  </nav>
+    <!-- End container -->
 
-  <!-- =====================================================
-       HERO BANNER
-       Blue background with title and subtitle.
-  ====================================================== -->
+  </nav>
+  <!-- End navbar -->
+
+
+  <!-- ==========================================================
+       2. HERO BANNER
+       A simple section with a coloured background (set in CSS
+       on .culture-hero). Contains the page title and subtitle.
+       Uses Bootstrap's .container to centre and pad the text.
+  =========================================================== -->
   <section class="culture-hero">
+
     <div class="container">
+
+      <!-- Main page heading -->
       <h1>Culture & Food</h1>
+
+      <!-- Sub-heading below the main title -->
       <h2>Discover the Rich Tapestry of Tunisia's Heritage</h2>
+
+      <!-- Short introductory paragraph -->
       <p>The rich tapestry of Berber, Arab, Ottoman, and Mediterranean influences —
          alive in every dish and every tradition.</p>
+
     </div>
+    <!-- End container -->
+
   </section>
+  <!-- End hero banner -->
 
-  <!-- =====================================================
-       CULTURE SECTION — Pure CSS Tab System
 
-       HOW IT WORKS (no JavaScript!):
-       1. Hidden <input type="radio"> elements are placed FIRST in the HTML.
-       2. Each <label for="tab-xxx"> is a visible clickable tab button.
-       3. When a radio is selected, CSS shows its matching content panel:
-             #tab-food:checked ~ #content-food { display: block; }
-       4. The active tab turns gold using the sibling combinator (~) to
-          reach the .ch-tabs labels:
-             #tab-food:checked ~ .ch-tabs label[for="tab-food"] { ... }
+  <!-- ==========================================================
+       3. CULTURE SECTION — Pure CSS Tab System (no JavaScript!)
 
-       IMPORTANT: Radio inputs MUST appear before both .ch-tabs and
-       the .ch-content divs in the HTML for the ~ selector to work.
-  ====================================================== -->
+       HOW IT WORKS:
+       ─────────────
+       This tab system uses only HTML and CSS — zero JavaScript.
+       It relies on three CSS features working together:
+
+       A) <input type="radio"> — hidden checkboxes that track
+          which tab is selected. Only one can be active at a time
+          because they share the same name="tabset".
+
+       B) <label for="..."> — visible clickable tab buttons.
+          When a label is clicked, it checks its linked radio input.
+
+       C) The CSS General Sibling Combinator (~) — lets CSS reach
+          elements that come AFTER the radio inputs in the HTML.
+          Example:
+            #tab-food:checked ~ #content-food { display: block; }
+          This means: "when #tab-food is checked, show #content-food."
+
+       ─── CRITICAL HTML ORDER ───────────────────────────────────
+       The ~ selector only works on elements that appear AFTER the
+       radio input in the HTML. So the order must always be:
+
+         1. <input> radio elements      ← must come first
+         2. <div class="ch-tabs">       ← tab button labels
+         3. <div class="ch-content">    ← content panels
+
+       If you move a radio input below its content panel, that
+       panel will stop responding to clicks.
+  =========================================================== -->
   <section class="culture-section container">
+  <!-- container: centres the tab section and constrains its max width -->
 
-    <!-- STEP 1: Hidden radio inputs (must be first!) -->
+
+    <!-- ── STEP 1: HIDDEN RADIO INPUTS ────────────────────────
+         These are invisible — CSS hides them (display:none).
+         They act as the "state memory" of the tab system.
+         name="tabset" groups them so only one can be checked.
+         "checked" on the first one makes Food the default tab. -->
+
     <input type="radio" name="tabset" id="tab-food"       checked>
+    <!-- id="tab-food": lets the label (for="tab-food") and CSS target this input -->
+    <!-- checked: Food tab is selected by default when the page loads -->
+
     <input type="radio" name="tabset" id="tab-traditions">
+    <!-- Traditions tab radio — unchecked by default -->
+
     <input type="radio" name="tabset" id="tab-arts">
+    <!-- Arts & Crafts tab radio — unchecked by default -->
+
     <input type="radio" name="tabset" id="tab-clothing">
+    <!-- Traditional Clothing tab radio — unchecked by default -->
 
-    <!-- STEP 2: Tab buttons (labels linked to the radios above) -->
+
+    <!-- ── STEP 2: TAB BUTTONS (visible labels) ───────────────
+         Each <label> is linked to a radio via for="...".
+         Clicking a label checks its paired radio input,
+         which triggers the CSS to show the matching content panel. -->
+
     <div class="ch-tabs">
-      <label for="tab-food"        class="ch-tab">🍽️ Food & Drink</label>
-      <label for="tab-traditions"  class="ch-tab">🎵 Traditions</label>
-      <label for="tab-arts"        class="ch-tab">🎨 Arts & Crafts</label>
-      <label for="tab-clothing"    class="ch-tab">👗 Traditional Clothing</label>
+    <!-- ch-tabs: CSS styles this as a horizontal tab bar -->
+
+      <label for="tab-food"       class="ch-tab">🍽️ Food & Drink</label>
+      <!-- for="tab-food": clicking this label checks the #tab-food radio -->
+
+      <label for="tab-traditions" class="ch-tab">🎵 Traditions</label>
+      <!-- for="tab-traditions": clicking this label checks #tab-traditions -->
+
+      <label for="tab-arts"       class="ch-tab">🎨 Arts & Crafts</label>
+      <!-- for="tab-arts": clicking this label checks #tab-arts -->
+
+      <label for="tab-clothing"   class="ch-tab">👗 Traditional Clothing</label>
+      <!-- for="tab-clothing": clicking this label checks #tab-clothing -->
+
     </div>
+    <!-- End tab buttons -->
 
-    <!-- ===================================================
-         STEP 3: Content panels
-         Each panel is hidden by default (display: none in CSS).
-         The matching panel appears when its radio is selected.
-    ==================================================== -->
 
-    <!-- FOOD TAB -->
+    <!-- ── STEP 3: CONTENT PANELS ─────────────────────────────
+         Each panel is hidden by default (CSS: display:none).
+         The CSS rule "#tab-xxx:checked ~ #content-xxx { display:block }"
+         reveals the matching panel when its radio is checked. -->
+
+
+    <!-- ╔══════════════════════════════════╗
+         ║  TAB 1 — FOOD & DRINK           ║
+         ║  Shows a grid of food cards.    ║
+         ╚══════════════════════════════════╝ -->
     <div class="ch-content" id="content-food">
+    <!-- id="content-food": CSS targets this when #tab-food is checked -->
+
+      <!-- food-grid: CSS grid that arranges the food cards in rows -->
       <div class="food-grid">
+
+        <!-- Each .food-card contains an image and a text block -->
 
         <div class="food-card">
           <img src="assets/images/food/brik.jpg" alt="Brik">
-          <div class="food-card-text"><h3>Brik</h3><p>Crispy fried pastry with egg and tuna.</p></div>
+          <!-- alt: describes the image for screen readers / if image fails to load -->
+          <div class="food-card-text">
+            <h3>Brik</h3>
+            <p>Crispy fried pastry with egg and tuna.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/kouskous.jpg" alt="Couscous">
-          <div class="food-card-text"><h3>Couscous</h3><p>Tunisia's national dish.</p></div>
+          <div class="food-card-text">
+            <h3>Couscous</h3>
+            <p>Tunisia's national dish.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/Kaskrout-Lablabi.jpg" alt="Lablabi">
-          <div class="food-card-text"><h3>Lablabi</h3><p>Warm chickpea soup.</p></div>
+          <div class="food-card-text">
+            <h3>Lablabi</h3>
+            <p>Warm chickpea soup.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/ojja.jpg" alt="Ojja">
-          <div class="food-card-text"><h3>Ojja</h3><p>Spicy tomato stew with merguez.</p></div>
+          <div class="food-card-text">
+            <h3>Ojja</h3>
+            <p>Spicy tomato stew with merguez.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/kaak-wark.jpg" alt="Kaak Warka">
-          <div class="food-card-text"><h3>Kaak Warka</h3><p>Delicate almond pastry.</p></div>
+          <div class="food-card-text">
+            <h3>Kaak Warka</h3>
+            <p>Delicate almond pastry.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/bambalouni.jpg" alt="Bambalouni">
-          <div class="food-card-text"><h3>Bambalouni</h3><p>Sweet fried dough.</p></div>
+          <div class="food-card-text">
+            <h3>Bambalouni</h3>
+            <p>Sweet fried dough.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/masfouf.jpg" alt="Mesfouf">
-          <div class="food-card-text"><h3>Mesfouf</h3><p>Sweet couscous with raisins.</p></div>
+          <div class="food-card-text">
+            <h3>Mesfouf</h3>
+            <p>Sweet couscous with raisins.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/makrouth.jpg" alt="Makroudh">
-          <div class="food-card-text"><h3>Makroudh</h3><p>Date-filled semolina pastry.</p></div>
+          <div class="food-card-text">
+            <h3>Makroudh</h3>
+            <p>Date-filled semolina pastry.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/harissa.jpg" alt="Harissa">
-          <div class="food-card-text"><h3>Harissa</h3><p>Spicy chili paste.</p></div>
+          <div class="food-card-text">
+            <h3>Harissa</h3>
+            <p>Spicy chili paste.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/sala-mechwia.jpg" alt="Salata Mechouia">
-          <div class="food-card-text"><h3>Salata Mechouia</h3><p>Grilled pepper salad.</p></div>
+          <div class="food-card-text">
+            <h3>Salata Mechouia</h3>
+            <p>Grilled pepper salad.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/merguez.jpg" alt="Merguez">
-          <div class="food-card-text"><h3>Merguez</h3><p>Spicy lamb sausages.</p></div>
+          <div class="food-card-text">
+            <h3>Merguez</h3>
+            <p>Spicy lamb sausages.</p>
+          </div>
         </div>
 
         <div class="food-card">
           <img src="assets/images/food/tea.jpeg" alt="tea">
-          <div class="food-card-text"><h3>Zwitina</h3><p>Mint tea.</p></div>
+          <div class="food-card-text">
+            <h3>Zwitina</h3>
+            <p>Mint tea.</p>
+          </div>
         </div>
 
       </div>
-    </div><!-- /content-food -->
+      <!-- End food-grid -->
 
-    <!-- TRADITIONS TAB -->
+    </div>
+    <!-- End #content-food -->
+
+
+    <!-- ╔══════════════════════════════════════╗
+         ║  TAB 2 — TRADITIONS                 ║
+         ║  Shows a vertical list of cultural  ║
+         ║  traditions, each with an emoji     ║
+         ║  icon and a description.            ║
+         ╚══════════════════════════════════════╝ -->
     <div class="ch-content" id="content-traditions">
+    <!-- id="content-traditions": CSS shows this when #tab-traditions is checked -->
 
-      <!-- Decorative divider image -->
+      <!-- Decorative divider image displayed at the top of this tab -->
       <div class="curly-top"></div>
 
+      <!-- trad-list: CSS lays out the tradition items vertically -->
       <div class="trad-list">
+
+        <!-- Each .trad-item has an emoji icon + a heading and description -->
 
         <div class="trad-item">
           <div class="trad-icon">🎵</div>
+          <!-- trad-icon: CSS styles this as a large centred emoji -->
           <div>
             <h3>Malouf Music</h3>
             <p>A classical musical tradition brought to Tunisia by Andalusian Muslims in the 15th century.
@@ -233,11 +412,24 @@
         </div>
 
       </div>
-    </div><!-- /content-traditions -->
+      <!-- End trad-list -->
 
-    <!-- ARTS & CRAFTS TAB -->
+    </div>
+    <!-- End #content-traditions -->
+
+
+    <!-- ╔══════════════════════════════════════╗
+         ║  TAB 3 — ARTS & CRAFTS             ║
+         ║  Shows a grid of craft cards,       ║
+         ║  each with a large emoji and text.  ║
+         ╚══════════════════════════════════════╝ -->
     <div class="ch-content" id="content-arts">
+    <!-- id="content-arts": CSS shows this when #tab-arts is checked -->
+
+      <!-- arts-grid: CSS grid that arranges craft cards in rows -->
       <div class="arts-grid">
+
+        <!-- Each .arts-card has a large decorative emoji, a heading, and a description -->
 
         <div class="arts-card">
           <div class="arts-emoji">🪔</div>
@@ -276,92 +468,158 @@
         </div>
 
       </div>
-    </div><!-- /content-arts -->
+      <!-- End arts-grid -->
 
-    <!-- TRADITIONAL CLOTHING TAB -->
+    </div>
+    <!-- End #content-arts -->
+
+
+    <!-- ╔════════════════════════════════════════╗
+         ║  TAB 4 — TRADITIONAL CLOTHING        ║
+         ║  Shows a grid of clothing cards,      ║
+         ║  each with a photo and a label.       ║
+         ╚════════════════════════════════════════╝ -->
     <div class="ch-content" id="content-clothing">
+    <!-- id="content-clothing": CSS shows this when #tab-clothing is checked -->
+
+      <!-- clothing-grid: CSS grid that arranges the clothing cards -->
       <div class="clothing-grid">
+
+        <!-- Each .cloth-card has an image and a text block (name + short description) -->
 
         <div class="cloth-card">
           <img src="assets/images/clothes/sefseri.jpg" alt="Sefsari">
-          <div class="cloth-card-text"><h3>Sefsari</h3><p>Elegant white wrap.</p></div>
+          <div class="cloth-card-text">
+            <h3>Sefsari</h3>
+            <p>Elegant white wrap.</p>
+          </div>
         </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/malya.jpg" alt="Malya">
-          <div class="cloth-card-text"><h3>Malya</h3><p>Traditional embroidered outfit.</p></div>
-        </div>
-        <div class="cloth-card">
-          <img src="assets/images/clothes/koftan.jpg" alt="Kaftan">
-          <div class="cloth-card-text"><h3>Kaftan</h3><p>Elegant embroidered robe.</p></div>
-        </div>
-        <div class="cloth-card">
-          <img src="assets/images/clothes/aroussa.jpg" alt="aroussa">
-          <div class="cloth-card-text"><h3>Klila</h3><p>Traditional Kiswa.</p></div>
-        </div>
-        <div class="cloth-card">
-          <img src="assets/images/clothes/chechia.jpg" alt="Chechia">
-          <div class="cloth-card-text"><h3>Chechia</h3><p>Iconic red wool hat.</p></div>
-        </div>
-        
-        <div class="cloth-card">
-          <img src="assets/images/clothes/kachabia.jpg" alt="kachabia">
-          <div class="cloth-card-text"><h3>Kachabia</h3><p>Striped wrap cloth.</p></div>
+          <div class="cloth-card-text">
+            <h3>Malya</h3>
+            <p>Traditional embroidered outfit.</p>
+          </div>
         </div>
 
-        
+        <div class="cloth-card">
+          <img src="assets/images/clothes/koftan.jpg" alt="Kaftan">
+          <div class="cloth-card-text">
+            <h3>Kaftan</h3>
+            <p>Elegant embroidered robe.</p>
+          </div>
+        </div>
+
+        <div class="cloth-card">
+          <img src="assets/images/clothes/aroussa.jpg" alt="aroussa">
+          <div class="cloth-card-text">
+            <h3>Klila</h3>
+            <p>Traditional Kiswa.</p>
+          </div>
+        </div>
+
+        <div class="cloth-card">
+          <img src="assets/images/clothes/chechia.jpg" alt="Chechia">
+          <div class="cloth-card-text">
+            <h3>Chechia</h3>
+            <p>Iconic red wool hat.</p>
+          </div>
+        </div>
+
+        <div class="cloth-card">
+          <img src="assets/images/clothes/kachabia.jpg" alt="kachabia">
+          <div class="cloth-card-text">
+            <h3>Kachabia</h3>
+            <p>Striped wrap cloth.</p>
+          </div>
+        </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/jebbam.jpg" alt="jebbam">
-          <div class="cloth-card-text"><h3>Jebba</h3><p>Jebba For Men.</p></div>
+          <div class="cloth-card-text">
+            <h3>Jebba</h3>
+            <p>Jebba For Men.</p>
+          </div>
         </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/balgha.jpg" alt="Balgha">
-          <div class="cloth-card-text"><h3>Balgha</h3><p>Leather slippers.</p></div>
+          <div class="cloth-card-text">
+            <h3>Balgha</h3>
+            <p>Leather slippers.</p>
+          </div>
         </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/kiswa.jpg" alt="Kswa">
-          <div class="cloth-card-text"><h3>Kswa</h3><p>Wedding ceremonial dress.</p></div>
+          <div class="cloth-card-text">
+            <h3>Kswa</h3>
+            <p>Wedding ceremonial dress.</p>
+          </div>
         </div>
-
-        
 
         <div class="cloth-card">
           <img src="assets/images/clothes/houli.jpg" alt="Houlli">
-          <div class="cloth-card-text"><h3>Houll</h3><p>Traditional men's wrap.</p></div>
+          <div class="cloth-card-text">
+            <h3>Houll</h3>
+            <p>Traditional men's wrap.</p>
+          </div>
         </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/maryoul-fadhila.jpg" alt="maryoul">
-          <div class="cloth-card-text"><h3>Maryoul</h3><p>Called Fadhila.</p></div>
+          <div class="cloth-card-text">
+            <h3>Maryoul</h3>
+            <p>Called Fadhila.</p>
+          </div>
         </div>
 
         <div class="cloth-card">
           <img src="assets/images/clothes/barnouss.jpg" alt="barnouss">
-          <div class="cloth-card-text"><h3>Barnouss</h3><p>Men cLOTHES.</p></div>
+          <div class="cloth-card-text">
+            <h3>Barnouss</h3>
+            <p>Men cLOTHES.</p>
+          </div>
         </div>
 
       </div>
-    </div><!-- /content-clothing -->
+      <!-- End clothing-grid -->
 
-  </section><!-- /culture-section -->
+    </div>
+    <!-- End #content-clothing -->
 
-  <!-- =====================================================
-       FOOTER — same on every page
-  ====================================================== -->
+
+  </section>
+  <!-- End culture-section -->
+
+
+  <!-- ==========================================================
+       4. FOOTER
+       Identical on every page. Three Bootstrap columns:
+         Left   — brand name + tagline
+         Centre — social media icon links
+         Right  — personal credit line
+       Below: a copyright bar spanning the full width.
+  =========================================================== -->
   <footer>
+
     <div class="container">
+
+      <!-- align-items-center: vertically centres the three footer columns -->
       <div class="row align-items-center">
 
+        <!-- Left column: brand name and short tagline -->
         <div class="col-md-4">
           <p class="footer-brand">Tunisia</p>
           <p class="footer-tagline">My first project</p>
         </div>
 
+        <!-- Centre column: social media icon links -->
+        <!-- text-center: centres the icons horizontally -->
         <div class="col-md-4 text-center">
           <div class="footer-social">
+            <!-- fab = Font Awesome "brands" icon set; href="#" = placeholder links -->
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -369,19 +627,38 @@
           </div>
         </div>
 
+        <!-- Right column: credit — text-md-end right-aligns text on md+ screens -->
         <div class="col-md-4 text-md-end">
           <p class="footer-tagline">Made with ❤️ for my country Tunisia</p>
         </div>
 
       </div>
+      <!-- End footer columns row -->
+
+      <!-- Copyright bar — sits below the three columns, full width -->
       <div class="footer-bottom">
         &copy; 2026 Discover Tunisia. All rights reserved.
+        <!-- &copy; is the HTML entity for the © copyright symbol -->
       </div>
-    </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
+    </div>
+    <!-- End container -->
+
+  </footer>
+  <!-- End footer -->
+
+
+  <!-- ==========================================================
+       BOOTSTRAP JS
+       Placed at the bottom of <body> so HTML is fully parsed
+       before the script runs. The "bundle" version includes
+       Popper.js (required for dropdowns, modals, tooltips).
+  =========================================================== -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+
 </body>
+<!-- End of <body> -->
+
 </html>
+<!-- End of document -->
