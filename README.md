@@ -52,6 +52,7 @@ Click here to explore the live version of my website:
   - [Mobile](#mobie)
 - [Bugs & Errors](#bugs-erros)
 - [Planned Future Updates](#planned-future-updates)
+- [Deployment Procedure](#deployment-procedure)
 
     ---------------------
     ---------------------
@@ -592,3 +593,18 @@ This happened because:
    - User Testimonials — showcasing real visitor experiences.
    - Location & Travel Information Section — providing essential travel details.
    - Travel Quiz / Itinerary Builder — offering personalized trip suggestions.
+
+## 🚀Deployment Procedure
+
+- The website was deployed using GitHub Pages.
+- Below is the deployment process followed for this project:
+     - The full project folder was pushed to a GitHub repository.
+     - In the repository settings, GitHub Pages was enabled.
+     - The deployment source was set to the main branch.
+     - GitHub automatically generated a live link for the website
+     - After each update, changes were committed and pushed, and the deployment refreshed automatically. 
+
+  ### 📝 Commit Documentation Note
+
+- Throughout the project, I made a consistent effort to commit as frequently as possible in order to clearly document every update, fix, and improvement.
+-  This ensured full transparency in the development process and made it easier to track changes over time.   
