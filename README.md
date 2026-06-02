@@ -15,9 +15,11 @@ Click here to explore the live version of my website:
 - [Target Audience](#target-audience)
 - [User Goals](#user-goals)
 - [User Experience (UX)](#user-experience-ux)
+- [Wireframe Home Page](#wireframe-home-page)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
 - [Website Flowchart](#website-flowchart)
 - [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
-
   - [User Story 1 – User-friendly navigation and responsive design](#user-story-1--user-friendly-navigation-and-responsive-design-must-have)
   - [User Story 2 – High-quality images and engaging descriptions](#user-story-2--high-quality-images-and-engaging-descriptions-must-have)
   - [User Story 3 – Detailed destination and culture information with interactive gallery](#user-story-3--detailed-destination-and-culture-information-with-interactive-gallery-must-have)
@@ -29,11 +31,9 @@ Click here to explore the live version of my website:
   - [User Story 9 – User testimonials](#user-story-9--user-testimonials-could-have)
   - [User Story 10 – Location, contact details, and travel information](#user-story-10--location-contact-details-and-travel-information-could-have)
   - [User Story 11 – Travel quiz or itinerary builder](#user-story-11--travel-quiz-or-itinerary-builder-could-have)
-
 - [Design Justification](#design-justification)
 - [Color Palette](#color-palette)
 - [Imagery & Themes](#imagery--themes)
-
 - [Pages Overview](#pages-overview)
   - [Home Page](#home-page)
   - [Destinations Page](#destinations-page)
@@ -47,11 +47,6 @@ Click here to explore the live version of my website:
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Using AI](#using-ai)
-
-- [Wireframe Home Page](#wireframe-home-page)
-  - [Desktop](#desktop)
-  - [Mobile](#mobile)
-
 - [Bugs & Errors](#bugs--errors)
 - [Planned Future Updates](#planned-future-updates)
 - [Deployment Procedure](#deployment-procedure)
@@ -134,6 +129,15 @@ Click here to explore the live version of my website:
      - Stay connected through social media links and optional newsletter sign‑up.
      - Enjoy a modern experience with subtle animations and interactive elements.
 
+## 🧩 Wireframe Home Page
+
+### 🖥️Desktop
+
+![Using-AI](assets/images/screenshots/wireframe-home-desktop.png) 
+
+### 📱Mobile
+
+![Using-AI](assets/images/screenshots/wireframe-home-mobile.png) 
 ## 📐Flowchart
 
 - This flowchart represents the navigation structure of the Discover Tunisia website.
@@ -558,16 +562,6 @@ The visual design of Discover Tunisia is crafted to reflect the essence of the c
 -  It genuinely felt like having a supportive coding partner during the project journey
 
 ![Using-AI](assets/images/screenshots/ai.png) 
-
-## 🧩 Wireframe Home Page
-
-### 🖥️Desktop
-
-![Using-AI](assets/images/screenshots/wireframe-home-desktop.png) 
-
-### 📱Mobile
-
-![Using-AI](assets/images/screenshots/wireframe-home-mobile.png) 
 
 ## 🐞 Bugs & Errors
 
